@@ -1,8 +1,8 @@
 {
   "name": "black-swan-digital",
   "private": false,
-  "description": "nick-starter-gatsby",
-  "version": "0.1.0",
+  "description": "black-swan-digital",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
@@ -68,6 +68,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "/"
+    "url": "https://github.com/NickEast12/black-swan-digital.git"
   }
 }
