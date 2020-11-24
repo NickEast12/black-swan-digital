@@ -1,9 +1,16 @@
 import React from 'react';
+import Layout from '../components/Layout';
+import WaveCTA from '../components/pageComponents/wave-cta';
 
 const index = () => (
-  <div>
-    <h1>this is my starter gatsby</h1>
-  </div>
+  <Layout>
+    <div>
+      <p style={{ padding: '10rem 5rem' }}>page one</p>
+    </div>
+    <div>
+      <WaveCTA />
+    </div>
+  </Layout>
 );
 
 export default index;

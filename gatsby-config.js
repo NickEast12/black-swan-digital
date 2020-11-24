@@ -1,8 +1,8 @@
-require('dotenv').config({ path: '.env' });
+require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
   siteMetadata: {
-    title: `Enter`,
+    title: `Black Swan Digital`,
     siteUrl: `https://wwww.nick-east.com`,
     description: `Enter`,
     twitter: `@comebacktothis`,
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-138434630-1',
+        trackingId: "UA-138434630-1",
         head: true,
       },
     },
@@ -55,18 +55,18 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-138434630-1',
+          trackingId: "UA-138434630-1",
           anonymize: true,
         },
-        environments: ['production', 'development'],
+        environments: ["production", "development"],
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.nick-east.com',
-        sitemap: 'https://www.nick-east.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        host: "https://www.nick-east.com",
+        sitemap: "https://www.nick-east.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],

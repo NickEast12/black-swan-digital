@@ -1,5 +1,5 @@
 {
-  "name": "nick-starter-gatsby",
+  "name": "black-swan-digital",
   "private": false,
   "description": "nick-starter-gatsby",
   "version": "0.1.0",
@@ -40,6 +40,7 @@
     "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-source-sanity": "^6.0.4",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.20",
     "netlify-cli": "^2.62.0",
     "netlify-lambda": "^2.0.1",
     "normalize.css": "^8.0.1",
