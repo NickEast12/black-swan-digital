@@ -1,6 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+//* Icon SVGs
+import LinkedIn from '../svgs/linkedin.svg';
+import Twitter from '../svgs/twitter.svg';
+import Facebook from '../svgs/facebook.svg';
+import Instagram from '../svgs/instagram.svg';
 
 const FooterStyles = styled.footer`
   width: 100%;
@@ -9,12 +14,20 @@ const FooterStyles = styled.footer`
   .footer {
     padding: 1rem 0;
     &__logo {
+      padding: 2rem 0;
+      border: var(--testing);
     }
     &__section {
-      padding: 0.5rem 0;
+      padding: 0.65rem 0;
       color: var(--offWhite);
+      h5 {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--white);
+      }
       ul {
         li {
+          margin: 0.5rem 0;
           a {
             list-style: none;
             color: inherit;
@@ -23,15 +36,40 @@ const FooterStyles = styled.footer`
         }
       }
     }
+    &__social {
+      width: 80%;
+      margin: 0 auto;
+      div {
+        width: 50%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        svg {
+          fill: var(--offWhite);
+        }
+      }
+    }
   }
   section {
     width: 100%;
-    height: 1rem;
     background: linear-gradient(
       to right,
       var(--mainColour),
       var(--mainColourLighter)
     );
+    div {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0.85rem 0;
+      p {
+        font-size: 0.85rem;
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
   }
 `;
 
@@ -42,11 +80,6 @@ const Footer = () => {
       <div className="footer">
         <div className="footer__logo">
           <img src="" alt="Logo" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus beatae laudantium repellat excepturi mollitia.
-            Voluptates qui facere quisquam a vero.
-          </p>
         </div>
         <div className="footer__section">
           <h5>Menu</h5>
@@ -66,40 +99,57 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer__section">
-          <h5>Services </h5>
+          <h5>Services</h5>
           <ul>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog">Web Development</Link>
             </li>
             <li>
-              <Link to="/blog">Contact</Link>
+              <Link to="/blog">Web Design</Link>
             </li>
             <li>
-              <Link to="/blog">About</Link>
-            </li>
-            <li>
-              <Link to="/blog">Privacy Policy</Link>
+              <Link to="/blog">Digital Marketing</Link>
             </li>
           </ul>
         </div>
         <div className="footer__section">
+          <h5>Contact</h5>
           <ul>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog">075 2821 6309</Link>
             </li>
             <li>
-              <Link to="/blog">Contact</Link>
-            </li>
-            <li>
-              <Link to="/blog">About</Link>
-            </li>
-            <li>
-              <Link to="/blog">Privacy Policy</Link>
+              <Link to="/blog">info@blackswandigital.com</Link>
             </li>
           </ul>
         </div>
+        <div className="footer__social">
+          <div>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <LinkedIn />
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Twitter />
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Facebook />
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Instagram />
+            </a>
+          </div>
+        </div>
       </div>
-      <section />
+      <section>
+        <div>
+          <p>
+            &copy; Black Swan Digital {new Date().getFullYear()} |
+            <span>
+              <Link to="privacy-policy"> Privacy Policy</Link>
+            </span>
+          </p>
+        </div>
+      </section>
     </FooterStyles>
   );
 };

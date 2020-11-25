@@ -1,4 +1,5 @@
 require(`dotenv`).config({ path: `.env` });
+const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
@@ -9,6 +10,15 @@ module.exports = {
     image: `/icon.png`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`, 'images'),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-preload-fonts`,
@@ -25,6 +35,15 @@ module.exports = {
         theme_color: `#1bbc9b`,
         display: `minimal-ui`,
         icon: `./src/assets/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: process.env.SANITY_ID,
+        dataset: `production`,
+        watchMode: true,
+        token: process.env.SANITY_KEY,
       },
     },
     {
@@ -47,7 +66,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-138434630-1",
+        trackingId: 'UA-138434630-1',
         head: true,
       },
     },
@@ -55,18 +74,18 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: "UA-138434630-1",
+          trackingId: 'UA-138434630-1',
           anonymize: true,
         },
-        environments: ["production", "development"],
+        environments: ['production', 'development'],
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "https://www.nick-east.com",
-        sitemap: "https://www.nick-east.com/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        host: 'https://www.nick-east.com',
+        sitemap: 'https://www.nick-east.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],

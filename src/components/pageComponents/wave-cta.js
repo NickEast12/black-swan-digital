@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import WaveSVG from '../../assets/images/wave.svg';
@@ -33,7 +34,21 @@ const WaveCTAStyles = styled.section`
     &__inner {
       width: 70%;
       margin: 0 auto;
+      padding: 2rem 0 1rem 0;
       text-align: center;
+      h4 {
+        font-size: 1.75rem;
+      }
+      p {
+        margin-top: 0.5rem;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.65rem 0;
+        width: 150px;
+        font-size: 0.9rem;
+        font-weight: 900;
+      }
     }
   }
 `;
@@ -47,7 +62,11 @@ const WaveCTA = () => (
           Whether you already have a project specification, or you just want to
           learn more about the way we work, we are just an email away.
         </p>
-        <button type="button">Get in Touch</button>
+        <Link to="/contact">
+          <button type="button" className="button--alt">
+            Get in Touch
+          </button>
+        </Link>
       </div>
     </div>
   </WaveCTAStyles>

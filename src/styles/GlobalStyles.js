@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
         --lightGrey: #CCCCCC;
         --white: #FFFFFF;
         --mainFont: Acumin;
+        --titleFont: AcuminTitle;
         --testing: red dotted 1px;
     }
     *, *:after, *:before {
@@ -36,7 +37,12 @@ const GlobalStyles = createGlobalStyle`
         color: var(--favColour);
     }
  
-
+    
+    .title-fea {
+        background: linear-gradient(transparent 60%, var(--mainColour) 60%);
+        color: #111;
+        padding: 0 1px 1px;
+    }
     button {
         background: linear-gradient(to right, var(--mainColour), var(--mainColourLighter));
         border-radius: 50px;
@@ -45,9 +51,14 @@ const GlobalStyles = createGlobalStyle`
         border: none;
         color: var(--white);
         span {
-            font-weight: 100;
+            font-weight: 900;
             font-size: .89rem;
         }
+    }
+    .button--alt {
+        background: var(--background);
+        color: var(--mainColour);
+
     }
     header {
         position: fixed;
@@ -72,10 +83,10 @@ const GlobalStyles = createGlobalStyle`
     }
     
 
-   /* .gatsby-image-wrapper img[src*=base64\\,] {
+   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
-    } */
+    }
 `;
 
 export default GlobalStyles;
