@@ -2,11 +2,16 @@ import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import useDocumentScrollThrottled from './hooks/useDocumentScrollThrottled.js';
+//* Icon SVGs
+import LinkedIn from '../svgs/linkedin.svg';
+import Twitter from '../svgs/twitter.svg';
+import Facebook from '../svgs/facebook.svg';
+import Instagram from '../svgs/instagram.svg';
 
 const Nav = () => {
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
-  const MINIMUM_SCROLL = 80;
+  const MINIMUM_SCROLL = 500;
   const TIMEOUT_DELAY = 400;
   useDocumentScrollThrottled((callbackData) => {
     const { previousScrollTop, currentScrollTop } = callbackData;
@@ -36,8 +41,10 @@ const Nav = () => {
 export default Nav;
 
 const MobileNavStyles = styled.div`
-  background: ${({ open }) => (open ? 'var(--background)' : 'var(--white)')};
-  transition: all 0.3s ease;
+  /* background: ${({ open }) =>
+    open ? 'var(--background)' : 'var(--white)'}; */
+  background: none;
+  transition: all 0s ease;
   position: fixed;
   width: 100%;
   top: 0;
@@ -90,17 +97,25 @@ const MobileMenuStyles = styled.div`
       z-index: 50;
     }
   }
+  @keyframes iconAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+      z-index: 50;
+    }
+  }
   width: 100%;
   height: 100vh;
-  background: var(--background);
   background: ${({ open }) => (open ? 'var(--background)' : 'var(--white)')};
   visibility: ${({ open }) => (open ? 'visiable' : 'hidden')};
+  opacity: ${({ open }) => (open ? '1' : '0')};
+  display: ${({ open }) => (open ? 'block' : 'none')};
   position: fixed;
   top: 0;
   z-index: 99;
-  transition: all 0.3s ease;
+  transition: background 0.3s, opacity 0.1s;
 
-  div {
+  > div {
     width: 80%;
     padding-top: 7.5rem;
     margin: 0 auto;
@@ -158,27 +173,68 @@ const MobileMenuStyles = styled.div`
       }
     }
   }
+  .icons {
+    > div {
+      width: 130px;
+      margin: 6rem auto 0 auto;
+      display: flex;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      a {
+        opacity: 0;
+        transform: translateY(40px);
+        &:nth-child(1) {
+          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.6s
+            forwards;
+        }
+        &:nth-child(2) {
+          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.8s
+            forwards;
+        }
+        &:nth-child(3) {
+          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2s
+            forwards;
+        }
+        &:nth-child(4) {
+          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2.2s
+            forwards;
+        }
+        svg {
+          fill: var(--offWhite);
+          transition: fill 0.3s ease;
+          &:hover {
+            fill: var(--mainColour);
+          }
+        }
+      }
+    }
+  }
 `;
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
   if (open) {
-    document.body.style.position = 'fixed';
+    document.body.style.overflow = 'hidden';
   }
   if (!open) {
-    document.body.style.position = 'static';
+    document.body.style.overflow = 'auto';
   }
   return (
     <div>
       <MobileNavStyles open={open}>
         <div className="mob">
           <div className="mob__logo">
-            <p>Logo</p>
+            <Link to="/">
+              <p>Logo</p>
+            </Link>
           </div>
           <div className="mob__btn">
-            <button type="button">
-              <span>Contact</span>
-            </button>
+            <Link to="/contact">
+              <button type="button">
+                <span>Contact</span>
+              </button>
+            </Link>
           </div>
           <HamburgerStyles
             onClick={() => setOpen(!open)}
@@ -196,11 +252,14 @@ const MobileNav = () => {
       <MobileMenuStyles open={open}>
         <div>
           <ul>
-            <Link to="/">
-              <li>Home</li>
+            <Link to="/services">
+              <li>Services</li>
             </Link>
-            <Link to="/about">
-              <li>About</li>
+            <Link to="/about-us">
+              <li>About us</li>
+            </Link>
+            <Link to="/work">
+              <li>Work</li>
             </Link>
             <Link to="/pricing">
               <li>Pricing</li>
@@ -208,10 +267,23 @@ const MobileNav = () => {
             <Link to="/blogs">
               <li>Blog</li>
             </Link>
-            <Link to="/contact">
-              <li>Contact</li>
-            </Link>
           </ul>
+          <section className="icons">
+            <div>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <LinkedIn />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Twitter />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Facebook />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Instagram />
+              </a>
+            </div>
+          </section>
         </div>
       </MobileMenuStyles>
     </div>

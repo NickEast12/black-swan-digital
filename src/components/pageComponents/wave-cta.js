@@ -7,11 +7,12 @@ const WaveCTAStyles = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: linear-gradient(
+  background-color: var(--background);
+  /* background-image: linear-gradient(
     90deg,
     var(--mainColour),
     var(--mainColourLighter)
-  );
+  ); */
   background-repeat: repeat-x;
   color: #fff;
   .wave {
@@ -47,7 +48,9 @@ const WaveCTAStyles = styled.section`
         padding: 0.65rem 0;
         width: 150px;
         font-size: 0.9rem;
-        font-weight: 900;
+        font-weight: 500;
+        color: var(--background);
+        background: var(--mainColour);
       }
     }
   }
@@ -64,7 +67,7 @@ const WaveCTA = () => (
         </p>
         <Link to="/contact">
           <button type="button" className="button--alt">
-            Get in Touch
+            <span>Get in Touch</span>
           </button>
         </Link>
       </div>

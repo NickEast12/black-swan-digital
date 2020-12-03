@@ -30,11 +30,11 @@ const Typography = createGlobalStyle`
         text-decoration: none;
     }
     h1,h2,h3,h4,h5,h6 {
-        font-family: Rubik, var(--titleFont), AcuminTitle, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        
+        font-family:  Rubik, AcuminTitle, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
     }
-    p, li, span, button, a  {
-        font-family: Karla, var(--mainFont), Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    p, li, span, button, a, input, textarea  {
+        font-family: Karla, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 400;
     }
     h1,h2,h3,h4,h5,h6, p, li, span {

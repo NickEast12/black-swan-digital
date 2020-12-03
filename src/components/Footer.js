@@ -21,11 +21,12 @@ const FooterStyles = styled.footer`
       padding: 0.65rem 0;
       color: var(--offWhite);
       h5 {
-        font-weight: 800;
+        font-weight: 500;
         font-size: 1.2rem;
         color: var(--white);
       }
       ul {
+        list-style: none;
         li {
           margin: 0.5rem 0;
           a {
@@ -85,16 +86,16 @@ const Footer = () => {
           <h5>Menu</h5>
           <ul>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blogs">Blog</Link>
             </li>
             <li>
-              <Link to="/blog">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/blog">About</Link>
+              <Link to="/about-us">About us</Link>
             </li>
             <li>
-              <Link to="/blog">Privacy Policy</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </li>
           </ul>
         </div>

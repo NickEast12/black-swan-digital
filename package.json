@@ -24,6 +24,8 @@
     }
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/image-url": "^0.140.19",
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.26.1",
@@ -40,7 +42,8 @@
     "gatsby-plugin-sitemap": "^2.6.0",
     "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-source-filesystem": "^2.3.35",
-    "gatsby-source-sanity": "^6.0.4",
+    "gatsby-source-sanity": "^6.0.0-beta.0",
+    "gatsby-transform-portable-text": "0.0.2",
     "gatsby-transformer-sharp": "^2.5.19",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.20",

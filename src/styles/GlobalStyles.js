@@ -10,9 +10,13 @@ const GlobalStyles = createGlobalStyle`
         --offWhite: #C9C8CD;
         --lightGrey: #CCCCCC;
         --white: #FFFFFF;
+        --black: #000000;
         --mainFont: Acumin;
         --titleFont: AcuminTitle;
         --testing: red dotted 1px;
+        --trial: #EBEBEB;
+        --servicesBackground: rgb(248, 248, 248);
+        --boxShadow: 0 10px 50px rgba(0,0,0,0.08),0 13px 45px rgba(0,0,0,0.08);
     }
     *, *:after, *:before {
         box-sizing: border-box;
@@ -37,7 +41,15 @@ const GlobalStyles = createGlobalStyle`
         color: var(--favColour);
     }
  
+    .title--style {
+      color: var(--mainColour);
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: -0.1px;
+      text-transform: uppercase;
+      margin: 1rem 0 0.5rem 0;
     
+    }
     .title-fea {
         background: linear-gradient(transparent 60%, var(--mainColour) 60%);
         color: #111;
@@ -45,13 +57,14 @@ const GlobalStyles = createGlobalStyle`
     }
     button {
         background: linear-gradient(to right, var(--mainColour), var(--mainColourLighter));
-        border-radius: 50px;
+        border-radius: 4.5px;
         padding: .6rem 0;
         width: 100px;
         border: none;
         color: var(--white);
+        cursor: pointer;
         span {
-            font-weight: 900;
+            font-weight: 600;
             font-size: .89rem;
         }
     }
@@ -69,17 +82,18 @@ const GlobalStyles = createGlobalStyle`
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 50px;
+        height: 65px;
         transform: translateY(0);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
     }
     .header.shadow {
-        box-shadow: 0px 10px 20px hsla(0, 0%, 78%, 0.59);
+        box-shadow: 0px 1px 10px hsla(0, 0%, 78%, 0.59);
+        background: white;
 
     }
 
     .header.hidden {
-        transform: translateY(-140%);
+        transform: translateY(-150%);
     }
     
 
@@ -87,6 +101,9 @@ const GlobalStyles = createGlobalStyle`
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
     }
+    ::placeholder {
+          color: white !important;
+        }
 `;
 
 export default GlobalStyles;
