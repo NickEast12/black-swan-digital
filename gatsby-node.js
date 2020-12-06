@@ -1,5 +1,6 @@
-import fetch from 'isomorphic-fetch';
-import path from 'path';
+const path = require('path');
+
+const fetch = require('isomorphic-fetch');
 
 export async function turnBlogCateogriesIntoPages({ graphql, actions }) {
   // TODO - Get template
