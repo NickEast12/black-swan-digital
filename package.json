@@ -4,7 +4,6 @@
   "description": "black-swan-digital",
   "version": "0.0.1",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
     "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
