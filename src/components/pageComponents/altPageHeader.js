@@ -12,8 +12,20 @@ const AltPageHeaderStyles = styled.div`
   div {
     width: 80%;
     margin: 0 auto;
-    padding: 7rem 0 3rem 0;
+    padding: 10rem 0 3rem 0;
     color: var(--white);
+    text-align: center;
+    h2 {
+      color: var(--mainColour);
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0.5rem 0;
+    }
   }
   section {
     width: 100%;
@@ -36,8 +48,8 @@ const AltPageHeader = ({ title, description }) => {
   return (
     <AltPageHeaderStyles>
       <div>
-        <h1>{title}</h1>
-        <h2>{description}</h2>
+        <h2>{title}</h2>
+        <h1>{description}</h1>
       </div>
       <section />
     </AltPageHeaderStyles>

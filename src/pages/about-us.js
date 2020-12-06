@@ -9,9 +9,9 @@ const AboutUs = () => {
       <div className="about__body">
         <AltPageHeader
           title="About us"
-          description="this is a description about the about page"
+          description="A tech-focused creative agency."
         />
-        <div style={{ padding: '3rem' }}>
+        <div>
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit

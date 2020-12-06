@@ -62,7 +62,8 @@ const IndexServices = () => (
 );
 const ServicesBoxesStyles = styled.div`
   width: 100%;
-  background: var(--servicesBackground);
+  background: var(--background);
+  color: var(--white);
   padding: 2rem 1rem 1rem 1rem;
   border-radius: 4.5px;
   position: relative;
