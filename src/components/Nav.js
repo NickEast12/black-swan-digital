@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { window, document, exists } from 'browser-monads';
 import useDocumentScrollThrottled from './hooks/useDocumentScrollThrottled.js';
 //* Icon SVGs
 import LinkedIn from '../svgs/linkedin.svg';
@@ -214,12 +215,15 @@ const MobileMenuStyles = styled.div`
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
-  if (open) {
-    document.body.style.overflow = 'hidden';
-  }
-  if (!open) {
-    document.body.style.overflow = 'auto';
-  }
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    }
+    if (!open) {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
+
   return (
     <div>
       <MobileNavStyles open={open}>
