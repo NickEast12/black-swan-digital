@@ -53,11 +53,11 @@ export const query = graphql`
         slug {
           current
         }
+        shortDescription
         categories {
           id
           title
         }
-        textColour
         projectImage {
           asset {
             fluid(maxWidth: 700) {
@@ -82,6 +82,7 @@ export const query = graphql`
           title
           _id
         }
+
         author {
           name
           image {

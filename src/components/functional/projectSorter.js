@@ -13,11 +13,12 @@ const ProjectSorterStyles = styled.div`
     justify-content: space-around;
     li {
       font-size: 1.2rem;
-      font-weight: 500;
-      border-bottom: solid 1px var(--mainColour);
+
       a {
         color: inherit;
+        font-weight: 700;
         text-decoration: none;
+        cursor: pointer;
       }
     }
   }

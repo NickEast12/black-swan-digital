@@ -265,8 +265,8 @@ const MobileNav = () => {
             <Link to="/work">
               <li>Work</li>
             </Link>
-            <Link to="/pricing">
-              <li>Pricing</li>
+            <Link to="/clients">
+              <li>Clients</li>
             </Link>
             <Link to="/blogs">
               <li>Blog</li>

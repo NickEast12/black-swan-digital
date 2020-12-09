@@ -141,7 +141,7 @@ export const query = graphql`
           id
           title
         }
-        textColour
+        shortDescription
         projectImage {
           asset {
             fluid(maxWidth: 700) {

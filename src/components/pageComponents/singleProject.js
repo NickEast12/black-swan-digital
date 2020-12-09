@@ -6,30 +6,16 @@ import { Link } from 'gatsby';
 const SingleProjectStyles = styled.div`
   width: 100%;
   position: relative;
-  height: 20rem;
   margin: 2.5rem 0 2rem 0;
   border-radius: 4.5px;
+
   a {
     color: inherit;
     text-decoration: none;
   }
   .single__background {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    &::after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      content: '';
-      background: var(--background);
-      opacity: 0.1;
-      border-radius: 4.5px;
-    }
+    height: 15rem;
     .gatsby-image-wrapper {
       width: 100%;
       height: 100%;
@@ -37,19 +23,19 @@ const SingleProjectStyles = styled.div`
     }
   }
   .single__content {
-    position: relative;
-    z-index: 5;
-    padding: 1rem;
-    color: var(--white);
-    h4 {
-      font-size: 1.5rem;
+    color: var(--black);
+    h5 {
+      color: var(--mainColour);
       font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: -0.1px;
+      text-transform: uppercase;
+      margin: 1rem 0 0.5rem 0;
     }
-    ul {
-      list-style: none;
-      display: flex;
-      li {
-      }
+    h4 {
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: 500;
     }
   }
 `;
@@ -62,15 +48,16 @@ const SingleProject = ({ project }) => {
           <Img fluid={project.projectImage.asset.fluid} alt={project.title} />
         </div>
         <div className="single__content">
-          <h4>{project.title}</h4>
-          <ul>
+          <h5>{project.title}</h5>
+          {/* <ul>
             {cat.map((i, index) => (
               <li key={i.title}>
                 {`${i.title}`}
                 {index < i.length + -1 ? '' : ',\u00A0'}
               </li>
             ))}
-          </ul>
+          </ul> */}
+          <h4>{project.shortDescription}</h4>
         </div>
       </Link>
     </SingleProjectStyles>
