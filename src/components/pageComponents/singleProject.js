@@ -15,7 +15,7 @@ const SingleProjectStyles = styled.div`
   }
   .single__background {
     width: 100%;
-    height: 15rem;
+    height: 12.5rem;
     .gatsby-image-wrapper {
       width: 100%;
       height: 100%;
