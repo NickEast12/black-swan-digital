@@ -32,12 +32,13 @@ const Typography = createGlobalStyle`
     h1,h2,h3,h4,h5,h6 {
         font-family:  Rubik, AcuminTitle, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
+        letter-spacing: -1px;
     }
     p, li, span, button, a, input, textarea  {
         font-family: Karla, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 400;
     }
-    h1,h2,h3,h4,h5,h6, p, li, span {
+    p, li, span {
         letter-spacing: -.1px;
         line-height: 1.2;
     }
