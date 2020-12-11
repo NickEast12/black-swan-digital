@@ -61,6 +61,9 @@ const MobileNavStyles = styled.div`
     }
     &__btn {
       margin: 0 0.5rem;
+      button {
+        padding: 0.45rem 0;
+      }
     }
   }
 `;

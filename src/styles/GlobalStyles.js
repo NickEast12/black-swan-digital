@@ -4,8 +4,8 @@ const GlobalStyles = createGlobalStyle`
     :root {
         --mainColour: #57CAC5;
         --mainColourLighter: #7ad3ce;
-        --background: #1F2833;
-        --altColour: #0B0C10;
+        --background: #0B0C10;
+        --altColour: #1F2833;
         --save: #0c1c3b;
         --offWhite: #C9C8CD;
         --lightGrey: #CCCCCC;
@@ -40,7 +40,10 @@ const GlobalStyles = createGlobalStyle`
     a[aria-current="page"] {
         color: var(--favColour);
     }
- 
+    ::selection {
+    background:var(--mainColour);
+    color: var(--white);
+    }
     .title--style {
       color: var(--mainColour);
       font-weight: 500;

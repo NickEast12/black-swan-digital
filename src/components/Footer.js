@@ -54,11 +54,12 @@ const FooterStyles = styled.footer`
   }
   section {
     width: 100%;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       var(--mainColour),
       var(--mainColourLighter)
-    );
+    ); */
+    background: var(--lightGrey);
     div {
       width: 80%;
       margin: 0 auto;
