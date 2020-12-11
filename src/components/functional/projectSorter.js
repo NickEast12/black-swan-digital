@@ -11,12 +11,18 @@ const ProjectSorterStyles = styled.div`
     list-style: none;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
     li {
       font-size: 1.2rem;
+      flex-grow: 2;
 
+      background: var(--background);
+      border-radius: 4.5px;
+      padding: 0.25rem 0;
+      color: var(--white);
       a {
         color: inherit;
-        font-weight: 700;
+        font-weight: 400;
         text-decoration: none;
         cursor: pointer;
       }

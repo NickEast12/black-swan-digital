@@ -37,9 +37,13 @@ const WaveHeaderStyles = styled.div`
       p {
         margin: 0.5rem 0;
       }
-      span {
+      h6 {
+        margin-top: 2rem;
+        font-size: 1rem;
+        font-weight: 500;
       }
       .bold {
+        margin-top: 0.25rem;
         display: block;
         font-weight: 900;
         color: var(--mainColour);
@@ -58,7 +62,7 @@ const WaveHeader = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsum
             nulla unde.
           </p>
-          <span>Want to get in touch?</span>
+          <h6>Want to get in touch?</h6>
           <span className="bold">Let's talk</span>
         </div>
       </section>

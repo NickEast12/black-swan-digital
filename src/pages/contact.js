@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
-import PageHeader from '../components/pageComponents/pageHeader';
+import AltPageHeader from '../components/pageComponents/altPageHeader';
 
 const ContactStyles = styled.div`
   width: 100%;
@@ -71,7 +71,10 @@ const contact = () => {
   const i = 'stay';
   return (
     <Layout>
-      <PageHeader page="Contact" pageTitle="Interested in working with us?" />
+      <AltPageHeader
+        title="Contact"
+        description="Interested in working with us?"
+      />
       <ContactStyles>
         <div className="contact">
           <p>

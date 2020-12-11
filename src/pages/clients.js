@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import PageHeader from '../components/pageComponents/pageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
+import AltPageHeader from '../components/pageComponents/altPageHeader';
 
 const ClientStyles = styled.div`
   width: 100%;
@@ -19,7 +19,10 @@ const Clients = ({ data }) => {
   console.log(clients);
   return (
     <Layout>
-      <PageHeader page="Clients" pageTitle="The amazing teams we work with." />
+      <AltPageHeader
+        title="Clients"
+        description="The amazing teams we work with."
+      />
       <ClientStyles>
         <div className="client__grid">
           {clients.map((client) => (
