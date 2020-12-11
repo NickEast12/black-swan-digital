@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as THREE from 'three';
 // import WAVES from 'vanta/dist/vanta.waves.min.js';
 import WAVES from '../../utils/vanta.waves.min.js'
-window.THREE = THREE;
+
  
 const AnimateHeaderBackgroundStyles = styled.div`
   position: relative;
