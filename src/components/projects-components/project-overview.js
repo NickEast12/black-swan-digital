@@ -18,8 +18,9 @@ const ProjectOverviewStyles = styled.div`
         margin: 0 auto 1rem auto;
         h5 {
           font-size: 1.2rem;
-          font-weight: 400;
+          font-weight: 500;
           margin-bottom: 0.5rem;
+          color: var(--mainColour);
         }
         &__inner {
           text-align: center;
