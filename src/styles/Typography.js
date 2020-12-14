@@ -39,7 +39,7 @@ const Typography = createGlobalStyle`
         font-weight: 400;
     }
     span {
-        letter-spacing: -.5px;
+        letter-spacing: -.7px;
     }
     p, li {
         letter-spacing: -.1px;
