@@ -38,7 +38,10 @@ const Typography = createGlobalStyle`
         font-family: Karla, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 400;
     }
-    p, li, span {
+    span {
+        letter-spacing: -.5px;
+    }
+    p, li {
         letter-spacing: -.1px;
         line-height: 1.2;
     }
