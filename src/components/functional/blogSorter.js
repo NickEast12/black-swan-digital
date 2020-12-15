@@ -7,10 +7,16 @@ const BlogSorterStyles = styled.ul`
   display: flex;
   padding-bottom: 1rem;
   flex-wrap: wrap;
+  @supports (gap: 10px) {
+    gap: 10px;
+  }
   /* @supports (gap: 10px) {
     gap: 10px;
-  } */
-  grid-gap: 10px;
+  }
+  grid-gap: 10px; */
+  & > * {
+    margin: 2px;
+  }
   li {
     background: var(--mainColour);
     border-radius: 4.5px;
