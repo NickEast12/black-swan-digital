@@ -7,11 +7,18 @@ import WaveCTA from '../components/pageComponents/wave-cta';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
 
 const ClientStyles = styled.div`
-  width: 100%;
-  .client__grid {
-    padding: 2rem 0;
-    width: 70%;
-    margin: 0 auto;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    .client__grid {
+      padding: 2rem 0;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .client__grid {
+      width: 60%;
+    }
   }
 `;
 const Clients = ({ data }) => {

@@ -34,8 +34,9 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1rem;
         margin: 0;
         padding: 0;
-        -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        
     }
     a[aria-current="page"] {
         color: var(--favColour);

@@ -9,11 +9,27 @@ import SingleProject from '../components/pageComponents/singleProject';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const WorkStyles = styled.div`
-  width: 100%;
-  padding-bottom: 2rem;
-  .work {
-    width: 80%;
-    margin: 0 auto;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    padding-bottom: 2rem;
+    .work__wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .work {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .work__wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    .work__wrapper {
+      width: 70%;
+    }
   }
 `;
 const Work = ({ data }) => {
@@ -23,11 +39,13 @@ const Work = ({ data }) => {
     <Layout>
       <PageHeader page="Work" pageTitle="A selection of our work" />
       <WorkStyles>
-        <ProjectSorter />
-        <div className="work">
-          {projects.map((project) => (
-            <SingleProject key={project.id} project={project} />
-          ))}
+        <div className="work__wrapper">
+          <ProjectSorter />
+          <div className="work">
+            {projects.map((project) => (
+              <SingleProject key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </WorkStyles>
       <PageBlogs indexBlogs={indexBlogs} />
