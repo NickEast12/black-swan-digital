@@ -14,100 +14,104 @@ const urlFor = (source) =>
   }).image(source);
 
 const BlogStyles = styled.div`
-  width: 100%;
-  padding-top: 4em;
-  .blog__header {
+  @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 2rem 0;
-    position: relative;
-    &::after {
+    padding-top: 4em;
+    .blog__header {
       width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      content: '';
-      background: var(--background);
-      z-index: -1;
-      position: absolute;
-      opacity: 0.25;
-    }
-    &__inner {
-      width: 80%;
-      margin: 0 auto;
-      color: var(--white);
-      z-index: 5;
-      p {
-      }
-      h1 {
-        margin: 0.5rem 0;
-        font-size: 2.2rem;
-      }
-      &__author {
-        display: grid;
-        grid-template-columns: 60px 1fr;
-        margin-top: 1rem;
-        &__img {
-          .gatsby-image-wrapper {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-          }
-        }
-        &__content {
-          padding-top: 7.5px;
-          h6 {
-            color: var(--mainColour);
-            font-weight: 500;
-            font-size: 0.85rem;
-            letter-spacing: -0.1px;
-            text-transform: uppercase;
-          }
-        }
-      }
-    }
-    &__background {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      z-index: -1;
-      .gatsby-image-wrapper {
+      padding: 2rem 0;
+      position: relative;
+      &::after {
         width: 100%;
         height: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+        background: var(--background);
+        z-index: -1;
+        position: absolute;
+        opacity: 0.25;
+      }
+      &__inner {
+        width: 80%;
+        margin: 0 auto;
+        color: var(--white);
+        z-index: 5;
+        p {
+        }
+        h1 {
+          margin: 0.5rem 0;
+          font-size: 2.2rem;
+        }
+        &__author {
+          display: grid;
+          grid-template-columns: 60px 1fr;
+          margin-top: 1rem;
+          &__img {
+            .gatsby-image-wrapper {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+            }
+          }
+          &__content {
+            padding-top: 7.5px;
+            h6 {
+              color: var(--mainColour);
+              font-weight: 500;
+              font-size: 0.85rem;
+              letter-spacing: -0.1px;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      &__background {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        .gatsby-image-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .blog__body {
+      padding: 2rem 0;
+      &__inner {
+        width: 80%;
+        margin: 0 auto;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0.5rem 0;
+        }
+        p {
+          margin: 0.5rem 0;
+        }
+        a {
+          color: var(--mainColour);
+          font-weight: 800;
+        }
+        .image {
+          width: 65%;
+          margin: 1rem auto;
+          img {
+            width: 100%;
+            height: 10rem;
+            border-radius: 4.5px;
+          }
+        }
       }
     }
   }
-  .blog__body {
-    padding: 2rem 0;
-    &__inner {
-      width: 80%;
-      margin: 0 auto;
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 0.5rem 0;
-      }
-      p {
-        margin: 0.5rem 0;
-      }
-      a {
-        color: var(--mainColour);
-        font-weight: 800;
-      }
-      .image {
-        width: 100%;
-        margin: 1rem 0;
-        img {
-          width: 100%;
-          height: 10rem;
-          border-radius: 4.5px;
-        }
-      }
-    }
+  @media only screen and (min-width: 0px) {
   }
 `;
 const Blog = ({ data }) => {

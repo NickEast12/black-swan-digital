@@ -8,57 +8,73 @@ import SEOIcon from '../../svgs/responsive-design.svg';
 import MarketingIcon from '../../svgs/digital-marketing.svg';
 
 const AltServicesStyles = styled.div`
-  width: 100%;
-  padding: 2rem 0;
-  .offerings__wrapper {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    &__content {
-      span {
-        color: var(--mainColour);
-        font-weight: 700;
-        font-size: 1.1rem;
-        letter-spacing: -0.9px;
-        text-transform: uppercase;
-        padding-bottom: 0.25rem;
-        display: block;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    padding: 2rem 0;
+    .offerings__wrapper {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      &__content {
+        span {
+          color: var(--mainColour);
+          font-weight: 700;
+          font-size: 1.1rem;
+          letter-spacing: -0.9px;
+          text-transform: uppercase;
+          padding-bottom: 0.25rem;
+          display: block;
+        }
+        h2 {
+          font-size: 1.5rem;
+          margin: 0.5rem 0 1rem 0;
+        }
+        p {
+          margin-bottom: 1rem;
+        }
       }
-      h2 {
-        font-size: 1.5rem;
-        margin: 0.5rem 0 1rem 0;
-      }
-      p {
-        margin-bottom: 1rem;
-      }
-    }
-    &__boxes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
-      margin-top: 2rem;
-      section {
-        border-radius: 4.5px;
-        background: var(--white);
-        box-shadow: 0 0 47px -1px rgba(153, 153, 153, 0.2);
-        padding: 1.5rem;
-        a {
-          text-decoration: none;
-          svg {
-            width: 50px;
-          }
-          h6 {
-            font-size: 1rem;
-            margin-top: 0.5rem;
-            font-weight: 500;
+      &__boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin-top: 2rem;
+        section {
+          border-radius: 4.5px;
+          background: var(--white);
+          box-shadow: 0 0 47px -1px rgba(153, 153, 153, 0.2);
+          padding: 1.5rem;
+          a {
+            text-decoration: none;
+            svg {
+              width: 50px;
+            }
+            h6 {
+              font-size: 1rem;
+              margin-top: 0.5rem;
+              font-weight: 500;
+            }
           }
         }
       }
+      &__btn {
+        margin-top: 2rem;
+        button {
+          width: 125px;
+        }
+      }
     }
-    &__btn {
-      margin-top: 2rem;
-      button {
-        width: 125px;
+  }
+  @media only screen and (min-width: 375px) {
+    .offerings__wrapper {
+      &__content {
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      &__btn {
+        button {
+          font-size: 1rem;
+        }
       }
     }
   }

@@ -3,54 +3,84 @@ import styled from 'styled-components';
 import AnimateHeaderBackground from '../functional/animatedHeader';
 
 const WaveHeaderStyles = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  /* background-image: linear-gradient(
-    90deg,
-    var(--mainColour),
-    var(--mainColourLighter)
-  ); */
-
-  color: white;
-  .wave-background {
+  @media only screen and (min-width: 0px) {
     width: 100%;
-    width: 100%;
-    top: 0;
-  }
-  section {
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    z-index: 10;
+    height: 100vh;
     color: white;
-    .header__inner {
+    .wave-background {
+      width: 100%;
+      width: 100%;
+      top: 0;
+    }
+    section {
+      position: absolute;
       width: 80%;
-      padding-top: 5rem;
       margin: 0 auto;
-      h1 {
-        margin: 0;
-        font-size: 2rem;
-        letter-spacing: -2px;
+      padding: 2rem 0;
+      z-index: 10;
+      color: white;
+      .header__inner {
+        width: 80%;
+        padding-top: 5rem;
+        margin: 0 auto;
+        h1 {
+          margin: 0;
+          font-size: 2rem;
+          letter-spacing: -2px;
+        }
+        p {
+          margin: 0.5rem 0;
+        }
+        h6 {
+          margin-top: 2rem;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        .bold {
+          margin-top: 0.25rem;
+          display: block;
+          font-weight: 900;
+          color: var(--mainColour);
+        }
+        button {
+          width: 150px;
+          margin-top: 1rem;
+        }
       }
-      p {
-        margin: 0.5rem 0;
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    section {
+      width: 90%;
+      .header__inner {
+        h1 {
+          font-size: 2.4rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+        button {
+          span {
+            font-size: 1rem;
+          }
+        }
       }
-      h6 {
-        margin-top: 2rem;
-        font-size: 1rem;
-        font-weight: 500;
-      }
-      .bold {
-        margin-top: 0.25rem;
-        display: block;
-        font-weight: 900;
-        color: var(--mainColour);
-      }
-      button {
-        width: 150px;
-        margin-top: 1rem;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    section {
+      .header__inner {
+        h1 {
+          font-size: 2.6rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        button {
+          span {
+            font-size: 1rem;
+          }
+        }
       }
     }
   }

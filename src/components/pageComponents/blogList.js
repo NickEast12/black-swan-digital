@@ -6,55 +6,64 @@ import Img from 'gatsby-image';
 const BlogGridStyles = styled.div``;
 
 const SingleBlogStyles = styled.div`
-  a {
-    text-decoration: none;
-    text-align: left;
-  }
-  border-radius: 4.5px;
-  margin: 2rem 0;
-  section {
-    .gatsby-image-wrapper {
-      height: 10rem;
-      border-radius: 4.5px;
-    }
-  }
-  aside {
-    padding-top: 1.25rem;
-    h6 {
-      color: var(--mainColour);
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: -0.1px;
-      text-transform: uppercase;
-    }
-    h5 {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-      color: var(--background);
-    }
-    p {
-      color: var(--background);
-      margin-bottom: 0.5rem;
-    }
+  @media only screen and (min-width: 0px) {
     a {
       text-decoration: none;
-      color: var(--mainColour);
-      font-weight: 900;
+      text-align: left;
     }
-  }
-  .author {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    border-radius: 4.5px;
+    margin: 2rem 0;
     section {
       .gatsby-image-wrapper {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        height: 10rem;
+        border-radius: 4.5px;
       }
     }
     aside {
-      padding-top: 6.5px;
+      padding-top: 1.25rem;
+      h6 {
+        color: var(--mainColour);
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: -0.1px;
+        text-transform: uppercase;
+      }
+      h5 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: var(--background);
+      }
+      p {
+        color: var(--background);
+        margin-bottom: 0.5rem;
+      }
+      a {
+        text-decoration: none;
+        color: var(--mainColour);
+        font-weight: 900;
+      }
+    }
+    .author {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      section {
+        .gatsby-image-wrapper {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+        }
+      }
+      aside {
+        padding-top: 6.5px;
+      }
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    section {
+      .gatsby-image-wrapper {
+        height: 12.5rem;
+      }
     }
   }
 `;

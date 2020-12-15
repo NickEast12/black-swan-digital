@@ -83,7 +83,7 @@ const PageBlogsStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     .page__blogs {
-      width: 70%;
+      width: 80%;
     }
   }
 `;

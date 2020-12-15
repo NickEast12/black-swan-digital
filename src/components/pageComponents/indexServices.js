@@ -8,26 +8,33 @@ import DigitalMarketing from '../../svgs/digital-marketing.svg';
 import Arrow from '../../svgs/right-arrow.svg';
 
 const IndexServicesStyles = styled.div`
-  width: 100%;
-  padding: 2rem 0;
-  .home__services {
-    width: 80%;
-    margin: 0 auto;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    padding: 2rem 0;
+    .home__services {
+      width: 80%;
+      margin: 0 auto;
 
-    h2 {
-      text-align: center;
-      color: var(--mainColour);
-      color: var(--mainColour);
-      font-weight: 500;
-      font-size: 1.2rem;
-      letter-spacing: -0.1px;
-      text-transform: uppercase;
-      margin: 1rem 0 0.5rem 0;
+      h2 {
+        text-align: center;
+        color: var(--mainColour);
+        color: var(--mainColour);
+        font-weight: 500;
+        font-size: 1.2rem;
+        letter-spacing: -0.1px;
+        text-transform: uppercase;
+        margin: 1rem 0 0.5rem 0;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 5rem;
+        font-size: 1.4rem;
+      }
     }
-    h3 {
-      text-align: center;
-      margin-bottom: 5rem;
-      font-size: 1.4rem;
+  }
+  @media only screen and (min-width: 375px) {
+    .home__services {
+      width: 70%;
     }
   }
 `;

@@ -20,7 +20,7 @@ const BlogStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     .blogs {
-      width: 70%;
+      width: 80%;
     }
   }
 `;
