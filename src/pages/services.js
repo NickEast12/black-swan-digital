@@ -22,7 +22,7 @@ const Services = ({ data }) => {
       <PageProjects
         projects={projects}
         title="See for yourself."
-        description="A selection of our most recent projects."
+        description="A selection of our most recent projects"
       />
       <WaveCTA />
     </Layout>
@@ -37,7 +37,7 @@ const ServicesHeaderStyles = styled.div`
 
   .services__header {
     width: 90%;
-    margin: 2rem auto;
+    margin: 0.5rem auto;
     &__img {
       width: 80%;
 
@@ -174,8 +174,13 @@ const ServicesBodyStyles = styled.div`
           list-style: none;
           display: flex;
           flex-wrap: wrap;
-          gap: 0.5rem;
+          /* @supports (gap: 5px) {
+            gap: 5px;
+          } */
           padding: 0.5rem 0;
+          & > * {
+            margin: 0 5px 5px 0;
+          }
           li {
             background: linear-gradient(
               to right,

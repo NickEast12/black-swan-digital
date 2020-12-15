@@ -11,12 +11,16 @@ const ProjectSorterStyles = styled.div`
     list-style: none;
     display: flex;
     justify-content: space-around;
-    gap: 10px;
+    @supports (gap: 10px) {
+      gap: 10px;
+    }
+    & > * + * {
+      margin-left: 5px;
+    }
     li {
       font-size: 1.2rem;
       flex-grow: 2;
-
-      background: var(--background);
+      background: var(--mainColour);
       border-radius: 4.5px;
       padding: 0.25rem 0;
       color: var(--white);

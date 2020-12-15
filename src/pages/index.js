@@ -9,6 +9,7 @@ import IndexAboutUs from '../components/pageComponents/indexAboutUs';
 import IndexServices from '../components/pageComponents/indexServices';
 import IndexProjects from '../components/pageComponents/indexProjects';
 import WaveHeader from '../components/pageComponents/waveHeader';
+import AltServices from '../components/pageComponents/altServices';
 
 const index = ({ data }) => {
   const indexBlogs = data.indexBlogs.nodes;
@@ -17,6 +18,7 @@ const index = ({ data }) => {
     <Layout>
       <div>
         <WaveHeader />
+        <AltServices />
         <IndexServices />
         <IndexAboutUs />
         <IndexProjects indexProject={indexProject} />

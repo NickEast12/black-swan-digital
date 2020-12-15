@@ -48,6 +48,7 @@ const FooterStyles = styled.footer`
         justify-content: space-between;
         svg {
           fill: var(--offWhite);
+          width: 18.5px;
         }
       }
     }
