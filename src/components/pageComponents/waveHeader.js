@@ -48,6 +48,10 @@ const WaveHeaderStyles = styled.div`
         font-weight: 900;
         color: var(--mainColour);
       }
+      button {
+        width: 150px;
+        margin-top: 1rem;
+      }
     }
   }
 `;
@@ -64,6 +68,9 @@ const WaveHeader = () => {
           </p>
           <h6>Want to get in touch?</h6>
           <span className="bold">Let's talk</span>
+          <button type="button">
+            <span>Find out more</span>
+          </button>
         </div>
       </section>
       <AnimateHeaderBackground />

@@ -14,7 +14,7 @@ const PageProjectsStyles = styled.div`
       letter-spacing: -0.1px;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
     > p {
       text-align: center;
