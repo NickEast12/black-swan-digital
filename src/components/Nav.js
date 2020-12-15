@@ -72,7 +72,8 @@ const HamburgerStyles = styled.div`
   width: 50px;
   height: 36px;
   outline: none !important;
-  padding: 0.75rem;
+  padding: 0.6rem 0.75rem;
+
   > div {
     width: 20px;
     height: 2px;

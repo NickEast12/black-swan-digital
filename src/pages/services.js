@@ -21,7 +21,7 @@ const Services = ({ data }) => {
       <ServicesBody />
       <PageProjects
         projects={projects}
-        title="See for yourself."
+        title="See for yourself"
         description="A selection of our most recent projects"
       />
       <WaveCTA />
@@ -32,34 +32,41 @@ const Services = ({ data }) => {
 export default Services;
 
 const ServicesHeaderStyles = styled.div`
-  width: 100%;
-  padding: 4rem 0 2rem 0;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+    .services__header {
+      width: 90%;
+      margin: 0.5rem auto;
+      &__img {
+        width: 80%;
 
-  .services__header {
-    width: 90%;
-    margin: 0.5rem auto;
-    &__img {
-      width: 80%;
-
-      margin: 0 auto;
-      svg {
-        width: 100%;
+        margin: 0 auto;
+        svg {
+          width: 100%;
+        }
+      }
+      &__content {
+        margin: 1.5rem auto;
+        width: 90%;
+        h1 {
+          margin: 0;
+          text-transform: uppercase;
+          color: var(--mainColour);
+          font-size: 1.2rem;
+          letter-spacing: -0.1px;
+        }
+        h2 {
+          font-size: 1.6rem;
+          margin: 0.5rem 0;
+        }
       }
     }
-    &__content {
-      margin: 1.5rem auto;
-      width: 90%;
-      h1 {
-        margin: 0;
-        text-transform: uppercase;
-        color: var(--mainColour);
-        font-size: 1.2rem;
-        letter-spacing: -0.1px;
-      }
-      h2 {
-        font-size: 1.6rem;
-        margin: 0.5rem 0;
-      }
+  }
+  @media only screen and (min-width: 375px) {
+    height: 100vh;
+    .services__header {
+      padding-top: 2rem;
     }
   }
 `;
@@ -82,40 +89,41 @@ const ServicesHeader = () => (
   </ServicesHeaderStyles>
 );
 const ServicesIntroStyles = styled.div`
-  width: 100%;
-  background: var(--background);
-  color: var(--white);
-  padding: 2rem 0;
-  .intro {
-    width: 90%;
-    margin: 0 auto;
-    &__box {
-      text-align: center;
-      margin: 1rem auto;
-      padding: 1rem 0;
-      width: 80%;
-      svg {
-        fill: var(--white);
-        width: 4rem;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    background: rgb(245, 245, 245);
+    color: var(--background);
+    padding: 2rem 0;
+    .intro {
+      width: 90%;
+      margin: 0 auto;
+      &__box {
+        text-align: center;
+        margin: 1rem auto;
+        padding: 1rem 0;
+        width: 80%;
+        svg {
+          fill: var(--background);
+          width: 4rem;
+        }
+        h4 {
+          margin: 0.5rem 0;
+          color: var(--background);
+          font-size: 1.2rem;
+        }
       }
-      h4 {
-        margin: 0.5rem 0;
-        color: var(--mainColour);
-        font-size: 1.2rem;
-      }
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 `;
 const ServicesIntro = () => (
   <ServicesIntroStyles>
     <div className="intro">
-      <div className="intro__box">
-        <UXDesignIcon />
-        <h4>UI/UX Design</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
-        </p>
-      </div>
       <div className="intro__box">
         <WebDevelopmentIcon />
         <h4>Web Development</h4>
@@ -124,8 +132,15 @@ const ServicesIntro = () => (
         </p>
       </div>
       <div className="intro__box">
+        <UXDesignIcon />
+        <h4>Branding &amp; Design</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
+        </p>
+      </div>
+      <div className="intro__box">
         <ResponsiveDesignIcon />
-        <h4>Responsive Design</h4>
+        <h4>SEO</h4>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
         </p>
@@ -214,7 +229,7 @@ const ServicesBody = () => (
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
         <aside>
-          <h4>UI/UX Design</h4>
+          <h4>Web Development</h4>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
             officia ut totam enim, blanditiis, ratione nam deleniti eius impedit
@@ -234,7 +249,7 @@ const ServicesBody = () => (
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
         <aside>
-          <h4>Web Development</h4>
+          <h4>Branding &amp; Design</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto sunt
             ducimus fugit assumenda labore cum!
@@ -252,7 +267,7 @@ const ServicesBody = () => (
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
         <aside>
-          <h4>Responsive Design</h4>
+          <h4>SEO</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto sunt
             ducimus fugit assumenda labore cum!

@@ -84,6 +84,15 @@ const PageBlogsStyles = styled.div`
   @media only screen and (min-width: 375px) {
     .page__blogs {
       width: 80%;
+      &__wrapper {
+        &__box {
+          > section {
+            .gatsby-image-wrapper {
+              height: 12rem;
+            }
+          }
+        }
+      }
     }
   }
 `;

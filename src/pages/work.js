@@ -28,7 +28,7 @@ const WorkStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     .work__wrapper {
-      width: 70%;
+      width: 80%;
     }
   }
 `;
