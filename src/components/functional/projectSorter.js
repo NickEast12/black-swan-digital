@@ -22,7 +22,7 @@ const ProjectSorterStyles = styled.div`
       flex-grow: 2;
       background: var(--mainColour);
       border-radius: 4.5px;
-      padding: 0.25rem 0;
+      padding: 0.5rem 0;
       color: var(--white);
       a {
         color: inherit;

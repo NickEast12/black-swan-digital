@@ -8,12 +8,19 @@ import PageHeader from '../components/pageComponents/pageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const BlogStyles = styled.div`
-  width: 100%;
-  .blogs {
-    width: 80%;
-    margin: 0 auto;
-    &__wrapper {
-      text-align: center;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    .blogs {
+      width: 80%;
+      margin: 0 auto;
+      &__wrapper {
+        text-align: center;
+      }
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    .blogs {
+      width: 70%;
     }
   }
 `;
