@@ -41,7 +41,10 @@ const AltPageHeaderStyles = styled.div`
     height: 60vh;
   }
   @media only screen and (min-width: 414px) {
-    height: 50vh;
+    height: 55vh;
+    section {
+      padding-top: 1.2rem;
+    }
   }
 `;
 const AltPageHeader = ({ title, description }) => {
