@@ -7,6 +7,7 @@ const WaveCTAStyles = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
   background-color: var(--background);
   /* background-image: linear-gradient(
     90deg,
@@ -18,8 +19,9 @@ const WaveCTAStyles = styled.section`
   .wave {
     position: absolute;
     top: -1px;
-    left: 0;
+    left: -1px;
     right: 0;
+    width: 101%;
     height: 10vw;
     background-image: url(${WaveSVG});
     background-repeat: no-repeat;
