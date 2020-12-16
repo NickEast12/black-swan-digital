@@ -26,7 +26,7 @@ const WaveHeaderStyles = styled.div`
         h1 {
           margin: 0;
           font-size: 2rem;
-          letter-spacing: -2px;
+          letter-spacing: -2.5px;
         }
         p {
           margin: 0.5rem 0;
