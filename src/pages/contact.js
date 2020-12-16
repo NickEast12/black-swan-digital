@@ -64,15 +64,15 @@ const ContactStyles = styled.div`
               width: 100%;
               margin: 0.5rem 0;
               border-radius: 2.5px;
-              border: 1px solid #e8e9ec;
+              border: 2px solid #e8e9ec;
               padding: 0.5rem;
             }
             textarea {
               margin: 0.5rem 0;
               width: 100%;
-              height: 5rem;
+              height: 10rem;
               resize: vertical;
-              border: 1px solid #e8e9ec;
+              border: 2px solid #e8e9ec;
               border-radius: 4.5px;
               padding: 0.5rem;
             }
@@ -119,9 +119,14 @@ const ContactStyles = styled.div`
       }
       .contact__body {
         &__form {
-          margin-top: -22rem;
+          margin-top: -24rem;
+          form {
+            .btn {
+              width: 50%;
+            }
+          }
           p {
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
         }
       }
