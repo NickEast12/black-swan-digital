@@ -29,6 +29,10 @@ const Typography = createGlobalStyle`
     a[-webkit-any-link] {
         text-decoration: none;
     }
+    body * {
+        -webkit-font-smoothing: subpixel-antialiased !important; 
+        text-rendering:optimizeLegibility !important;
+    }
     h1,h2,h3,h4,h5,h6 {
         font-family:  Rubik, AcuminTitle, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 600;
