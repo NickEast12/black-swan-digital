@@ -38,7 +38,7 @@ const Typography = createGlobalStyle`
         font-weight: 600;
         letter-spacing: -1px;
     }
-    p, li, span, button, a, input, textarea  {
+    p, li, span, button, a, input, textarea, label  {
         font-family: Karla, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 400;
     }

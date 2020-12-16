@@ -1,124 +1,175 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import AnimateHeaderBackground from '../components/functional/animatedHeader';
 import Layout from '../components/Layout';
-import AltPageHeader from '../components/pageComponents/altPageHeader';
 
 const ContactStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 1rem 0;
-    .contact {
-      width: 80%;
-      margin: 0 auto;
-      h3 {
-        text-align: center;
-        padding: 2rem 0;
-        font-weight: 400;
-        a {
-          color: var(--mainColour);
-        }
-      }
-      p {
-        text-align: center;
-        font-size: 1.1rem;
-        margin: 3rem 0;
-
-        a {
-          color: var(--mainColour);
-          cursor: pointer;
-          text-decoration: none;
-        }
-      }
-      &__form {
-        width: 100%;
-        margin-top: 1rem;
-        &__left {
-          textarea {
-            background: var(--background);
-            color: var(--white);
-            width: 100%;
-            height: 10rem;
-            border: none;
-            resize: none;
-            border-radius: 4.5px;
-            padding: 1rem;
+    .contact__wrapper {
+      .contact__header {
+        position: relative;
+        height: 90vh;
+        &__content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          &__inner {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 7.5rem;
+            text-align: center;
+            span {
+              color: var(--mainColour);
+              text-transform: uppercase;
+              font-size: 1rem;
+            }
+            h1 {
+              margin: 0.25rem 0 0 0;
+              color: var(--white);
+              font-size: 2rem;
+            }
           }
         }
-        &__right {
-          input {
-            width: 100%;
-            background: var(--background);
+      }
+      .contact__body {
+        padding: 1rem 0;
+        background: rgb(245, 245, 245);
+        &__form {
+          width: 80%;
+          position: relative;
+          z-index: 10;
+          margin: -17.5rem auto 0 auto;
+          p {
+            text-align: center;
             color: var(--white);
-            border: solid 1px var(--background);
-            border-radius: 4.5px;
-            padding: 1rem;
-            margin: 0.3rem 0;
+            a {
+              color: var(--mainColour);
+              text-decoration: underline;
+            }
           }
-          &__btn {
-            width: 100%;
-            margin-top: 1rem;
-            button {
+          form {
+            margin: 1.5rem 0;
+            padding: 2.5rem 2rem;
+            background: var(--white);
+            border-radius: 4.5px;
+            label {
+              letter-spacing: -0.5px;
+              font-size: 0.9rem;
+              display: block;
+              text-transform: uppercase;
+            }
+            input {
               width: 100%;
-              padding: 1rem;
-              span {
-                font-size: 1rem;
+              margin: 0.5rem 0;
+              border-radius: 2.5px;
+              border: 1px solid #e8e9ec;
+              padding: 0.5rem;
+            }
+            textarea {
+              margin: 0.5rem 0;
+              width: 100%;
+              height: 5rem;
+              resize: vertical;
+              border: 1px solid #e8e9ec;
+              border-radius: 4.5px;
+              padding: 0.5rem;
+            }
+            .btn {
+              width: 70%;
+              margin-top: 1rem;
+              button {
+                width: 100%;
               }
             }
           }
+        }
+        .legal {
+          width: 80%;
+          margin: 2rem auto;
+          text-align: center;
+          a {
+            color: var(--mainColour);
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .contact__wrapper {
+      .contact__body {
+        &__form {
+          margin-top: -22rem;
         }
       }
     }
   }
   @media only screen and (min-width: 414px) {
-    .contact {
-      width: 75%;
+    .contact__wrapper {
+      .contact__header {
+        &__content {
+          span {
+            font-size: 1rem;
+          }
+          h1 {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .contact__body {
+        &__form {
+          margin-top: -22rem;
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
     }
   }
 `;
-const contact = () => {
-  const i = 'stay';
-  return (
-    <Layout>
-      <AltPageHeader
-        title="Contact"
-        description="Interested in working with us?"
-      />
-      <ContactStyles>
-        <div className="contact">
-          <h3>
-            Simply fill out this form and we will be in touch, feel like sending
-            us an <a href="mailto:contact@nick-east.com"> email instead?</a>
-          </h3>
-          <div className="contact__form">
-            <form action="">
-              <div className="contact__form__left">
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="About your project?"
-                />
-              </div>
-              <div className="contact__form__right">
-                <input type="text" name="name" placeholder="Your name" />
-                <input type="email" name="email" placeholder="Your email" />
-                <input type="text" name="company" placeholder="Your company" />
-                <div className="contact__form__right__btn">
-                  <button type="submit">
-                    <span>Send</span>
-                  </button>
-                </div>
-              </div>
-            </form>
-            <p>
-              By contacting us you are agreeing to our{' '}
-              <Link to="/privacy-policy"> Privacy Policy</Link>
-            </p>
+const contact = () => (
+  <Layout>
+    <ContactStyles>
+      <div className="contact__wrapper">
+        <div className="contact__header">
+          <AnimateHeaderBackground />
+          <div className="contact__header__content">
+            <div className="contact__header__content__inner">
+              <span>Contact</span>
+              <h1>Interested in working with us?</h1>
+            </div>
           </div>
         </div>
-      </ContactStyles>
-    </Layout>
-  );
-};
+        <div className="contact__body">
+          <div className="contact__body__form">
+            <p>
+              Simply fill out this form, or <a> send us an email.</a>
+            </p>
+            <form action="" className="form">
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" />
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" />
+              <label htmlFor="company">Company</label>
+              <input type="text" name="company" />
+              <label htmlFor="message">Message</label>
+              <textarea name="message" id="message" />
+              <div className="btn">
+                <button type="submit">
+                  <span>Submit</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <p className="legal">
+            By contacting us you are agreeing to our{' '}
+            <Link to="/privacy-policy"> Privacy Policy</Link>
+          </p>
+        </div>
+      </div>
+    </ContactStyles>
+  </Layout>
+);
 
 export default contact;
