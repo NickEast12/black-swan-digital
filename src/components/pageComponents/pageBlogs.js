@@ -36,11 +36,11 @@ const PageBlogsStyles = styled.div`
           }
           > aside {
             padding-top: 1.25rem;
-            h6 {
+            span {
               color: var(--mainColour);
-              font-weight: 700;
-              font-size: 0.85rem;
-              letter-spacing: -0.1px;
+              font-weight: 300;
+              font-size: 1rem;
+              letter-spacing: -1px;
               text-transform: uppercase;
             }
             h5 {
@@ -71,6 +71,9 @@ const PageBlogsStyles = styled.div`
             }
             > aside {
               padding-top: 6.5px;
+              h6 {
+                font-weight: 300;
+              }
             }
           }
         }
@@ -111,7 +114,7 @@ const PageBlogs = ({ indexBlogs }) => (
               </section>
               <aside>
                 {blog.categories.map((cat) => (
-                  <h6 key={cat._id}>{cat.title}</h6>
+                  <span key={cat._id}>{cat.title}</span>
                 ))}
                 <h5>{blog.title}</h5>
                 <p>{blog.excerpt}</p>
@@ -120,7 +123,7 @@ const PageBlogs = ({ indexBlogs }) => (
                     <Img fluid={blog.author.image.asset.fluid} />
                   </section>
                   <aside>
-                    <h6>{blog.author.name}</h6>
+                    <span>{blog.author.name}</span>
                     <p>{blog._createdAt}</p>
                   </aside>
                 </div>
