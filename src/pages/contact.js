@@ -87,10 +87,8 @@ const contact = () => {
       <ContactStyles>
         <div className="contact">
           <h3>
-            Simply fill out this form and we will be in touch,{' '}
-            <a href="mailto:contact@nick-east.com">
-              feel like sending us an email instead?
-            </a>
+            Simply fill out this form and we will be in touch, feel like sending
+            us an <a href="mailto:contact@nick-east.com"> email instead?</a>
           </h3>
           <div className="contact__form">
             <form action="">

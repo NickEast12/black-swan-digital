@@ -69,7 +69,8 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         span {
             font-weight: 600;
-            font-size: .89rem;
+            font-size: .95rem;
+            letter-spacing: -1px;
         }
     }
     .button--alt {

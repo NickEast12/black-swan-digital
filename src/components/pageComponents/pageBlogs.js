@@ -10,10 +10,11 @@ const PageBlogsStyles = styled.div`
     .page__blogs {
       width: 80%;
       margin: 0 auto;
-      h2 {
+      > span {
+        display: block;
         font-size: 1.2rem;
       }
-      h3 {
+      h4 {
         text-align: center;
         text-transform: capitalize;
         font-size: 1.4rem;
@@ -88,7 +89,7 @@ const PageBlogsStyles = styled.div`
         &__box {
           > section {
             .gatsby-image-wrapper {
-              height: 12rem;
+              height: 12.5rem;
             }
           }
         }
@@ -99,8 +100,8 @@ const PageBlogsStyles = styled.div`
 const PageBlogs = ({ indexBlogs }) => (
   <PageBlogsStyles>
     <div className="page__blogs">
-      <h2 className="title--style">Recent Articles</h2>
-      <h3>Latest news, data and tips from our team</h3>
+      <span className="title--style">Recent Articles</span>
+      <h4>Latest news, data and tips from our team</h4>
       <div className="page__blogs__wrapper">
         {indexBlogs.map((blog) => (
           <Link key={blog.title} to={`/blogs/${blog.slug.current}`}>

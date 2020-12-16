@@ -16,17 +16,18 @@ const IndexAboutUsStyles = styled.div`
     }
     .about__content {
       width: 80%;
-      margin: 0 auto;
-      h3 {
+      margin: 1.5rem auto 0 auto;
+      > span {
         color: var(--mainColour);
         font-weight: 500;
-        font-size: 0.85rem;
+        font-size: 1rem;
         letter-spacing: -0.1px;
         text-transform: uppercase;
         margin: 1rem 0 0.5rem 0;
+        display: block;
       }
 
-      h2 {
+      h4 {
         font-size: 1.6rem;
       }
       p {
@@ -47,8 +48,8 @@ const IndexAboutUs = () => (
         <Image filename="about-us.jpg" alt="The team at a meeting" />
       </div>
       <div className="about__content">
-        <h3>About us</h3>
-        <h2>We are here to help you with</h2>
+        <span>About us</span>
+        <h4>We are here to help you with</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
           officia explicabo numquam veniam accusamus quibusdam. Lorem ipsum

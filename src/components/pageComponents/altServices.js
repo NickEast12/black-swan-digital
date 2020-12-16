@@ -48,7 +48,7 @@ const AltServicesStyles = styled.div`
             svg {
               width: 50px;
             }
-            h6 {
+            h3 {
               font-size: 1rem;
               margin-top: 0.5rem;
               font-weight: 500;
@@ -66,6 +66,7 @@ const AltServicesStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     .offerings__wrapper {
+      padding-top: 1rem;
       &__content {
         span {
           font-size: 1.2rem;
@@ -95,25 +96,25 @@ const AltServices = () => (
         <section>
           <Link to="/">
             <WebDevIcon />
-            <h6>Web Development</h6>
+            <h3>Web Development</h3>
           </Link>
         </section>
         <section>
           <Link to="/">
             <DesignIcon />
-            <h6>Branding &amp; Design</h6>
+            <h3>Branding &amp; Design</h3>
           </Link>
         </section>
         <section>
           <Link to="/">
             <SEOIcon />
-            <h6>SEO</h6>
+            <h3>SEO</h3>
           </Link>
         </section>
         <section>
           <Link to="/">
             <MarketingIcon />
-            <h6>Digital Marketing</h6>
+            <h3>Digital Marketing</h3>
           </Link>
         </section>
       </div>
