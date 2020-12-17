@@ -33,7 +33,7 @@ const Clients = ({ data }) => {
       <ClientStyles>
         <div className="client__grid">
           {clients.map((client) => (
-            <SingleClient client={client} />
+            <SingleClient key={client.id} client={client} />
           ))}
         </div>
       </ClientStyles>

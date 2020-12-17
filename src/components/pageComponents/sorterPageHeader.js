@@ -22,7 +22,7 @@ const SorterPageHeaderStyles = styled.div`
         margin: 0 auto;
         text-align: center;
         padding: 7rem 0 3.5rem 0;
-        h2 {
+        span {
           color: var(--mainColour);
           margin: 0.5rem 0;
           font-size: 1rem;
@@ -42,6 +42,17 @@ const SorterPageHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     height: 80vh;
+    section {
+      padding-top: 1rem;
+      .sorter__header__inner {
+        span {
+          font-size: 1.2rem;
+        }
+        h1 {
+          font-size: 2.25rem;
+        }
+      }
+    }
   }
   @media only screen and (min-width: 414px) {
     height: 70vh;
@@ -56,7 +67,7 @@ const SorterPageHeader = ({ title, description, children }) => {
     <SorterPageHeaderStyles>
       <section>
         <div className="sorter__header__inner">
-          <h2>{title}</h2>
+          <span>{title}</span>
           <h1>{description}</h1>
         </div>
         <div className="sorter__header">{children}</div>

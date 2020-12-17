@@ -81,6 +81,9 @@ const ContactStyles = styled.div`
               margin-top: 1rem;
               button {
                 width: 100%;
+                span {
+                  text-transform: uppercase;
+                }
               }
             }
           }
@@ -105,12 +108,13 @@ const ContactStyles = styled.div`
       }
     }
   }
+
   @media only screen and (min-width: 414px) {
     .contact__wrapper {
       .contact__header {
         &__content {
           span {
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
           h1 {
             font-size: 2.5rem;
@@ -121,9 +125,6 @@ const ContactStyles = styled.div`
         &__form {
           margin-top: -24rem;
           form {
-            .btn {
-              width: 50%;
-            }
           }
           p {
             font-size: 1.2rem;

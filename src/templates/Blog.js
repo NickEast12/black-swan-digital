@@ -16,10 +16,10 @@ const urlFor = (source) =>
 const BlogStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding-top: 4em;
+
     .blog__header {
       width: 100%;
-      padding: 2rem 0;
+      padding: 5rem 0 2rem 0;
       position: relative;
       &::after {
         width: 100%;
