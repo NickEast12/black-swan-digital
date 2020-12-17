@@ -44,7 +44,7 @@ const ServicesHeaderStyles = styled.div`
       z-index: 5;
     }
     .services__header {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       color: var(--white);
       padding-top: 5rem;
@@ -58,15 +58,15 @@ const ServicesHeaderStyles = styled.div`
       &__content {
         margin: 1.5rem auto;
         width: 90%;
-        h1 {
+        span {
           margin: 0;
           text-transform: uppercase;
           color: var(--mainColour);
           font-size: 1.2rem;
           letter-spacing: -0.1px;
         }
-        h2 {
-          font-size: 1.6rem;
+        h1 {
+          font-size: 1.8rem;
           margin: 0.5rem 0;
         }
       }
@@ -86,12 +86,11 @@ const ServicesHeader = () => (
           <HeaderIcon />
         </div>
         <div className="services__header__content">
-          <h1>Services</h1>
-          <h2>Our services include lots of good stuff</h2>
+          <span>Services</span>
+          <h1>Our services include lots of good stuff</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Necessitatibus vitae tenetur neque dolor libero iste consequatur
-            consectetur itaque, animi fugit?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt
+            natus ipsa illum recusandae totam!
           </p>
         </div>
       </div>

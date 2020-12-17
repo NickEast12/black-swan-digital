@@ -7,6 +7,7 @@ const WaveHeaderStyles = styled.div`
     width: 100%;
     height: 100vh;
     color: white;
+    background: var(--background);
     .wave-background {
       width: 100%;
       width: 100%;

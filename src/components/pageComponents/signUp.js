@@ -15,8 +15,11 @@ const SignUpStyles = styled.div`
         &__box {
           input {
             background: var(--background);
-            border-right: none;
+            border: none;
             color: var(--mainColour);
+          }
+          button {
+            border: none;
           }
         }
       }
@@ -47,6 +50,7 @@ const SignUpStyles = styled.div`
           }
           button {
             width: 100%;
+            border: none;
             margin-top: 1rem;
             color: var(--black);
           }
