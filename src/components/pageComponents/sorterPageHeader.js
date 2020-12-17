@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimateHeaderBackground from '../functional/animatedHeader';
+import BlogSorter from '../functional/blogSorter';
 
-const AltPageHeaderStyles = styled.div`
+const SorterPageHeaderStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
     background: var(--background);
     margin-top: -2rem;
-    height: 70vh;
+    height: 90vh;
     section {
       width: 100%;
       height: 100%;
@@ -16,11 +17,11 @@ const AltPageHeaderStyles = styled.div`
       position: absolute;
       z-index: 5;
       color: var(--white);
-      .alt__header__inner {
+      .sorter__header__inner {
         width: 80%;
         margin: 0 auto;
         text-align: center;
-        padding: 7rem 0;
+        padding: 7rem 0 3.5rem 0;
         h2 {
           color: var(--mainColour);
           margin: 0.5rem 0;
@@ -33,31 +34,36 @@ const AltPageHeaderStyles = styled.div`
           margin: 0.5rem 0;
         }
       }
+      .sorter__header {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 60vh;
+    height: 80vh;
   }
   @media only screen and (min-width: 414px) {
-    height: 55vh;
+    height: 70vh;
     section {
       padding-top: 1.2rem;
     }
   }
 `;
-const AltPageHeader = ({ title, description }) => {
+const SorterPageHeader = ({ title, description, children }) => {
   const i = 'stay';
   return (
-    <AltPageHeaderStyles>
+    <SorterPageHeaderStyles>
       <section>
-        <div className="alt__header__inner">
+        <div className="sorter__header__inner">
           <h2>{title}</h2>
           <h1>{description}</h1>
         </div>
+        <div className="sorter__header">{children}</div>
       </section>
       <AnimateHeaderBackground />
-    </AltPageHeaderStyles>
+    </SorterPageHeaderStyles>
   );
 };
 
-export default AltPageHeader;
+export default SorterPageHeader;

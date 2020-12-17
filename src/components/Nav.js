@@ -115,110 +115,131 @@ const MobileMenuStyles = styled.div`
       z-index: 50;
     }
   }
-  width: 100%;
-  height: 100vh;
-  background: ${({ open }) => (open ? 'var(--background)' : 'var(--white)')};
-  visibility: ${({ open }) => (open ? 'visiable' : 'hidden')};
-  opacity: ${({ open }) => (open ? '1' : '0')};
-  display: ${({ open }) => (open ? 'block' : 'none')};
-  position: fixed;
-  top: 0;
-  z-index: 99;
-  transition: background 0.3s, opacity 0.1s;
-
-  > div {
-    width: 80%;
-    padding-top: 7.5rem;
-    margin: 0 auto;
-    text-align: center;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    height: 100vh;
+    background: ${({ open }) => (open ? 'var(--background)' : 'var(--white)')};
+    visibility: ${({ open }) => (open ? 'visiable' : 'hidden')};
+    opacity: ${({ open }) => (open ? '1' : '0')};
     display: ${({ open }) => (open ? 'block' : 'none')};
-    ul {
-      list-style: none;
-      a[aria-current='page'] {
-        li {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transition: background 0.3s, opacity 0.1s;
+
+    > div {
+      width: 80%;
+      padding-top: 7.5rem;
+      margin: 0 auto;
+      text-align: center;
+      display: ${({ open }) => (open ? 'block' : 'none')};
+      ul {
+        list-style: none;
+        a[aria-current='page'] {
+          li {
+            color: var(--white);
+          }
+        }
+        a {
+          text-decoration: none;
           color: var(--white);
+          &:nth-child(1) {
+            li {
+              animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.5s
+                forwards;
+            }
+          }
+          &:nth-child(2) {
+            li {
+              animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.7s
+                forwards;
+            }
+          }
+          &:nth-child(3) {
+            li {
+              animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.9s
+                forwards;
+            }
+          }
+          &:nth-child(4) {
+            li {
+              animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 1.1s
+                forwards;
+            }
+          }
+          &:nth-child(5) {
+            li {
+              animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 1.3s
+                forwards;
+            }
+          }
+          li {
+            padding-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #a9a7b1;
+            opacity: 0;
+            z-index: -1;
+            transform: translateY(15px);
+          }
         }
       }
-      a {
-        text-decoration: none;
-        color: var(--white);
-        &:nth-child(1) {
-          li {
-            animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.5s
-              forwards;
-          }
-        }
-        &:nth-child(2) {
-          li {
-            animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.7s
-              forwards;
-          }
-        }
-        &:nth-child(3) {
-          li {
-            animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 0.9s
-              forwards;
-          }
-        }
-        &:nth-child(4) {
-          li {
-            animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 1.1s
-              forwards;
-          }
-        }
-        &:nth-child(5) {
-          li {
-            animation: ${({ open }) => (open ? 'liAnimation' : '')} 0.65s 1.3s
-              forwards;
-          }
-        }
-        li {
-          padding-bottom: 2rem;
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: #a9a7b1;
+    }
+    .icons {
+      > div {
+        width: 130px;
+        margin: 6rem auto 0 auto;
+        display: flex;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        a {
           opacity: 0;
-          z-index: -1;
-          transform: translateY(15px);
+          transform: translateY(40px);
+          &:nth-child(1) {
+            animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.6s
+              forwards;
+          }
+          &:nth-child(2) {
+            animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.8s
+              forwards;
+          }
+          &:nth-child(3) {
+            animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2s
+              forwards;
+          }
+          &:nth-child(4) {
+            animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2.2s
+              forwards;
+          }
+          svg {
+            fill: var(--offWhite);
+            transition: fill 0.3s ease;
+            &:hover {
+              fill: var(--mainColour);
+            }
+          }
         }
       }
     }
   }
-  .icons {
+  @media only screen and (min-width: 375px) {
     > div {
-      width: 130px;
-      margin: 6rem auto 0 auto;
-      display: flex;
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      a {
-        opacity: 0;
-        transform: translateY(40px);
-        &:nth-child(1) {
-          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.6s
-            forwards;
-        }
-        &:nth-child(2) {
-          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 1.8s
-            forwards;
-        }
-        &:nth-child(3) {
-          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2s
-            forwards;
-        }
-        &:nth-child(4) {
-          animation: ${({ open }) => (open ? 'iconAnimation' : '')} 0.65s 2.2s
-            forwards;
-        }
-        svg {
-          fill: var(--offWhite);
-          transition: fill 0.3s ease;
-          &:hover {
-            fill: var(--mainColour);
-          }
-        }
+      padding-top: 9rem;
+    }
+    .icons {
+      padding-top: 5rem;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    > div {
+      padding-top: 12rem;
+      ul a li {
+        font-size: 1.2rem;
       }
+    }
+    .icons {
+      padding-top: 5rem;
     }
   }
 `;

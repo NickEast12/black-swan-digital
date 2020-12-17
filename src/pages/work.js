@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import ProjectSorter from '../components/functional/projectSorter';
 import Layout from '../components/Layout';
 import PageBlogs from '../components/pageComponents/pageBlogs';
-import PageHeader from '../components/pageComponents/pageHeader';
 import SingleProject from '../components/pageComponents/singleProject';
+import SorterPageHeader from '../components/pageComponents/sorterPageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const WorkStyles = styled.div`
@@ -37,10 +37,14 @@ const Work = ({ data }) => {
   const indexBlogs = data.indexBlogs.nodes;
   return (
     <Layout>
-      <PageHeader page="Work" pageTitle="A selection of our work" />
+      <SorterPageHeader
+        title="Work"
+        description="A selection of our most recent work"
+      >
+        <ProjectSorter />
+      </SorterPageHeader>
       <WorkStyles>
         <div className="work__wrapper">
-          <ProjectSorter />
           <div className="work">
             {projects.map((project) => (
               <SingleProject key={project.id} project={project} />

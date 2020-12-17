@@ -18,7 +18,6 @@ const ProjectSorterStyles = styled.div`
       margin-left: 5px;
     }
     li {
-      font-size: 1.2rem;
       flex-grow: 2;
       background: var(--mainColour);
       border-radius: 4.5px;

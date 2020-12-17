@@ -34,8 +34,8 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1rem;
         margin: 0;
         padding: 0;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: subpixel-antialiased !important; 
+        text-rendering:optimizeLegibility !important;
         
     }
     a[aria-current="page"] {
@@ -101,8 +101,11 @@ const GlobalStyles = createGlobalStyle`
     .header.shadow {
         box-shadow: 0px 1px 10px hsla(0, 0%, 78%, 0.59);
         background: white;
+        @media only screen and (min-width: 768px) {
         li {
             color: black!important;
+        }
+
         }
        
 
@@ -113,15 +116,14 @@ const GlobalStyles = createGlobalStyle`
     .header.hidden {
         transform: translateY(-150%);
     }
-    
-
    .gatsby-image-wrapper img[src*=base64\\,] {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
     }
     ::placeholder {
-          color: white !important;
-        }
+        color: white !important;
+    }
+   
 `;
 
 export default GlobalStyles;

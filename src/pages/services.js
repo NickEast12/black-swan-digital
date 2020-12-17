@@ -11,6 +11,7 @@ import ResponsiveDesignIcon from '../svgs/responsive-design.svg';
 import DigitalMarketingIcon from '../svgs/digital-marketing.svg';
 import Image from '../components/functional/Image';
 import PageProjects from '../components/pageComponents/pageProjects';
+import AnimateHeaderBackground from '../components/functional/animatedHeader';
 
 const Services = ({ data }) => {
   const projects = data.projects.nodes;
@@ -34,13 +35,21 @@ export default Services;
 const ServicesHeaderStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 4rem 0 2rem 0;
+    position: relative;
+    height: 100vh;
+    .services-header-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
     .services__header {
-      width: 90%;
-      margin: 0.5rem auto;
+      width: 80%;
+      margin: 0 auto;
+      color: var(--white);
+      padding-top: 5rem;
       &__img {
-        width: 80%;
-
+        width: 75%;
         margin: 0 auto;
         svg {
           width: 100%;
@@ -64,28 +73,30 @@ const ServicesHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 100vh;
     .services__header {
-      padding-top: 2rem;
+      padding-top: 6rem;
     }
   }
 `;
 const ServicesHeader = () => (
   <ServicesHeaderStyles>
-    <div className="services__header">
-      <div className="services__header__img">
-        <HeaderIcon />
-      </div>
-      <div className="services__header__content">
-        <h1>Services</h1>
-        <h2>Our services include lots of good stuff</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Necessitatibus vitae tenetur neque dolor libero iste consequatur
-          consectetur itaque, animi fugit?
-        </p>
+    <div className="services-header-wrapper">
+      <div className="services__header">
+        <div className="services__header__img">
+          <HeaderIcon />
+        </div>
+        <div className="services__header__content">
+          <h1>Services</h1>
+          <h2>Our services include lots of good stuff</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Necessitatibus vitae tenetur neque dolor libero iste consequatur
+            consectetur itaque, animi fugit?
+          </p>
+        </div>
       </div>
     </div>
+    <AnimateHeaderBackground />
   </ServicesHeaderStyles>
 );
 const ServicesIntroStyles = styled.div`
