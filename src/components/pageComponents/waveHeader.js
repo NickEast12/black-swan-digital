@@ -84,6 +84,16 @@ const WaveHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    section {
+      .header__inner {
+        padding-top: 8rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
 `;
 const WaveHeader = () => {
   const stay = 'i';

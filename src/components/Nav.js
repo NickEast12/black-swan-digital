@@ -27,13 +27,14 @@ const Nav = () => {
   });
   const shadowStyle = shouldShowShadow ? 'shadow' : '';
   const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+  const menuItemsStyle = shouldShowShadow ? 'show' : '';
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <header className={`header ${shadowStyle} ${hiddenStyle}`}>
         <MobileNav open={open} />
-        {/* <DesktopNav /> */}
+        <DesktopNav className={` style ${shadowStyle}`} />
       </header>
     </>
   );
@@ -42,29 +43,34 @@ const Nav = () => {
 export default Nav;
 
 const MobileNavStyles = styled.div`
-  /* background: ${({ open }) =>
-    open ? 'var(--background)' : 'var(--white)'}; */
-  background: none;
-  transition: all 0s ease;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-  .mob {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    &__logo {
-      flex-grow: 2;
-    }
-    &__btn {
-      margin: 0 0.5rem;
-      button {
-        padding: 0.45rem 0;
+  @media only screen and (min-width: 0px) {
+    /* background: ${({ open }) =>
+      open ? 'var(--background)' : 'var(--white)'}; */
+    background: none;
+    transition: all 0s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    .mob {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      &__logo {
+        flex-grow: 2;
+      }
+      &__btn {
+        margin: 0 0.5rem;
+        button {
+          padding: 0.45rem 0;
+        }
       }
     }
+  }
+  @media only screen and (min-width: 768px) {
+    display: none;
   }
 `;
 const HamburgerStyles = styled.div`
@@ -297,9 +303,76 @@ const MobileNav = () => {
     </div>
   );
 };
-
+const DesktopNavStyles = styled.div`
+  @media only screen and (min-width: 0px) {
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    display: block;
+    .desktop__nav__wrapper {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2rem 0;
+      .desktop {
+        display: flex;
+        justify-content: space-between;
+        &__nav {
+          ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+            li {
+              color: var(--white);
+              a {
+                color: inherit;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 const DesktopNav = () => (
-  <div>
-    <h1>DesktopNav</h1>
-  </div>
+  <DesktopNavStyles>
+    <div className={`desktop__nav__wrapper `}>
+      <div className="desktop">
+        <div className="desktop__img">
+          <Link to="/">
+            <img src="" alt="Logo" />
+          </Link>
+        </div>
+        <div className="desktop__nav">
+          <ul>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About us</Link>
+            </li>
+            <li>
+              <Link to="/work">Work</Link>
+            </li>
+            <li>
+              <Link to="/clients">Clients</Link>
+            </li>
+            <li>
+              <Link to="/blogs">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                <button type="button">
+                  <span>Contact</span>
+                </button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </DesktopNavStyles>
 );

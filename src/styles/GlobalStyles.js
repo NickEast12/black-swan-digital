@@ -78,6 +78,7 @@ const GlobalStyles = createGlobalStyle`
         color: var(--mainColour);
 
     }
+    @media only screen and (min-width: 0px) {
     header {
         position: fixed;
         top: 0;
@@ -91,12 +92,24 @@ const GlobalStyles = createGlobalStyle`
         transform: translateY(0);
         transition: all 0.3s ease;
     }
+    @media only screen and (min-width: 768px) {
+        header {
+            height: 70px;
+        }
+    }
+    }
     .header.shadow {
         box-shadow: 0px 1px 10px hsla(0, 0%, 78%, 0.59);
         background: white;
+        li {
+            color: black!important;
+        }
+       
 
     }
-
+    .show li {
+        color: var(--black);
+    }
     .header.hidden {
         transform: translateY(-150%);
     }
