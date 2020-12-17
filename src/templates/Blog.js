@@ -6,6 +6,7 @@ import PortableText from '@sanity/block-content-to-react';
 import urlBuilder from '@sanity/image-url';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
+import SignUp from '../components/pageComponents/signUp';
 
 const urlFor = (source) =>
   urlBuilder({
@@ -155,6 +156,7 @@ const Blog = ({ data }) => {
           </div>
         </div>
       </BlogStyles>
+      <SignUp alt />
       <WaveCTA />
     </Layout>
   );
