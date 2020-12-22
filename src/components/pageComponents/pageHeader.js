@@ -35,6 +35,9 @@ const PageHeaderStyles = styled.div`
   @media only screen and (min-width: 414px) {
     height: 45vh;
   }
+  @media only screen and (min-width: 768px) {
+    height: 25vh;
+  }
 `;
 const PageHeader = ({ page, pageTitle }) => (
   <PageHeaderStyles>

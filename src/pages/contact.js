@@ -15,6 +15,9 @@ const ContactStyles = styled.div`
           position: absolute;
           top: 0;
           left: 0;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
           &__inner {
             width: 80%;
             margin: 0 auto;
@@ -116,7 +119,6 @@ const ContactStyles = styled.div`
       }
     }
   }
-
   @media only screen and (min-width: 414px) {
     .contact__wrapper {
       .contact__header {
@@ -142,6 +144,49 @@ const ContactStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .contact__wrapper {
+      .contact__header {
+        height: 70vh;
+        &__content {
+          &__inner {
+            width: 50%;
+          }
+        }
+      }
+      .contact__body {
+        &__form {
+          margin-top: -20rem;
+          width: 70%;
+          div {
+            display: flex;
+            gap: 1rem;
+            section {
+              width: 100%;
+              input {
+                width: 100%;
+              }
+            }
+          }
+          form {
+            .btn {
+              width: 50%;
+            }
+          }
+        }
+        &__legal {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .contact__wrapper {
+      .contact__header {
+        height: 80vh;
+      }
+    }
+  }
 `;
 const contact = () => (
   <Layout>
@@ -162,10 +207,16 @@ const contact = () => (
               Simply fill out this form, or <a> send us an email.</a>
             </p>
             <form action="" className="form">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" placeholder="Joe Blogs" />
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" placeholder="testing" />
+              <div>
+                <section>
+                  <label htmlFor="name">Name</label>
+                  <input type="text" name="name" placeholder="Joe Blogs" />
+                </section>
+                <section>
+                  <label htmlFor="email">Email</label>
+                  <input type="email" name="email" placeholder="testing" />
+                </section>
+              </div>
               <label htmlFor="company">Company</label>
               <input type="text" name="company" />
               <label htmlFor="message">Message</label>

@@ -5,8 +5,6 @@ import BlogSorter from '../components/functional/blogSorter';
 import Layout from '../components/Layout';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
 import BlogList from '../components/pageComponents/blogList';
-import PageHeader from '../components/pageComponents/pageHeader';
-import SorterPageHeader from '../components/pageComponents/sorterPageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const BlogStyles = styled.div`
@@ -32,14 +30,13 @@ const Blogs = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SorterPageHeader
+      <AltPageHeader
         title="Articles"
         description="Latest news, data and tips from our team"
-      >
-        <BlogSorter activeCategory={pageContext.title} />
-      </SorterPageHeader>
+      />
       <BlogStyles>
         <section className="blogs">
+          <BlogSorter activeCategory={pageContext.title} />
           <div className="blogs__wrapper">
             <BlogList blogs={blogs} />
           </div>

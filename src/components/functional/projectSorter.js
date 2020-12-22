@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const ProjectSorterStyles = styled.div`
   width: 100%;
   ul {
-    width: 100%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 2rem auto 0 auto;
     text-align: center;
     list-style: none;
     display: flex;

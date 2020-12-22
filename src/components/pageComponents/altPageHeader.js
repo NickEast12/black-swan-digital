@@ -22,12 +22,7 @@ const AltPageHeaderStyles = styled.div`
         text-align: center;
         padding: 7rem 0;
         span {
-          color: var(--mainColour);
           margin: 0.5rem 0;
-          font-size: 1rem;
-          font-weight: 600;
-          letter-spacing: -0.1px;
-          text-transform: uppercase;
         }
         h1 {
           margin: 0.5rem 0;
@@ -40,7 +35,7 @@ const AltPageHeaderStyles = styled.div`
     section {
       padding-top: 1rem;
       .alt__header__inner {
-        span {
+        .title--style {
           font-size: 1.2rem;
         }
         h1 {
@@ -53,6 +48,20 @@ const AltPageHeaderStyles = styled.div`
     height: 55vh;
     section {
       padding-top: 1.2rem;
+      .alt__header__inner {
+        .title--style {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    height: 25rem;
+    section {
+      padding-top: 1rem;
+      .alt__header__inner {
+        width: 70%;
+      }
     }
   }
 `;
@@ -62,7 +71,7 @@ const AltPageHeader = ({ title, description }) => {
     <AltPageHeaderStyles>
       <section>
         <div className="alt__header__inner">
-          <span>{title}</span>
+          <span className="title--style">{title}</span>
           <h1>{description}</h1>
         </div>
       </section>

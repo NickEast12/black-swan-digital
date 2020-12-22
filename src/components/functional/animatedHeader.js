@@ -29,6 +29,7 @@ class AnimateHeaderBackground extends React.Component {
       THREE,
       color: 0x0b0c10,
       speed: 1,
+      zoom: 0.65,
     });
   }
 

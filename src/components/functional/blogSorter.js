@@ -7,6 +7,7 @@ const BlogSorterStyles = styled.ul`
   display: flex;
   padding-bottom: 1rem;
   flex-wrap: wrap;
+  padding: 2rem 0 0 0;
   @supports (gap: 10px) {
     gap: 10px;
   }

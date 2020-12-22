@@ -20,6 +20,13 @@ const ClientStyles = styled.div`
       width: 60%;
     }
   }
+  @media only screen and (min-width: 768px) {
+    .client__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
 `;
 const Clients = ({ data }) => {
   const clients = data.clients.nodes;

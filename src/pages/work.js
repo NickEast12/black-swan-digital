@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectSorter from '../components/functional/projectSorter';
 import Layout from '../components/Layout';
+import AltPageHeader from '../components/pageComponents/altPageHeader';
 import PageBlogs from '../components/pageComponents/pageBlogs';
 import SingleProject from '../components/pageComponents/singleProject';
 import SorterPageHeader from '../components/pageComponents/sorterPageHeader';
@@ -37,13 +38,12 @@ const Work = ({ data }) => {
   const indexBlogs = data.indexBlogs.nodes;
   return (
     <Layout>
-      <SorterPageHeader
+      <AltPageHeader
         title="Work"
         description="A selection of our most recent work"
-      >
-        <ProjectSorter />
-      </SorterPageHeader>
+      />
       <WorkStyles>
+        <ProjectSorter />
         <div className="work__wrapper">
           <div className="work">
             {projects.map((project) => (
