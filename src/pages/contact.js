@@ -51,7 +51,7 @@ const ContactStyles = styled.div`
           }
           form {
             margin: 1.5rem 0;
-            padding: 2.5rem 1.5rem;
+            padding: 2rem;
             background: var(--white);
             border-radius: 4.5px;
             label {
@@ -59,6 +59,10 @@ const ContactStyles = styled.div`
               font-size: 0.9rem;
               display: block;
               text-transform: uppercase;
+              margin-top: 0.5rem;
+            }
+            input::placeholder {
+              color: red;
             }
             input {
               -webkit-appearance: none;
@@ -66,7 +70,7 @@ const ContactStyles = styled.div`
               margin: 0.5rem 0;
               border-radius: 2.5px;
               border: 1px solid #e8e9ec;
-              padding: 0.5rem;
+              padding: 0.75rem 0.5rem;
               display: block;
             }
             textarea {
@@ -75,7 +79,7 @@ const ContactStyles = styled.div`
               width: 100%;
               height: 15rem;
               resize: vertical;
-              border: 2px solid #e8e9ec;
+              border: 1px solid #e8e9ec;
               border-radius: 4.5px;
               padding: 0.5rem;
             }
@@ -107,6 +111,7 @@ const ContactStyles = styled.div`
       .contact__body {
         &__form {
           margin-top: -22rem;
+          width: 85%;
         }
       }
     }
@@ -126,7 +131,8 @@ const ContactStyles = styled.div`
       }
       .contact__body {
         &__form {
-          margin-top: -24rem;
+          width: 80%;
+          margin-top: -26rem;
           form {
           }
           p {
@@ -157,9 +163,9 @@ const contact = () => (
             </p>
             <form action="" className="form">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" />
+              <input type="text" name="name" placeholder="Joe Blogs" />
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" />
+              <input type="email" name="email" placeholder="testing" />
               <label htmlFor="company">Company</label>
               <input type="text" name="company" />
               <label htmlFor="message">Message</label>
