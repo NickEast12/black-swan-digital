@@ -99,6 +99,14 @@ const PageBlogsStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .page__blogs {
+      &__wrapper {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+  }
 `;
 const PageBlogs = ({ indexBlogs }) => (
   <PageBlogsStyles>

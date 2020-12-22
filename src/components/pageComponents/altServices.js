@@ -79,6 +79,26 @@ const AltServicesStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    padding: 2rem 0;
+    .offerings__wrapper {
+      width: 70%;
+      &__content {
+        span {
+          font-size: 1.3rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+      &__boxes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      &__btn {
+        padding-top: 2rem;
+      }
+    }
+  }
 `;
 const AltServices = () => (
   <AltServicesStyles>

@@ -94,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
     }
     @media only screen and (min-width: 768px) {
         header {
-            height: 70px;
+            height: 80px;
         }
     }
     }

@@ -19,7 +19,7 @@ const index = ({ data }) => {
       <div>
         <WaveHeader />
         <AltServices />
-        <IndexServices />
+        {/* <IndexServices /> */}
         <IndexAboutUs />
         <IndexProjects indexProject={indexProject} />
         <SignUp />

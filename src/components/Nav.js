@@ -344,12 +344,32 @@ const DesktopNavStyles = styled.div`
             list-style: none;
             align-items: center;
             justify-content: space-evenly;
-            gap: 1rem;
+            gap: 1.2rem;
             li {
               color: var(--white);
+              position: relative;
+              &::after {
+                width: 0px;
+                transition: width 0.35s ease;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                position: absolute;
+                background: var(--mainColour);
+                content: '';
+              }
+
               a {
                 color: inherit;
                 text-decoration: none;
+              }
+            }
+            li:hover :after {
+              width: 75%;
+            }
+            li:last-child {
+              &::after {
+                display: none;
               }
             }
           }

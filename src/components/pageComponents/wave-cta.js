@@ -4,56 +4,65 @@ import styled from 'styled-components';
 import WaveSVG from '../../assets/images/wave.svg';
 
 const WaveCTAStyles = styled.section`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background);
-  /* background-image: linear-gradient(
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background);
+    /* background-image: linear-gradient(
     90deg,
     var(--mainColour),
     var(--mainColourLighter)
   ); */
-  background-repeat: repeat-x;
-  color: #fff;
-  .wave {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: 0;
-    width: 101%;
-    height: 10vw;
-    background-image: url(${WaveSVG});
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    content: '';
-    margin-top: -1px;
-    z-index: 50;
+    background-repeat: repeat-x;
+    color: #fff;
+    .wave {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: 0;
+      width: 101%;
+      height: 10vw;
+      background-image: url(${WaveSVG});
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      content: '';
+      margin-top: -1px;
+      z-index: 50;
+    }
+    .wave__content {
+      width: 100%;
+      padding: 2rem 0;
+      &__inner {
+        width: 70%;
+        margin: 0 auto;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        h4 {
+          font-size: 1.75rem;
+        }
+        p {
+          margin-top: 0.5rem;
+        }
+        button {
+          margin-top: 1rem;
+          padding: 0.65rem 0;
+          width: 150px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: var(--background);
+          background: var(--mainColour);
+        }
+      }
+    }
   }
-  .wave__content {
-    width: 100%;
-    padding: 2rem 0;
-    &__inner {
+  @media only screen and (min-width: 768px) {
+    .wave__content {
+      padding-top: 5rem;
       width: 70%;
       margin: 0 auto;
-      padding: 2rem 0 1rem 0;
-      text-align: center;
-      h4 {
-        font-size: 1.75rem;
-      }
-      p {
-        margin-top: 0.5rem;
-      }
-      button {
-        margin-top: 1rem;
-        padding: 0.65rem 0;
-        width: 150px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: var(--background);
-        background: var(--mainColour);
-      }
     }
   }
 `;

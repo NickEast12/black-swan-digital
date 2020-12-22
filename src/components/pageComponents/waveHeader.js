@@ -92,6 +92,12 @@ const WaveHeaderStyles = styled.div`
         h1 {
           font-size: 3.5rem;
         }
+
+        p {
+          width: 80%;
+          margin-top: 1.5rem;
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -107,8 +113,8 @@ const WaveHeader = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsum
             nulla unde.
           </p>
-          <h6>Want to get in touch?</h6>
-          <span className="bold">Let's talk</span>
+          {/* <h6>Want to get in touch?</h6>
+          <span className="bold">Let's talk</span> */}
           <button type="button">
             <span>Find out more</span>
           </button>

@@ -37,86 +37,102 @@ const IndexServicesStyles = styled.div`
       width: 70%;
     }
   }
+  @media only screen and (min-width: 768px) {
+    .home__services {
+      h3 {
+        margin-bottom: 0;
+      }
+      &__boxes {
+        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        gap: 1rem;
+      }
+    }
+  }
 `;
 const IndexServices = () => (
   <IndexServicesStyles>
     <div className="home__services">
       <h2>Services</h2>
       <h3>Our Digital Services</h3>
-      <ServicesBoxes
-        title="UI/UX Design"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
-        slug="/web-development"
-      >
-        <UXDesign />
-      </ServicesBoxes>
-      <ServicesBoxes
-        title="Web Development"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
-        slug="/web-development"
-      >
-        <WebDevelopment />
-      </ServicesBoxes>
-      <ServicesBoxes
-        title="Digital Marketing"
-        text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
-        slug="/web-development"
-      >
-        <DigitalMarketing />
-      </ServicesBoxes>
+      <div className="home__services__boxes">
+        <ServicesBoxes
+          title="UI/UX Design"
+          text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+          slug="/web-development"
+        >
+          <UXDesign />
+        </ServicesBoxes>
+        <ServicesBoxes
+          title="Web Development"
+          text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+          slug="/web-development"
+        >
+          <WebDevelopment />
+        </ServicesBoxes>
+        <ServicesBoxes
+          title="Digital Marketing"
+          text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. "
+          slug="/web-development"
+        >
+          <DigitalMarketing />
+        </ServicesBoxes>
+      </div>
     </div>
   </IndexServicesStyles>
 );
 const ServicesBoxesStyles = styled.div`
-  width: 100%;
-  background: var(--background);
-  color: var(--white);
-  padding: 2rem 1rem 1rem 1rem;
-  border-radius: 4.5px;
-  position: relative;
-  margin-top: 5rem;
-  .img {
-    position: absolute;
-    top: -3rem;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    background: var(--background);
+    color: var(--white);
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 4.5px;
+    position: relative;
+    margin-top: 5rem;
+    .img {
+      position: absolute;
+      top: -3rem;
 
-    background: linear-gradient(
-      to right,
-      var(--mainColour),
-      var(--mainColourLighter)
-    );
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
-    vertical-align: middle;
-    padding: 20px;
-    svg {
-      width: 50px;
-      fill: var(--white);
-    }
-  }
-  .content {
-    h4 {
-      font-size: 1.5rem;
-      margin: 2rem 0 0.5rem 0;
-    }
-    p {
-      margin: 0.5rem 0;
-    }
-    span {
-      display: flex;
-      a {
-        color: var(--mainColour);
-        font-weight: 500;
-        text-decoration: none;
-
-        letter-spacing: -0.1px;
-      }
+      background: linear-gradient(
+        to right,
+        var(--mainColour),
+        var(--mainColourLighter)
+      );
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 100px;
+      vertical-align: middle;
+      padding: 20px;
       svg {
-        width: 20px;
-        margin-right: 10px;
-        fill: var(--mainColour);
+        width: 50px;
+        fill: var(--white);
+      }
+    }
+    .content {
+      h4 {
+        font-size: 1.5rem;
+        margin: 2rem 0 0.5rem 0;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+      span {
+        display: flex;
+        a {
+          color: var(--mainColour);
+          font-weight: 500;
+          text-decoration: none;
+
+          letter-spacing: -0.1px;
+        }
+        svg {
+          width: 20px;
+          margin-right: 10px;
+          fill: var(--mainColour);
+        }
       }
     }
   }

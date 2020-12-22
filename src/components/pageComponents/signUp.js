@@ -80,6 +80,11 @@ const SignUpStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .signup {
+      width: 50%;
+    }
+  }
 `;
 
 const SignUp = ({ alt }) => {
