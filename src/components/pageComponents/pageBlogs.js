@@ -10,9 +10,9 @@ const PageBlogsStyles = styled.div`
     .page__blogs {
       width: 80%;
       margin: 0 auto;
-      > span {
-        display: block;
-        font-size: 1.2rem;
+      .title--style {
+        margin: 0.5rem 0;
+        text-align: center;
       }
       h4 {
         text-align: center;
@@ -38,9 +38,9 @@ const PageBlogsStyles = styled.div`
             padding-top: 1.25rem;
             span {
               color: var(--mainColour);
-              font-weight: 500;
+              font-weight: 700;
               font-size: 1rem;
-              letter-spacing: -1px;
+              letter-spacing: -0.5px;
               text-transform: uppercase;
             }
             h5 {
@@ -72,7 +72,9 @@ const PageBlogsStyles = styled.div`
             > aside {
               padding-top: 6.5px;
               span {
-                font-weight: 500;
+                font-weight: 700;
+                font-size: 1rem;
+                letter-spacing: -0.5px;
               }
             }
           }
@@ -88,6 +90,9 @@ const PageBlogsStyles = styled.div`
   @media only screen and (min-width: 375px) {
     .page__blogs {
       width: 80%;
+      .title--style {
+        font-size: 1.2rem;
+      }
       &__wrapper {
         &__box {
           > section {
@@ -99,10 +104,25 @@ const PageBlogsStyles = styled.div`
       }
     }
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-with: 414px) {
     .page__blogs {
+      .title--style {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 3rem 0;
+    .page__blogs {
+      .title--style {
+        font-size: 1.3rem;
+      }
+      h4 {
+        font-size: 1.7rem;
+      }
       &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
     }

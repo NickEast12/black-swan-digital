@@ -24,15 +24,16 @@ const SingleProjectStyles = styled.div`
   }
   .single__content {
     color: var(--black);
-    h5 {
+    span {
       color: var(--mainColour);
-      font-weight: 500;
+      font-weight: 700;
       font-size: 1rem;
-      letter-spacing: -0.1px;
+      letter-spacing: -0.5px;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;
+      display: block;
     }
-    h4 {
+    h5 {
       font-size: 1.3rem;
       margin: 0;
       font-weight: 500;
@@ -48,7 +49,7 @@ const SingleProject = ({ project }) => {
           <Img fluid={project.projectImage.asset.fluid} alt={project.title} />
         </div>
         <div className="single__content">
-          <h5>{project.title}</h5>
+          <span>{project.title}</span>
           {/* <ul>
             {cat.map((i, index) => (
               <li key={i.title}>
@@ -57,7 +58,7 @@ const SingleProject = ({ project }) => {
               </li>
             ))}
           </ul> */}
-          <h4>{project.shortDescription}</h4>
+          <h5>{project.shortDescription}</h5>
         </div>
       </Link>
     </SingleProjectStyles>

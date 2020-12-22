@@ -45,14 +45,25 @@ const GlobalStyles = createGlobalStyle`
     background:var(--mainColour);
     color: var(--white);
     }
+    @media only screen and (min-width: 0px) {
     .title--style {
-      color: var(--mainColour);
-      font-weight: 500;
-      text-align: center;
-      letter-spacing: -0.1px;
-      text-transform: uppercase;
-      margin: 1rem 0 0.5rem 0;
+        color: var(--mainColour);
+          font-weight: 700;
+          font-size: 1.1rem;
+          letter-spacing: -.5px;
+          text-transform: uppercase;
+          display: block;
     
+    }
+
+    }
+    @media only screen and (min-width: 414px)  {
+    .title--style {
+          font-size: 1.2rem;
+        }
+    }
+    @media only screen and (min-width: 768px)  {
+   
     }
     .title-fea {
         background: linear-gradient(transparent 60%, var(--mainColour) 60%);
@@ -92,11 +103,14 @@ const GlobalStyles = createGlobalStyle`
         transform: translateY(0);
         transition: all 0.3s ease;
     }
+    }
     @media only screen and (min-width: 768px) {
         header {
             height: 80px;
         }
-    }
+        .title--style {
+          font-size: 1.3rem;
+        }
     }
     .header.shadow {
         box-shadow: 0px 1px 10px hsla(0, 0%, 78%, 0.59);

@@ -19,17 +19,11 @@ const IndexAboutUsStyles = styled.div`
       .about__content {
         width: 100%;
         margin: 1.5rem auto 0 auto;
-        > span {
-          color: var(--mainColour);
-          font-weight: 500;
-          font-size: 1rem;
-          letter-spacing: -0.1px;
-          text-transform: uppercase;
+        .title--style {
           margin: 1rem 0 0.5rem 0;
-          display: block;
         }
 
-        h4 {
+        h3 {
           font-size: 1.6rem;
         }
         p {
@@ -57,10 +51,19 @@ const IndexAboutUsStyles = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 3rem;
+      gap: 2.5rem;
       .about__img {
-        width: 100%;
-        height: 100%;
+        width: 700px;
+        height: 300px;
+        .gatsby-image-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .about__content {
+        h3 {
+          font-size: 1.75rem;
+        }
       }
     }
   }
@@ -72,8 +75,8 @@ const IndexAboutUs = () => (
         <Image filename="about-us.jpg" alt="The team at a meeting" />
       </div>
       <div className="about__content">
-        <span>About us</span>
-        <h4>We are here to help you with</h4>
+        <span className="title--style">About us</span>
+        <h3>We are here to help you with</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
           officia explicabo numquam veniam accusamus quibusdam. Lorem ipsum

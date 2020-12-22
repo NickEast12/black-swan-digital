@@ -17,13 +17,7 @@ const AltServicesStyles = styled.div`
       text-align: center;
       &__content {
         span {
-          color: var(--mainColour);
-          font-weight: 700;
-          font-size: 1.1rem;
-          letter-spacing: -0.9px;
-          text-transform: uppercase;
           padding-bottom: 0.25rem;
-          display: block;
         }
         h2 {
           font-size: 1.5rem;
@@ -68,9 +62,6 @@ const AltServicesStyles = styled.div`
     .offerings__wrapper {
       padding-top: 1rem;
       &__content {
-        span {
-          font-size: 1.2rem;
-        }
       }
       &__btn {
         button {
@@ -84,9 +75,6 @@ const AltServicesStyles = styled.div`
     .offerings__wrapper {
       width: 70%;
       &__content {
-        span {
-          font-size: 1.3rem;
-        }
         h2 {
           font-size: 1.75rem;
         }
@@ -104,7 +92,7 @@ const AltServices = () => (
   <AltServicesStyles>
     <div className="offerings__wrapper">
       <div className="offerings__wrapper__content">
-        <span>Our Services</span>
+        <span className="title--style">Our Services</span>
         <h2>Our full range of web development services.</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia incidunt

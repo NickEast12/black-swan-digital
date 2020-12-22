@@ -7,6 +7,7 @@ const SignUpStyles = styled.div`
     width: 100%;
     .signup__wrapper {
       background: var(--background);
+      h5 
     }
     .altSignup {
       background: var(--white);
@@ -80,9 +81,19 @@ const SignUpStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 414px) {
+   .signup__wrapper {
+      h5 {
+        font-size: 1.6rem;
+      }
+   }
+  }
   @media only screen and (min-width: 768px) {
     .signup {
       width: 50%;
+      h5 {
+        font-size: 1.85rem;
+      }
     }
   }
 `;
