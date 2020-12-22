@@ -97,7 +97,7 @@ function SingleBlog({ blog }) {
   );
 }
 const BlogList = ({ blogs }) => (
-  <BlogGridStyles>
+  <BlogGridStyles className="blogs__grid">
     {blogs.map((blog) => (
       <SingleBlog key={blog.id} blog={blog} />
     ))}

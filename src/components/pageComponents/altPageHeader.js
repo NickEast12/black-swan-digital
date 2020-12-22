@@ -8,6 +8,7 @@ const AltPageHeaderStyles = styled.div`
     background: var(--background);
     margin-top: -2rem;
     height: 70vh;
+    position: relative;
     section {
       width: 100%;
       height: 100%;

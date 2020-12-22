@@ -23,6 +23,18 @@ const BlogStyles = styled.div`
       width: 80%;
     }
   }
+  @media only screen and (min-width: 768px) {
+    .blogs {
+      padding-top: 1.5rem;
+      &__wrapper {
+        .blogs__grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+      }
+    }
+  }
 `;
 
 const Blogs = ({ data, pageContext }) => {

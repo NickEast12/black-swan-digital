@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
 import PageBlogs from '../components/pageComponents/pageBlogs';
 import SingleProject from '../components/pageComponents/singleProject';
-import SorterPageHeader from '../components/pageComponents/sorterPageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const WorkStyles = styled.div`
@@ -30,6 +29,17 @@ const WorkStyles = styled.div`
   @media only screen and (min-width: 414px) {
     .work__wrapper {
       width: 80%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    padding-top: 1rem;
+    .work__wrapper {
+      padding: 0.5rem 0;
+      .work {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
     }
   }
 `;
