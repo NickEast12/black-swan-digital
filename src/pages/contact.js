@@ -37,7 +37,7 @@ const ContactStyles = styled.div`
         padding: 1rem 0;
         background: rgb(245, 245, 245);
         &__form {
-          width: 80%;
+          width: 90%;
           position: relative;
           z-index: 10;
           margin: -17.5rem auto 0 auto;
@@ -51,7 +51,7 @@ const ContactStyles = styled.div`
           }
           form {
             margin: 1.5rem 0;
-            padding: 2.5rem 2rem;
+            padding: 2.5rem 1.5rem;
             background: var(--white);
             border-radius: 4.5px;
             label {
@@ -61,16 +61,19 @@ const ContactStyles = styled.div`
               text-transform: uppercase;
             }
             input {
+              -webkit-appearance: none;
               width: 100%;
               margin: 0.5rem 0;
               border-radius: 2.5px;
-              border: 2px solid #e8e9ec;
+              border: 1px solid #e8e9ec;
               padding: 0.5rem;
+              display: block;
             }
             textarea {
+              -webkit-appearance: none;
               margin: 0.5rem 0;
               width: 100%;
-              height: 10rem;
+              height: 15rem;
               resize: vertical;
               border: 2px solid #e8e9ec;
               border-radius: 4.5px;
