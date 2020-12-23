@@ -112,7 +112,18 @@ const BlogStyles = styled.div`
       }
     }
   }
-  @media only screen and (min-width: 0px) {
+  @media only screen and (min-width: 768px) {
+    .blog__header {
+      &__inner {
+        width: 70%;
+        padding: 4rem 0;
+      }
+    }
+    .blog__body {
+      &__inner {
+        width: 70%;
+      }
+    }
   }
 `;
 const Blog = ({ data }) => {
