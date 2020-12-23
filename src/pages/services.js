@@ -58,13 +58,7 @@ const ServicesHeaderStyles = styled.div`
       &__content {
         margin: 1.5rem auto;
         width: 90%;
-        span {
-          margin: 0;
-          text-transform: uppercase;
-          color: var(--mainColour);
-          font-size: 1.2rem;
-          letter-spacing: -0.1px;
-        }
+
         h1 {
           font-size: 1.8rem;
           margin: 0.5rem 0;
@@ -77,6 +71,22 @@ const ServicesHeaderStyles = styled.div`
       padding-top: 6rem;
     }
   }
+  @media only screen and (min-width: 768px) {
+    height: 30rem;
+    .services-header-wrapper {
+      padding-top: 2rem;
+      .services__header {
+        width: 70%;
+        display: flex;
+        gap: 2rem;
+        &__img {
+          width: 70%;
+        }
+        &__content {
+        }
+      }
+    }
+  }
 `;
 const ServicesHeader = () => (
   <ServicesHeaderStyles>
@@ -86,7 +96,7 @@ const ServicesHeader = () => (
           <HeaderIcon />
         </div>
         <div className="services__header__content">
-          <span>Services</span>
+          <span className="title--style">Services</span>
           <h1>Our services include lots of good stuff</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt
@@ -130,6 +140,11 @@ const ServicesIntroStyles = styled.div`
       grid-template-columns: 1fr 1fr;
     }
   }
+  @media only screen and (min-width: 768px) {
+    .intro {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 `;
 const ServicesIntro = () => (
   <ServicesIntroStyles>
@@ -137,97 +152,111 @@ const ServicesIntro = () => (
       <div className="intro__box">
         <WebDevelopmentIcon />
         <h4>Web Development</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
-        </p>
       </div>
       <div className="intro__box">
         <UXDesignIcon />
         <h4>Branding &amp; Design</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
-        </p>
       </div>
       <div className="intro__box">
         <ResponsiveDesignIcon />
         <h4>SEO</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
-        </p>
       </div>
       <div className="intro__box">
         <DigitalMarketingIcon />
         <h4>Digital Marketing</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, odit?
-        </p>
       </div>
     </div>
   </ServicesIntroStyles>
 );
 
 const ServicesBodyStyles = styled.div`
-  width: 100%;
-  padding: 2rem 0;
-  .services__body {
-    width: 90%;
-    margin: 0 auto;
-    &__box {
-      margin: 1rem auto 2.5rem auto;
+  @media only screen and (min-width: 0px) {
+    width: 100%;
+    padding: 2rem 0;
+    .services__body {
       width: 90%;
+      margin: 0 auto;
+      &__box {
+        margin: 1rem auto 2.5rem auto;
+        width: 90%;
 
-      section {
-        .gatsby-image-wrapper {
-          border-radius: 4.5px;
+        section {
+          .gatsby-image-wrapper {
+            border-radius: 4.5px;
+          }
         }
-      }
-      aside {
-        h4 {
-          font-size: 1.6rem;
-          margin: 1rem 0 0.5rem 0;
-        }
-        p {
-          margin: 0.5rem 0;
-        }
-        h6 {
-          margin: 1rem 0 0 0;
-          font-size: 0.85rem;
-          color: var(--offWhite);
-          text-transform: uppercase;
-        }
-        ul {
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-          /* @supports (gap: 5px) {
+        aside {
+          h4 {
+            font-size: 1.6rem;
+            margin: 1rem 0 0.5rem 0;
+          }
+          p {
+            margin: 0.5rem 0;
+          }
+          h6 {
+            margin: 1rem 0 0 0;
+            font-size: 0.85rem;
+            color: var(--offWhite);
+            text-transform: uppercase;
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            /* @supports (gap: 5px) {
             gap: 5px;
           } */
-          padding: 0.5rem 0;
-          & > * {
-            margin: 0 5px 5px 0;
+            padding: 0.5rem 0;
+            & > * {
+              margin: 0 5px 5px 0;
+            }
+            li {
+              background: linear-gradient(
+                to right,
+                var(--mainColour),
+                var(--mainColourLighter)
+              );
+              border: solid 1px var(--mainColour);
+              color: var(--white);
+              border-radius: 4.5px;
+              padding: 0.15rem 0.5rem;
+              font-weight: 500;
+            }
           }
-          li {
-            background: linear-gradient(
-              to right,
-              var(--mainColour),
-              var(--mainColourLighter)
-            );
-            border: solid 1px var(--mainColour);
-            color: var(--white);
-            border-radius: 4.5px;
-            padding: 0.15rem 0.5rem;
-            font-weight: 500;
+        }
+      }
+      &--left {
+      }
+      &--right {
+        section {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .services__body {
+      &__box {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        margin: 2rem auto 6rem auto;
+        section {
+          .gatsby-image-wrapper {
+            width: 300px;
+            height: 230px;
+          }
+        }
+        aside {
+          h4 {
+            margin-top: 0;
           }
         }
       }
     }
-    &--left {
-    }
-    &--right {
-      section {
-        display: flex;
-        flex-direction: column-reverse;
-      }
+    .services__body--right {
+      flex-direction: row-reverse;
     }
   }
 `;
