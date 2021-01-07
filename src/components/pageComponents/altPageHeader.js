@@ -59,9 +59,19 @@ const AltPageHeaderStyles = styled.div`
   @media only screen and (min-width: 768px) {
     height: 25rem;
     section {
-      padding-top: 1rem;
+      padding-top: 3rem;
       .alt__header__inner {
         width: 70%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    height: 30rem;
+    section {
+      .alt__header__inner {
+        h1 {
+          font-size: 3rem;
+        }
       }
     }
   }

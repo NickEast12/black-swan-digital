@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AnimateHeaderBackground from '../components/functional/animatedHeader';
 import Layout from '../components/Layout';
+import SignUp from '../components/pageComponents/signUp';
 
 const ContactStyles = styled.div`
   @media only screen and (min-width: 0px) {
@@ -156,7 +157,7 @@ const ContactStyles = styled.div`
       }
       .contact__body {
         &__form {
-          margin-top: -20rem;
+          margin-top: -25rem;
           width: 70%;
           div {
             display: flex;
@@ -180,10 +181,21 @@ const ContactStyles = styled.div`
       }
     }
   }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1024px) {
     .contact__wrapper {
       .contact__header {
-        height: 80vh;
+        height: 55vh;
+        &__content {
+          padding-top: 2rem;
+          h1 {
+            font-size: 3rem;
+          }
+        }
+      }
+      .contact__body {
+        &__form {
+          width: 65%;
+        }
       }
     }
   }
@@ -235,6 +247,7 @@ const contact = () => (
         </div>
       </div>
     </ContactStyles>
+    <SignUp />
   </Layout>
 );
 

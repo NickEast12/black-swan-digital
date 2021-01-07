@@ -377,6 +377,11 @@ const DesktopNavStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .desktop__nav__wrapper {
+      width: 80%;
+    }
+  }
 `;
 const DesktopNav = () => (
   <DesktopNavStyles>

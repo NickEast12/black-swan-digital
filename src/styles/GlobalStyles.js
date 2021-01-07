@@ -62,9 +62,6 @@ const GlobalStyles = createGlobalStyle`
           font-size: 1.2rem;
         }
     }
-    @media only screen and (min-width: 768px)  {
-   
-    }
     .title-fea {
         background: linear-gradient(transparent 60%, var(--mainColour) 60%);
         color: #111;
@@ -110,6 +107,9 @@ const GlobalStyles = createGlobalStyle`
         }
         .title--style {
           font-size: 1.3rem;
+        }
+        button span {
+            font-weight: -.5px;
         }
     }
     .header.shadow {

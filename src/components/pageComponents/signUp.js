@@ -91,9 +91,15 @@ const SignUpStyles = styled.div`
   @media only screen and (min-width: 768px) {
     .signup {
       width: 50%;
+      padding: 5rem 0;
       h5 {
         font-size: 1.85rem;
       }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .signup {
+      padding:6rem 0  ;
     }
   }
 `;

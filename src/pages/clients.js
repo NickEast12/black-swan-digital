@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
+import SignUp from '../components/pageComponents/signUp';
 
 const ClientStyles = styled.div`
   @media only screen and (min-width: 0px) {
@@ -27,6 +28,11 @@ const ClientStyles = styled.div`
       gap: 1rem;
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .client__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 `;
 const Clients = ({ data }) => {
   const clients = data.clients.nodes;
@@ -44,6 +50,7 @@ const Clients = ({ data }) => {
           ))}
         </div>
       </ClientStyles>
+      <SignUp alt />
       <WaveCTA />
     </Layout>
   );

@@ -60,9 +60,14 @@ const WaveCTAStyles = styled.section`
   }
   @media only screen and (min-width: 768px) {
     .wave__content {
-      padding-top: 5rem;
+      padding: 5rem 0 4rem 0;
       width: 70%;
       margin: 0 auto;
+      &__inner {
+        h4 {
+          font-size: 2rem;
+        }
+      }
     }
   }
 `;

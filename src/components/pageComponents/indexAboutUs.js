@@ -67,6 +67,22 @@ const IndexAboutUsStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    padding: 4rem 0;
+    section {
+      .about__img {
+        width: 900px;
+        height: 320px;
+        .gatsby-image-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .about__content {
+        margin-top: 0;
+      }
+    }
+  }
 `;
 const IndexAboutUs = () => (
   <IndexAboutUsStyles>

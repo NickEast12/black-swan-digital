@@ -29,6 +29,7 @@ const WaveHeaderStyles = styled.div`
           font-size: 2rem;
           letter-spacing: -2.5px;
         }
+
         p {
           margin: 0.5rem 0;
         }
@@ -86,11 +87,12 @@ const WaveHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
+    height: 86vh;
     section {
       .header__inner {
         padding-top: 8rem;
         h1 {
-          font-size: 3.5rem;
+          font-size: 4rem;
         }
 
         p {
@@ -98,6 +100,14 @@ const WaveHeaderStyles = styled.div`
           margin-top: 1.5rem;
           font-size: 1.1rem;
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    height: 70vh;
+    section {
+      .header__inner {
+        padding-top: 12.5rem;
       }
     }
   }

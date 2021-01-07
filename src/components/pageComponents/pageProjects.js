@@ -27,7 +27,7 @@ const PageProjectsStyles = styled.div`
       padding-bottom: 2.5rem;
       section {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
     }

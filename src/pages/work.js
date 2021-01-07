@@ -37,7 +37,7 @@ const WorkStyles = styled.div`
       padding: 0.5rem 0;
       .work {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
     }
@@ -53,8 +53,8 @@ const Work = ({ data }) => {
         description="A selection of our most recent work"
       />
       <WorkStyles>
-        <ProjectSorter />
         <div className="work__wrapper">
+          <ProjectSorter />
           <div className="work">
             {projects.map((project) => (
               <SingleProject key={project.id} project={project} />
@@ -76,7 +76,7 @@ export const query = graphql`
       filter: {
         categories: { elemMatch: { title: { regex: $projectCategoryRegex } } }
       }
-      sort: { fields: _createdAt, order: ASC }
+      sort: { fields: _createdAt, order: DESC }
     ) {
       nodes {
         title

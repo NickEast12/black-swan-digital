@@ -87,6 +87,9 @@ const AltServicesStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    padding: 3rem 0 4rem 0;
+  }
 `;
 const AltServices = () => (
   <AltServicesStyles>

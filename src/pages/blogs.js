@@ -35,6 +35,11 @@ const BlogStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .blogs {
+      width: 75%;
+    }
+  }
 `;
 
 const Blogs = ({ data, pageContext }) => {

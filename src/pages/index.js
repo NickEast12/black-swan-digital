@@ -69,7 +69,7 @@ export const query = graphql`
       }
     }
     projects: allSanityProjects(
-      sort: { fields: _createdAt, order: ASC }
+      sort: { fields: _createdAt, order: DESC }
       limit: 3
     ) {
       nodes {

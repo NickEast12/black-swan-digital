@@ -94,6 +94,12 @@ const FooterStyles = styled.footer`
         width: 40%;
       }
     }
+    section {
+      div {
+        text-align: left;
+        width: 80%;
+      }
+    }
   }
 `;
 
