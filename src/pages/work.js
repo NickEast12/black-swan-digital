@@ -43,7 +43,7 @@ const WorkStyles = styled.div`
     }
   }
 `;
-const Work = ({ data }) => {
+const Work = ({ data, pageContext }) => {
   const projects = data.projects.nodes;
   const indexBlogs = data.indexBlogs.nodes;
   return (
@@ -51,6 +51,7 @@ const Work = ({ data }) => {
       <AltPageHeader
         title="Work"
         description="A selection of our most recent work"
+        pageContext={pageContext}
       />
       <WorkStyles>
         <div className="work__wrapper">

@@ -7,61 +7,60 @@ import WaveCTA from '../components/pageComponents/wave-cta';
 
 const AboutUsStyles = styled.div`
   width: 100%;
-  .about__top {
+  .about {
     width: 90%;
     margin: 0 auto;
-    padding: 2rem 0;
-    text-align: center;
-    &__content {
-      padding-top: 1rem;
-      h4 {
-        color: var(--mainColour);
-        font-weight: 500;
-        font-size: 1rem;
-        letter-spacing: -0.1px;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
+    &__top {
+      margin: 3rem 0 1rem 0;
+      &__img {
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5rem;
+        grid-template-areas:
+          'gallery-a gallery-b gallery-b'
+          'gallery-a gallery-b gallery-b'
+          'gallery-c gallery-c gallery-d';
+        div {
+          width: 100%;
+          height: 100%;
+          .gatsby-image-wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 4.5px;
+          }
+        }
+        .gallery-a {
+          grid-area: gallery-a;
+        }
+        .gallery-b {
+          grid-area: gallery-b;
+        }
+        .gallery-c {
+          grid-area: gallery-c;
+        }
+        .gallery-d {
+          grid-area: gallery-d;
+        }
       }
-      h3 {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
+      &__content {
+        padding: 1.25rem 0;
+        text-align: center;
+        h2 {
+        }
+        p {
+          margin-top: 1rem;
+        }
       }
     }
-    &__img {
-      width: 90%;
-      margin: 2rem auto;
-      .gatsby-image-wrapper {
-        border-radius: 4.5px;
-        width: 100%;
+    &__middle {
+      &__content {
       }
-    }
-  }
-  .about__middle {
-    background: var(--background);
-    padding: 2rem 0;
-    section {
-      width: 90%;
-      margin: 0 auto;
-      color: var(--white);
-      text-align: center;
-      margin-bottom: 2rem;
-      h4 {
-        color: var(--mainColour);
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-    }
-  }
-  .about__lower {
-    padding: 2rem 0;
-    section {
-      width: 90%;
-      margin: 0 auto;
-      text-align: center;
     }
   }
 `;
-const AboutUs = () => {
+const AboutUs = ({ pageContext }) => {
   const i = 'stay';
   return (
     <Layout>
@@ -69,63 +68,53 @@ const AboutUs = () => {
         <AltPageHeader
           title="About us"
           description="A tech-focused creative agency."
+          pageContext={pageContext}
         />
         <AboutUsStyles>
-          <div className="about__top">
-            <div className="about__top__content">
-              <h4>Black Swan Digital</h4>
-              <h3>Our story</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
-                mollitia id adipisci itaque maiores reprehenderit fugit? Earum
-                minima nobis quibusdam!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
-                mollitia id adipisci itaque maiores reprehenderit fugit? Earum
-                minima nobis quibusdam!
-              </p>
+          <div className="about">
+            <div className="about__top">
+              <div className="about__top__img">
+                <div className="gallery-a">
+                  <Image filename="about-us.jpg" alt="Photo" />
+                </div>
+                <div className="gallery-b">
+                  <Image filename="about-us.jpg" alt="Photo" />
+                </div>
+                <div className="gallery-c">
+                  <Image filename="about-us.jpg" alt="Photo" />
+                </div>
+                <div className="gallery-d">
+                  <Image filename="about-us.jpg" alt="Photo" />
+                </div>
+              </div>
+              <div className="about__top__content">
+                <div className="about__top__content">
+                  <h2>Our Company</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consectetur facere vero commodi doloribus. Illo quaerat
+                    sequi libero totam eius repellendus minima voluptatum aut
+                    quo maiores.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="about__top__img">
-              <Image filename="about-us.jpg" alt="The Black Swan Team" />
+            <div className="about__middle">
+              <div className="about__middle__content">
+                <h3>Key Facts</h3>
+                <div className="facts">
+                  <div className="facts__box">
+                    <i>Icon</i>
+                    <h6>Fact 1 </h6>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laboriosam sapiente repellat voluptate corporis inventore
+                      dolorem.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="about__middle">
-            <section>
-              <h4>Cool thing about us</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur voluptatibus placeat dolore similique? Dolorum
-                cumque minus in commodi tenetur veniam.
-              </p>
-            </section>
-            <section>
-              <h4>Cool thing about us</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur voluptatibus placeat dolore similique? Dolorum
-                cumque minus in commodi tenetur veniam.
-              </p>
-            </section>
-            <section>
-              <h4>Cool thing about us</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur voluptatibus placeat dolore similique? Dolorum
-                cumque minus in commodi tenetur veniam.
-              </p>
-            </section>
-          </div>
-          <div className="about__lower">
-            <section>
-              <h5>this is some more cool text</h5>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Commodi maiores mollitia officia repellat unde, inventore animi
-                exercitationem amet cumque laudantium vel quos, sapiente quis.
-                Perferendis excepturi fugit cumque voluptatibus saepe!
-              </p>
-            </section>
           </div>
         </AboutUsStyles>
         <WaveCTA />

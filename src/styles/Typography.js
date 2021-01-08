@@ -30,18 +30,18 @@ const Typography = createGlobalStyle`
         text-decoration: none;
     }
    
-    h1,h2,h3,h4,h5,h6 {
-        font-family:  Rubik, AcuminTitle, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 600;
-        letter-spacing: -1px;
+    h1,h2,h3,h4,h5,h6 , button {
+        font-family:  Poppins , AcuminTitle, Rubik, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        letter-spacing: -.5px;
         
     }
-    p, li, span, button, a, input, textarea, label  {
-        font-family: Karla, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    p, li, span, a, input, textarea, label   {
+        font-family:  Muli, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 400;
     }
     span {
-        letter-spacing: -0.7px;
+        letter-spacing: -0.25px;
         
     }
     p, li {

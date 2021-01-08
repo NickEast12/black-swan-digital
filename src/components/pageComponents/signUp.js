@@ -7,7 +7,6 @@ const SignUpStyles = styled.div`
     width: 100%;
     .signup__wrapper {
       background: var(--background);
-      h5 
     }
     .altSignup {
       background: var(--white);
@@ -40,9 +39,12 @@ const SignUpStyles = styled.div`
       }
       &__box {
         margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
         form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: stretch !important;
+          border: none;
+          background: none;
           input {
             width: 100%;
             padding: 0.5rem 0.5rem;
@@ -53,7 +55,10 @@ const SignUpStyles = styled.div`
             width: 100%;
             border: none;
             margin-top: 1rem;
-            color: var(--black);
+            background: var(--mainColour);
+            span {
+              color: var(--black);
+            }
           }
         }
       }
@@ -82,11 +87,11 @@ const SignUpStyles = styled.div`
     }
   }
   @media only screen and (min-width: 414px) {
-   .signup__wrapper {
+    .signup__wrapper {
       h5 {
         font-size: 1.6rem;
       }
-   }
+    }
   }
   @media only screen and (min-width: 768px) {
     .signup {
@@ -99,7 +104,7 @@ const SignUpStyles = styled.div`
   }
   @media only screen and (min-width: 1024px) {
     .signup {
-      padding:6rem 0  ;
+      padding: 6rem 0;
     }
   }
 `;
@@ -118,7 +123,9 @@ const SignUp = ({ alt }) => {
           <div className="signup__box">
             <form action="">
               <input type="email" name="email" id="email" placeholder="Email" />
-              <button type="submit">Signup</button>
+              <button type="submit">
+                <span>Sign up</span>
+              </button>
             </form>
           </div>
         </div>

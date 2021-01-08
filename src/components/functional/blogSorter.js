@@ -28,6 +28,7 @@ const BlogSorterStyles = styled.ul`
       padding: 0;
       background: none;
       width: 100%;
+      color: var(--white);
       span {
         background: var(--white);
         color: var(--background);

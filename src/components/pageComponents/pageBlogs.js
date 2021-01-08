@@ -38,9 +38,9 @@ const PageBlogsStyles = styled.div`
             padding-top: 1.25rem;
             span {
               color: var(--mainColour);
-              font-weight: 700;
+              font-weight: 500;
               font-size: 1rem;
-              letter-spacing: -0.5px;
+              letter-spacing: -0.1px;
               text-transform: uppercase;
             }
             h5 {
@@ -72,9 +72,9 @@ const PageBlogsStyles = styled.div`
             > aside {
               padding-top: 6.5px;
               span {
-                font-weight: 700;
+                font-weight: 400;
                 font-size: 1rem;
-                letter-spacing: -0.5px;
+                letter-spacing: -0.25px;
               }
             }
           }

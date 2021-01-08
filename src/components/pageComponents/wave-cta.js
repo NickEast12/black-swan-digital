@@ -23,6 +23,7 @@ const WaveCTAStyles = styled.section`
       left: -1px;
       right: 0;
       width: 101%;
+
       height: 10vw;
       background-image: url(${WaveSVG});
       background-repeat: no-repeat;
@@ -48,12 +49,14 @@ const WaveCTAStyles = styled.section`
         }
         button {
           margin-top: 1rem;
-          padding: 0.65rem 0;
           width: 150px;
           font-size: 0.9rem;
           font-weight: 500;
           color: var(--background);
           background: var(--mainColour);
+          span {
+            color: var(--black);
+          }
         }
       }
     }

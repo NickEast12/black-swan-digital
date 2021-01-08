@@ -23,7 +23,7 @@ const SingleBlogStyles = styled.div`
       padding-top: 1.25rem;
       h6 {
         color: var(--mainColour);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.85rem;
         letter-spacing: -0.1px;
         text-transform: uppercase;

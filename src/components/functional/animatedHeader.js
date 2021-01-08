@@ -26,7 +26,7 @@ class AnimateHeaderBackground extends React.Component {
   componentDidMount() {
     this.vantaEffect = WAVES({
       el: this.vantaRef.current,
-      THREE,
+      // THREE,
       color: 0x000000,
       speed: 1,
       zoom: 0.65,

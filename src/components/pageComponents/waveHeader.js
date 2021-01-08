@@ -26,12 +26,16 @@ const WaveHeaderStyles = styled.div`
         margin: 0 auto;
         h1 {
           margin: 0;
-          font-size: 2rem;
-          letter-spacing: -2.5px;
+          font-size: 2.1rem;
+          letter-spacing: -1px;
+          width: 130%;
+          overflow: hidden;
         }
 
         p {
           margin: 0.5rem 0;
+          width: 130%;
+          overflow: hidden;
         }
         h6 {
           margin-top: 2rem;
@@ -56,15 +60,14 @@ const WaveHeaderStyles = styled.div`
       width: 90%;
       .header__inner {
         h1 {
-          font-size: 2.4rem;
+          font-size: 2.7rem;
+          width: 120%;
         }
         p {
           font-size: 1.1rem;
+          width: 110%;
         }
         button {
-          span {
-            font-size: 1rem;
-          }
         }
       }
     }
@@ -73,15 +76,10 @@ const WaveHeaderStyles = styled.div`
     section {
       .header__inner {
         h1 {
-          font-size: 2.6rem;
+          font-size: 3rem;
         }
         p {
           font-size: 1.2rem;
-        }
-        button {
-          span {
-            font-size: 1rem;
-          }
         }
       }
     }

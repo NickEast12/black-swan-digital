@@ -12,10 +12,10 @@ const AltServicesStyles = styled.div`
     width: 100%;
     padding: 2rem 0;
     .offerings__wrapper {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
-      text-align: center;
       &__content {
+        text-align: left;
         span {
           padding-bottom: 0.25rem;
         }
@@ -29,9 +29,10 @@ const AltServicesStyles = styled.div`
       }
       &__boxes {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 1rem;
         margin-top: 2rem;
+        text-align: center;
         section {
           border-radius: 4.5px;
           background: var(--white);
@@ -61,7 +62,11 @@ const AltServicesStyles = styled.div`
   @media only screen and (min-width: 375px) {
     .offerings__wrapper {
       padding-top: 1rem;
+      width: 80%;
       &__content {
+      }
+      &__boxes {
+        grid-template-columns: repeat(2, 1fr);
       }
       &__btn {
         button {
@@ -131,7 +136,9 @@ const AltServices = () => (
       </div>
       <div className="offerings__wrapper__btn">
         <Link to="/services">
-          <button type="button">Read More</button>
+          <button type="button">
+            <span>Read More</span>
+          </button>
         </Link>
       </div>
     </div>

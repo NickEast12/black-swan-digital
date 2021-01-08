@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
+import PageProjects from '../components/pageComponents/pageProjects';
+import AnimateHeaderBackground from '../components/functional/animatedHeader';
+import AltPageHeader from '../components/pageComponents/altPageHeader';
 //* Icons
 import HeaderIcon from '../svgs/services-icon.svg';
 import UXDesignIcon from '../svgs/web-design.svg';
@@ -10,14 +13,16 @@ import WebDevelopmentIcon from '../svgs/web-development.svg';
 import ResponsiveDesignIcon from '../svgs/responsive-design.svg';
 import DigitalMarketingIcon from '../svgs/digital-marketing.svg';
 import Image from '../components/functional/Image';
-import PageProjects from '../components/pageComponents/pageProjects';
-import AnimateHeaderBackground from '../components/functional/animatedHeader';
 
-const Services = ({ data }) => {
+const Services = ({ data, pageContext }) => {
   const projects = data.projects.nodes;
   return (
     <Layout>
-      <ServicesHeader />
+      <AltPageHeader
+        title="services"
+        description="Our full range of web development services"
+        pageContext={pageContext}
+      />
       <ServicesIntro />
       <ServicesBody />
       <PageProjects
@@ -32,91 +37,92 @@ const Services = ({ data }) => {
 
 export default Services;
 
-const ServicesHeaderStyles = styled.div`
-  @media only screen and (min-width: 0px) {
-    width: 100%;
-    position: relative;
-    height: 100vh;
-    .services-header-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 5;
-    }
-    .services__header {
-      width: 90%;
-      margin: 0 auto;
-      color: var(--white);
-      padding-top: 5rem;
-      &__img {
-        width: 75%;
-        margin: 0 auto;
-        svg {
-          width: 100%;
-        }
-      }
-      &__content {
-        margin: 1.5rem auto;
-        width: 90%;
+// const ServicesHeaderStyles = styled.div`
+//   @media only screen and (min-width: 0px) {
+//     width: 100%;
+//     position: relative;
+//     height: 100vh;
+//     .services-header-wrapper {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       z-index: 5;
+//     }
+//     .services__header {
+//       width: 90%;
+//       margin: 0 auto;
+//       color: var(--white);
+//       padding-top: 5rem;
+//       &__img {
+//         width: 75%;
+//         margin: 0 auto;
+//         svg {
+//           width: 100%;
+//         }
+//       }
+//       &__content {
+//         margin: 1.5rem auto;
+//         width: 90%;
 
-        h1 {
-          font-size: 1.8rem;
-          margin: 0.5rem 0;
-        }
-      }
-    }
-  }
-  @media only screen and (min-width: 375px) {
-    .services__header {
-      padding-top: 6rem;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    height: 30rem;
-    .services-header-wrapper {
-      padding-top: 2rem;
-      .services__header {
-        width: 70%;
-        display: flex;
-        gap: 2rem;
-        &__img {
-          width: 70%;
-        }
-        &__content {
-        }
-      }
-    }
-  }
-`;
-const ServicesHeader = () => (
-  <ServicesHeaderStyles>
-    <div className="services-header-wrapper">
-      <div className="services__header">
-        <div className="services__header__img">
-          <HeaderIcon />
-        </div>
-        <div className="services__header__content">
-          <span className="title--style">Services</span>
-          <h1>Our services include lots of good stuff</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt
-            natus ipsa illum recusandae totam!
-          </p>
-        </div>
-      </div>
-    </div>
-    <AnimateHeaderBackground />
-  </ServicesHeaderStyles>
-);
+//         h1 {
+//           font-size: 1.8rem;
+//           margin: 0.5rem 0;
+//         }
+//       }
+//     }
+//   }
+//   @media only screen and (min-width: 375px) {
+//     .services__header {
+//       padding-top: 6rem;
+//     }
+//   }
+//   @media only screen and (min-width: 768px) {
+//     height: 30rem;
+//     .services-header-wrapper {
+//       padding-top: 2rem;
+//       .services__header {
+//         width: 70%;
+//         display: flex;
+//         gap: 2rem;
+//         &__img {
+//           width: 70%;
+//         }
+//         &__content {
+//         }
+//       }
+//     }
+//   }
+// `;
+// const ServicesHeader = () => (
+//   <ServicesHeaderStyles>
+//     <div className="services-header-wrapper">
+//       <div className="services__header">
+//         <div className="services__header__img">
+//           <HeaderIcon />
+//         </div>
+//         <div className="services__header__content">
+//           <span className="title--style">Services</span>
+//           <h1>Our services include lots of good stuff</h1>
+//           <p>
+//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt
+//             natus ipsa illum recusandae totam!
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//     <AnimateHeaderBackground />
+//   </ServicesHeaderStyles>
+// );
 const ServicesIntroStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    background: rgb(245, 245, 245);
     color: var(--background);
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     .intro {
       width: 90%;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &__box {
         text-align: center;
         margin: 1rem auto;
@@ -124,7 +130,7 @@ const ServicesIntroStyles = styled.div`
         width: 80%;
         svg {
           fill: var(--background);
-          width: 4rem;
+          width: 3.5rem;
         }
         h4 {
           margin: 0.5rem 0;
@@ -134,15 +140,24 @@ const ServicesIntroStyles = styled.div`
       }
     }
   }
-  @media only screen and (min-width: 375px) {
-    .intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+
   @media only screen and (min-width: 768px) {
     .intro {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .intro {
+      width: 75%;
+      &__box {
+        svg {
+          width: 5rem;
+        }
+        h4 {
+          font-size: 1.75rem;
+          margin-top: 1rem;
+        }
+      }
     }
   }
 `;
@@ -237,26 +252,50 @@ const ServicesBodyStyles = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .services__body {
+      padding-top: 5rem;
       &__box {
-        display: flex;
-        gap: 2rem;
-        justify-content: space-between;
-        margin: 2rem auto 6rem auto;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto 8rem auto;
         section {
-          .gatsby-image-wrapper {
-            width: 300px;
-            height: 230px;
-          }
+          justify-self: stretch;
         }
         aside {
+          justify-self: stretch;
           h4 {
             margin-top: 0;
+            font-size: 2rem;
           }
         }
       }
     }
     .services__body--right {
-      flex-direction: row-reverse;
+      grid-template-areas: 'grid-b grid-a';
+      section {
+        grid-area: grid-a;
+      }
+      aside {
+        grid-area: grid-b;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .services__body {
+      width: 75%;
+      &__box {
+        width: 100%;
+        gap: 2.5rem;
+        aside {
+          padding-top: 1rem;
+          h4 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
     }
   }
 `;
@@ -264,10 +303,10 @@ const ServicesBody = () => (
   <ServicesBodyStyles>
     <div className="services__body">
       <div className="services__body--left services__body__box">
-        <section>
+        <section className="grid-a">
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
-        <aside>
+        <aside className="grid-b">
           <h4>Web Development</h4>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
@@ -344,7 +383,7 @@ const ServicesBody = () => (
 export const query = graphql`
   query {
     projects: allSanityProjects(
-      sort: { fields: _createdAt, order: ASC }
+      sort: { fields: _createdAt, order: DESC }
       limit: 3
     ) {
       nodes {

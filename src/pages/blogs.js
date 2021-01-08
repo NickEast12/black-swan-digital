@@ -50,6 +50,7 @@ const Blogs = ({ data, pageContext }) => {
       <AltPageHeader
         title="Articles"
         description="Latest news, data and tips from our team"
+        pageContext={pageContext}
       />
       <BlogStyles>
         <section className="blogs">

@@ -7,6 +7,7 @@ import urlBuilder from '@sanity/image-url';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
 import SignUp from '../components/pageComponents/signUp';
+import Bread from '../components/functional/Breadcrums';
 
 const urlFor = (source) =>
   urlBuilder({
@@ -126,7 +127,7 @@ const BlogStyles = styled.div`
     }
   }
 `;
-const Blog = ({ data }) => {
+const Blog = ({ data, pageContext }) => {
   const content = data.blog;
   const serializers = {
     types: {
@@ -142,7 +143,7 @@ const Blog = ({ data }) => {
       <BlogStyles>
         <div className="blog__header">
           <div className="blog__header__inner">
-            <p>Breadcrum component</p>
+            <Bread breaddata={pageContext.breadcrumb} />
             <h1>{content.title}</h1>
             <aside className="blog__header__inner__author">
               <div className="blog__header__inner__author__img">

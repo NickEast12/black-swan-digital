@@ -18,7 +18,6 @@ const IndexServicesStyles = styled.div`
       h2 {
         text-align: center;
         color: var(--mainColour);
-        color: var(--mainColour);
         font-weight: 500;
         font-size: 1.2rem;
         letter-spacing: -0.1px;

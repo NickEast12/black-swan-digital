@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimateHeaderBackground from '../functional/animatedHeader';
+import Bread from '../functional/Breadcrums';
 
 const AltPageHeaderStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
     background: var(--background);
     margin-top: -2rem;
-    height: 70vh;
+    height: 80vh;
     position: relative;
     section {
       width: 100%;
@@ -20,8 +21,8 @@ const AltPageHeaderStyles = styled.div`
       .alt__header__inner {
         width: 80%;
         margin: 0 auto;
-        text-align: center;
-        padding: 7rem 0;
+        text-align: left;
+        padding: 10rem 0;
         span {
           margin: 0.5rem 0;
         }
@@ -32,43 +33,48 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 60vh;
+    height: 85vh;
     section {
-      padding-top: 1rem;
+      padding-top: 2rem;
       .alt__header__inner {
         .title--style {
           font-size: 1.2rem;
         }
         h1 {
-          font-size: 2.25rem;
+          font-size: 2.5rem;
         }
       }
     }
   }
   @media only screen and (min-width: 414px) {
-    height: 55vh;
     section {
-      padding-top: 1.2rem;
+      padding-top: 3.5rem;
       .alt__header__inner {
         .title--style {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
+          h1 {
+            font-size: 3rem;
+          }
         }
       }
     }
   }
   @media only screen and (min-width: 768px) {
-    height: 25rem;
+    height: 40rem;
     section {
-      padding-top: 3rem;
+      padding-top: 4.5rem;
       .alt__header__inner {
         width: 70%;
       }
     }
   }
   @media only screen and (min-width: 1024px) {
-    height: 30rem;
     section {
+      padding-top: 6rem;
       .alt__header__inner {
+        .title--style {
+          font-size: 1.85rem;
+        }
         h1 {
           font-size: 3rem;
         }
@@ -76,7 +82,7 @@ const AltPageHeaderStyles = styled.div`
     }
   }
 `;
-const AltPageHeader = ({ title, description }) => {
+const AltPageHeader = ({ title, description, pageContext }) => {
   const i = 'stay';
   return (
     <AltPageHeaderStyles>
@@ -84,6 +90,7 @@ const AltPageHeader = ({ title, description }) => {
         <div className="alt__header__inner">
           <span className="title--style">{title}</span>
           <h1>{description}</h1>
+          <Bread breaddata={pageContext.breadcrumb} />
         </div>
       </section>
       <AnimateHeaderBackground />

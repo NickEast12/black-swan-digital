@@ -48,9 +48,9 @@ const GlobalStyles = createGlobalStyle`
     @media only screen and (min-width: 0px) {
     .title--style {
         color: var(--mainColour);
-          font-weight: 700;
+          font-weight: 500;
           font-size: 1.1rem;
-          letter-spacing: -.5px;
+          letter-spacing: -.1px;
           text-transform: uppercase;
           display: block;
     
@@ -68,17 +68,23 @@ const GlobalStyles = createGlobalStyle`
         padding: 0 1px 1px;
     }
     button {
-        background: linear-gradient(to right, var(--mainColour), var(--mainColourLighter));
+        /* background: linear-gradient(to right, var(--mainColour), var(--mainColourLighter)); */
+        background: none;
         border-radius: 4.5px;
+        border: var(--mainColour) 2px solid;
         padding: .6rem 0;
         width: 100px;
-        border: none;
-        color: var(--white);
         cursor: pointer;
+        transform: all 0.3s ease;
         span {
-            font-weight: 600;
-            font-size: .95rem;
-            letter-spacing: -1px;
+            color: var(--mainColour);
+            font-weight: 500;
+            transform: all 0.3s ease;
+            font-family: Poppins;
+            text-transform: uppercase;
+            letter-spacing: -.1px;
+            font-size: 13px;
+            font-weight: 500;
         }
     }
     .button--alt {
@@ -115,6 +121,12 @@ const GlobalStyles = createGlobalStyle`
     .header.shadow {
         box-shadow: 0px 1px 10px hsla(0, 0%, 78%, 0.59);
         background: white;
+        button {
+            background: var(--mainColour);
+            span {
+                color: var(--white);
+            }
+        }
         @media only screen and (min-width: 768px) {
         li {
             color: black!important;

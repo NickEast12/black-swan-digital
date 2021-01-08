@@ -34,7 +34,7 @@ const ClientStyles = styled.div`
     }
   }
 `;
-const Clients = ({ data }) => {
+const Clients = ({ data, pageContext }) => {
   const clients = data.clients.nodes;
   console.log(clients);
   return (
@@ -42,6 +42,7 @@ const Clients = ({ data }) => {
       <AltPageHeader
         title="Clients"
         description="The amazing teams we work with."
+        pageContext={pageContext}
       />
       <ClientStyles>
         <div className="client__grid">

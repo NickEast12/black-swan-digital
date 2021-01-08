@@ -26,9 +26,9 @@ const SingleProjectStyles = styled.div`
     color: var(--black);
     span {
       color: var(--mainColour);
-      font-weight: 700;
+      font-weight: 500;
       font-size: 1rem;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.1px;
       text-transform: uppercase;
       margin: 1rem 0 0.5rem 0;
       display: block;

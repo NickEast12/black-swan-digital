@@ -94,10 +94,10 @@ const IndexAboutUs = () => (
         <span className="title--style">About us</span>
         <h3>We are here to help you with</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-          officia explicabo numquam veniam accusamus quibusdam. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Nulla, officia explicabo
-          numquam veniam accusamus quibusdam.
+          As a leading digital agency in London we offer a range of creative and
+          development services to connect with your target audience. View our
+          brand identity, web design, graphic design & development services
+          below.
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
