@@ -16,12 +16,8 @@ const Typography = createGlobalStyle`
         src: url(${Poppins});
     }
     @font-face {
-        font-family: PoppinsRegular;
-        src: url(${PoppinsRegular});
-    }
-    @font-face {
         font-family: PoppinsLight;
-        src: url(${PoppinsLight});
+        src: url(${PoppinsRegular});
     }
     @font-face {
         font-family: MuliBold;
