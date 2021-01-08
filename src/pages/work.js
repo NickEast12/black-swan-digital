@@ -3,9 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectSorter from '../components/functional/projectSorter';
 import Layout from '../components/Layout';
-import AltPageHeader from '../components/pageComponents/altPageHeader';
 import PageBlogs from '../components/pageComponents/pageBlogs';
 import SingleProject from '../components/pageComponents/singleProject';
+import SmallerHeader from '../components/pageComponents/smallerHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
 
 const WorkStyles = styled.div`
@@ -48,7 +48,7 @@ const Work = ({ data, pageContext }) => {
   const indexBlogs = data.indexBlogs.nodes;
   return (
     <Layout>
-      <AltPageHeader
+      <SmallerHeader
         title="Work"
         description="A selection of our most recent work"
         pageContext={pageContext}

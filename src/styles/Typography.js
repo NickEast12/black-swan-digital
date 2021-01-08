@@ -4,7 +4,9 @@ import mainFont from '../assets/fonts/Acumin-RPro.otf';
 import titleFont from '../assets/fonts/Acumin-BdPro.otf';
 import Karla from '../assets/fonts/Karla.ttf';
 import Rubik from '../assets/fonts/Rubik.ttf';
+import PoppinsRegular from '../assets/fonts/Poppins-Regular.ttf';
 import Poppins from '../assets/fonts/Poppins-SemiBold.ttf';
+import PoppinsLight from '../assets/fonts/Poppins-Light.ttf';
 import Muli from '../assets/fonts/Muli.ttf';
 import MuliBold from '../assets/fonts/Muli-Bold.ttf';
 
@@ -12,6 +14,14 @@ const Typography = createGlobalStyle`
     @font-face {
         font-family: Poppins;
         src: url(${Poppins});
+    }
+    @font-face {
+        font-family: PoppinsRegular;
+        src: url(${PoppinsRegular});
+    }
+    @font-face {
+        font-family: PoppinsLight;
+        src: url(${PoppinsLight});
     }
     @font-face {
         font-family: MuliBold;

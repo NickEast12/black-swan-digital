@@ -48,12 +48,12 @@ const GlobalStyles = createGlobalStyle`
     @media only screen and (min-width: 0px) {
     .title--style {
         color: var(--mainColour);
-          font-weight: 500;
+          font-weight: 400;
           font-size: 1.1rem;
           letter-spacing: -.1px;
           text-transform: uppercase;
           display: block;
-          font-family: MuliBold;
+          font-family: PoppinsLight;
     
     }
 

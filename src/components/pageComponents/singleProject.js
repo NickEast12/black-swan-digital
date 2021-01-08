@@ -26,7 +26,7 @@ const SingleProjectStyles = styled.div`
     color: var(--black);
     span {
       color: var(--mainColour);
-      font-family: MuliBold;
+      font-family: PoppinsLight;
       font-weight: 500;
       font-size: 1rem;
       letter-spacing: -0.1px;

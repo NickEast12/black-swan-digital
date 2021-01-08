@@ -11,6 +11,7 @@ const ClientStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
     .client__grid {
+      display: grid;
       padding: 2rem 0;
       width: 70%;
       margin: 0 auto;
