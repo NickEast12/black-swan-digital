@@ -4,7 +4,7 @@ import mainFont from '../assets/fonts/Acumin-RPro.otf';
 import titleFont from '../assets/fonts/Acumin-BdPro.otf';
 import Karla from '../assets/fonts/Karla.ttf';
 import Rubik from '../assets/fonts/Rubik.ttf';
-import Poppins from '../assets/fonts/Poppins-Regular.ttf';
+import Poppins from '../assets/fonts/Poppins-SemiBold.ttf';
 import Muli from '../assets/fonts/Muli.ttf';
 
 const Typography = createGlobalStyle`
