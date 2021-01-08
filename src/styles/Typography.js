@@ -4,8 +4,18 @@ import mainFont from '../assets/fonts/Acumin-RPro.otf';
 import titleFont from '../assets/fonts/Acumin-BdPro.otf';
 import Karla from '../assets/fonts/Karla.ttf';
 import Rubik from '../assets/fonts/Rubik.ttf';
+import Poppins from '../assets/fonts/Poppins-Regular.ttf';
+import Muli from '../assets/fonts/Muli.ttf';
 
 const Typography = createGlobalStyle`
+    @font-face {
+        font-family: Poppins;
+        src: url(${Poppins});
+    }
+    @font-face {
+        font-family: Muli;
+        src: url(${Muli});
+    }
     @font-face {
         font-family: Acumin;
         src: url(${mainFont});

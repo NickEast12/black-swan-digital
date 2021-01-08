@@ -4,58 +4,54 @@ import Image from '../components/functional/Image';
 import Layout from '../components/Layout';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';
+//* Icons
+import TemplateIcon from '../svgs/medal.svg';
 
 const AboutUsStyles = styled.div`
   width: 100%;
   .about {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    &__top {
-      margin: 3rem 0 1rem 0;
-      &__img {
-        height: 300px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0.5rem;
-        grid-template-areas:
-          'gallery-a gallery-b gallery-b'
-          'gallery-a gallery-b gallery-b'
-          'gallery-c gallery-c gallery-d';
-        div {
-          width: 100%;
-          height: 100%;
-          .gatsby-image-wrapper {
-            width: 100%;
-            height: 100%;
-            border-radius: 4.5px;
-          }
-        }
-        .gallery-a {
-          grid-area: gallery-a;
-        }
-        .gallery-b {
-          grid-area: gallery-b;
-        }
-        .gallery-c {
-          grid-area: gallery-c;
-        }
-        .gallery-d {
-          grid-area: gallery-d;
-        }
-      }
+    &__intro {
+      padding: 2rem 0;
       &__content {
-        padding: 1.25rem 0;
-        text-align: center;
         h2 {
+          font-size: 1.85rem;
+          margin-bottom: 1rem;
         }
         p {
-          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &__img {
+        .gatsby-image-wrapper {
+          border-radius: 4.5px;
         }
       }
     }
-    &__middle {
-      &__content {
+    &__ethos {
+      margin-top: 2rem;
+      &__inner {
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+        }
+        .ethos__grid {
+          padding: 2rem 0;
+          display: grid;
+          grid-gap: 1.5rem;
+          grid-template-columns: repeat(2, 1fr);
+          svg {
+            width: 60px;
+          }
+          h5 {
+            font-size: 1.4rem;
+            margin: 0.85rem 0;
+          }
+          p {
+            font-weight: 400;
+          }
+        }
       }
     }
   }
@@ -72,44 +68,63 @@ const AboutUs = ({ pageContext }) => {
         />
         <AboutUsStyles>
           <div className="about">
-            <div className="about__top">
-              <div className="about__top__img">
-                <div className="gallery-a">
-                  <Image filename="about-us.jpg" alt="Photo" />
-                </div>
-                <div className="gallery-b">
-                  <Image filename="about-us.jpg" alt="Photo" />
-                </div>
-                <div className="gallery-c">
-                  <Image filename="about-us.jpg" alt="Photo" />
-                </div>
-                <div className="gallery-d">
-                  <Image filename="about-us.jpg" alt="Photo" />
-                </div>
+            <div className="about__intro">
+              <div className="about__intro__content">
+                <h2>Why us?</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                  quisquam deserunt ratione et minus provident? Explicabo nam
+                  nulla voluptates deleniti.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Recusandae illum sed, eos consectetur voluptatibus deserunt,
+                  id impedit delectus deleniti quod nemo qui molestiae earum
+                  voluptate nostrum! Porro quidem neque excepturi?
+                </p>
               </div>
-              <div className="about__top__content">
-                <div className="about__top__content">
-                  <h2>Our Company</h2>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Consectetur facere vero commodi doloribus. Illo quaerat
-                    sequi libero totam eius repellendus minima voluptatum aut
-                    quo maiores.
-                  </p>
-                </div>
+              <div className="about__intro__img">
+                <Image filename="about-us.jpg" alt="The Black Swan Team" />
               </div>
             </div>
-            <div className="about__middle">
-              <div className="about__middle__content">
-                <h3>Key Facts</h3>
-                <div className="facts">
-                  <div className="facts__box">
-                    <i>Icon</i>
-                    <h6>Fact 1 </h6>
+            <div className="about__ethos">
+              <div className="about__ethos__inner">
+                <h3>Our Ethos</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Omnis, dicta?
+                </p>
+                <div className="ethos__grid">
+                  <div className="ethos__grid__box">
+                    <TemplateIcon />
+                    <h5>Ethos 1</h5>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Laboriosam sapiente repellat voluptate corporis inventore
-                      dolorem.
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Saepe labore ut tempore quae perspiciatis quasi.
+                    </p>
+                  </div>
+                  <div className="ethos__grid__box">
+                    <TemplateIcon />
+                    <h5>Ethos 2</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Saepe labore ut tempore quae perspiciatis quasi.
+                    </p>
+                  </div>
+                  <div className="ethos__grid__box">
+                    <TemplateIcon />
+                    <h5>Ethos 3</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Saepe labore ut tempore quae perspiciatis quasi.
+                    </p>
+                  </div>
+                  <div className="ethos__grid__box">
+                    <TemplateIcon />
+                    <h5>Ethos 4</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Saepe labore ut tempore quae perspiciatis quasi.
                     </p>
                   </div>
                 </div>
