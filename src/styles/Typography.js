@@ -6,11 +6,16 @@ import Karla from '../assets/fonts/Karla.ttf';
 import Rubik from '../assets/fonts/Rubik.ttf';
 import Poppins from '../assets/fonts/Poppins-SemiBold.ttf';
 import Muli from '../assets/fonts/Muli.ttf';
+import MuliBold from '../assets/fonts/Muli-Bold.ttf';
 
 const Typography = createGlobalStyle`
     @font-face {
         font-family: Poppins;
         src: url(${Poppins});
+    }
+    @font-face {
+        font-family: MuliBold;
+        src: url(${MuliBold});
     }
     @font-face {
         font-family: Muli;

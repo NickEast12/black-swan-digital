@@ -39,6 +39,7 @@ const PageBlogsStyles = styled.div`
             span {
               color: var(--mainColour);
               font-weight: 500;
+              font-family: MuliBold;
               font-size: 1rem;
               letter-spacing: -0.1px;
               text-transform: uppercase;

@@ -53,6 +53,7 @@ const GlobalStyles = createGlobalStyle`
           letter-spacing: -.1px;
           text-transform: uppercase;
           display: block;
+          font-family: MuliBold;
     
     }
 
