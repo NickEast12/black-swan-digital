@@ -33,9 +33,9 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 85vh;
+    height: 75vh;
     section {
-      padding-top: 2rem;
+      padding-top: 0rem;
       .alt__header__inner {
         .title--style {
           font-size: 1.2rem;
@@ -48,7 +48,7 @@ const AltPageHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     section {
-      padding-top: 3.5rem;
+      padding-top: 0.85rem;
       .alt__header__inner {
         .title--style {
           font-size: 1.5rem;

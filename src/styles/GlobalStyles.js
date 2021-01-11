@@ -70,7 +70,7 @@ const GlobalStyles = createGlobalStyle`
     }
     button {
         /* background: linear-gradient(to right, var(--mainColour), var(--mainColourLighter)); */
-        background: none;
+        background: var(--mainColour);
         border-radius: 4.5px;
         border: var(--mainColour) 2px solid;
         padding: .6rem 0;
@@ -78,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         transform: all 0.3s ease;
         span {
-            color: var(--mainColour);
+            color: var(--black);
             font-weight: 500;
             transform: all 0.3s ease;
             font-family: Poppins;

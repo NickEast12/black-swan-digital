@@ -14,9 +14,12 @@ const ProjectSorterStyles = styled.div`
     @supports (gap: 10px) {
       gap: 10px;
     }
-    & > * + * {
-      margin-left: 5px;
+    @supports not (gap: 10px) {
+      & > * + * {
+        margin-left: 5px;
+      }
     }
+
     li {
       flex-grow: 2;
       background: var(--mainColour);

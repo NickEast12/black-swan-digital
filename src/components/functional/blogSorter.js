@@ -11,13 +11,15 @@ const BlogSorterStyles = styled.ul`
   @supports (gap: 10px) {
     gap: 10px;
   }
+  @supports not (gap: 10px) {
+    & > * {
+      margin: 7px;
+    }
+  }
   /* @supports (gap: 10px) {
     gap: 10px;
   }
   grid-gap: 10px; */
-  & > * {
-    margin: 2px;
-  }
   li {
     background: var(--mainColour);
     border-radius: 4.5px;
