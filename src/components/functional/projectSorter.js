@@ -10,7 +10,8 @@ const ProjectSorterStyles = styled.div`
     text-align: center;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
     @supports (gap: 10px) {
       gap: 10px;
     }

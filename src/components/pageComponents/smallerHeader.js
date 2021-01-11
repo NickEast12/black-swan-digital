@@ -7,8 +7,8 @@ const AltPageHeaderStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
     background: var(--background);
-    margin-top: 0;
-    height: 50vh;
+    margin-top: -2rem;
+    height: 65vh;
     position: relative;
     section {
       width: 100%;
@@ -16,6 +16,7 @@ const AltPageHeaderStyles = styled.div`
       top: 0;
       left: 0;
       position: absolute;
+      padding-top: 3rem;
       z-index: 5;
       color: var(--white);
       .alt__header__inner {
@@ -33,9 +34,9 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 55vh;
+    height: 60vh;
     section {
-      padding-top: 2rem;
+      padding-top: 3rem;
       .alt__header__inner {
         .title--style {
           font-size: 1.2rem;
@@ -48,7 +49,7 @@ const AltPageHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     section {
-      padding-top: 2.5rem;
+      padding-top: 3.5rem;
       .alt__header__inner {
         .title--style {
           font-size: 1.5rem;
@@ -70,8 +71,8 @@ const AltPageHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 1024px) {
     height: 27rem;
-    padding-top: 6rem;
     .alt__header__inner {
+      padding-top: 6rem;
       .title--style {
         font-size: 1.85rem;
       }

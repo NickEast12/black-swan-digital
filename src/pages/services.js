@@ -226,12 +226,14 @@ const ServicesBodyStyles = styled.div`
               margin: 0 5px 5px 0;
             }
             li {
-              background: linear-gradient(
+              /* background: linear-gradient(
                 to right,
                 var(--mainColour),
                 var(--mainColourLighter)
               );
-              border: solid 1px var(--mainColour);
+              border: solid 1px var(--mainColour); */
+              background: var(--black);
+              border: solid 1px var(--black);
               color: var(--white);
               border-radius: 4.5px;
               padding: 0.15rem 0.5rem;

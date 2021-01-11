@@ -2,9 +2,15 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import WaveSVG from '../../assets/images/wave.svg';
+import WaveBlackSVG from '../../assets/images/wave-black.svg';
 
 const WaveCTAStyles = styled.section`
   @media only screen and (min-width: 0px) {
+    .alt {
+      .wave {
+        background-image: url(${WaveBlackSVG});
+      }
+    }
     width: 100%;
     height: 100%;
     position: relative;
@@ -74,21 +80,23 @@ const WaveCTAStyles = styled.section`
     }
   }
 `;
-const WaveCTA = () => (
+const WaveCTA = ({ alt }) => (
   <WaveCTAStyles>
-    <div className="wave" />
-    <div className="wave__content">
-      <div className="wave__content__inner">
-        <h4>Let's Talk</h4>
-        <p>
-          Whether you already have a project specification, or you just want to
-          learn more about the way we work, we are just an email away.
-        </p>
-        <Link to="/contact">
-          <button type="button" className="button--alt">
-            <span>Get in Touch</span>
-          </button>
-        </Link>
+    <div className={`${alt ? 'alt' : ''}`}>
+      <div className="wave" />
+      <div className="wave__content">
+        <div className="wave__content__inner">
+          <h4>Let's Talk</h4>
+          <p>
+            Whether you already have a project specification, or you just want
+            to learn more about the way we work, we are just an email away.
+          </p>
+          <Link to="/contact">
+            <button type="button" className="button--alt">
+              <span>Get in Touch</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   </WaveCTAStyles>

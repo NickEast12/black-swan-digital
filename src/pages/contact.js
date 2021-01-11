@@ -115,7 +115,7 @@ const ContactStyles = styled.div`
       .contact__body {
         &__form {
           margin-top: -22rem;
-          width: 85%;
+          width: 90%;
         }
       }
     }
@@ -134,7 +134,7 @@ const ContactStyles = styled.div`
       }
       .contact__body {
         &__form {
-          width: 80%;
+          width: 90%;
           margin-top: -26rem;
           form {
           }
