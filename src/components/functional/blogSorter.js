@@ -11,11 +11,11 @@ const BlogSorterStyles = styled.ul`
   @supports (gap: 10px) {
     gap: 10px;
   }
-  @supports not (gap: 10px) {
-    & > * {
-      margin: 7px;
-    }
+
+  & > * {
+    margin: 4.5px;
   }
+
   /* @supports (gap: 10px) {
     gap: 10px;
   }
