@@ -120,6 +120,16 @@ const ContactStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 375px) and (min-height: 812px) {
+    .contact__wrapper {
+      .contact__body {
+        &__form {
+          margin-top: -30rem;
+          width: 90%;
+        }
+      }
+    }
+  }
   @media only screen and (min-width: 414px) {
     .contact__wrapper {
       .contact__header {

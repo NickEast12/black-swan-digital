@@ -113,6 +113,11 @@ const BlogStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 375px) {
+    .blog__header {
+      padding: 6rem 0;
+    }
+  }
   @media only screen and (min-width: 768px) {
     .blog__header {
       &__inner {
