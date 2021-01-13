@@ -66,7 +66,7 @@ const AltPageHeaderStyles = styled.div`
     section {
       padding-top: 4.5rem;
       .alt__header__inner {
-        width: 70%;
+        width: 80%;
       }
     }
   }
