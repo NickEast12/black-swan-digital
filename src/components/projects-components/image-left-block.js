@@ -58,14 +58,6 @@ const ImageLeftBlock = ({ title, description }) => (
       <div className="left__content">
         <h3>{title}</h3>
         <p>{description}</p>
-        <ul>
-          <li>Point 1</li>
-          <li>Point 1</li>
-          <li>Point 1</li>
-          <li>Point 1</li>
-          <li>Point 1</li>
-          <li>Point 1</li>
-        </ul>
       </div>
     </div>
   </ImageLeftBlockStyles>

@@ -21,8 +21,9 @@ const BlogStyles = styled.div`
 
     .blog__header {
       width: 100%;
-      padding: 5rem 0 2rem 0;
+      padding: 5.5rem 0 2rem 0;
       position: relative;
+      height: 22.5rem;
       &::after {
         width: 100%;
         height: 100%;
@@ -115,14 +116,21 @@ const BlogStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     .blog__header {
-      padding: 6rem 0;
+      padding: 6rem 0 0 0;
+      height: 20rem;
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    .blog__header {
+      padding: 7.5rem 0 0 0;
+      height: 22rem;
     }
   }
   @media only screen and (min-width: 768px) {
     .blog__header {
       &__inner {
         width: 70%;
-        padding: 4rem 0;
+        padding: 1.25rem 0;
       }
     }
     .blog__body {

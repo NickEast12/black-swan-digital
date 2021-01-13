@@ -343,11 +343,12 @@ const DesktopNavStyles = styled.div`
             display: flex;
             list-style: none;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             gap: 1.2rem;
             li {
               color: var(--white);
               position: relative;
+              margin: 0 0.5rem;
               &::after {
                 width: 0px;
                 transition: width 0.35s ease;

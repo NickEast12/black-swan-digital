@@ -78,7 +78,6 @@ const AltServicesStyles = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 2rem 0;
     .offerings__wrapper {
-      width: 70%;
       &__content {
         h2 {
           font-size: 1.75rem;

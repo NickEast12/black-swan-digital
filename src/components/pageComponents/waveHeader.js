@@ -15,59 +15,62 @@ const WaveHeaderStyles = styled.div`
     }
     section {
       position: absolute;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
       padding: 2rem 0;
       z-index: 10;
       color: white;
       .header__inner {
-        width: 80%;
-        padding-top: 5rem;
-        margin: 0 auto;
-        h1 {
-          margin: 0;
-          font-size: 2.1rem;
-          letter-spacing: -1px;
-          width: 130%;
-          overflow: hidden;
-        }
+        &__content {
+          width: 85%;
+          padding-top: 5rem;
+          margin: 0 auto;
+          h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: -1px;
 
-        p {
-          margin: 0.5rem 0;
-          width: 130%;
-          overflow: hidden;
-        }
-        h6 {
-          margin-top: 2rem;
-          font-size: 1rem;
-          font-weight: 500;
-        }
-        .bold {
-          margin-top: 0.25rem;
-          display: block;
-          font-weight: 900;
-          color: var(--mainColour);
-        }
-        button {
-          width: 150px;
-          margin-top: 1rem;
+            overflow: hidden;
+          }
+
+          p {
+            margin: 0.5rem 0;
+
+            overflow: hidden;
+          }
+          h6 {
+            margin-top: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          .bold {
+            margin-top: 0.25rem;
+            display: block;
+            font-weight: 900;
+            color: var(--mainColour);
+          }
+          button {
+            width: 150px;
+            margin-top: 1.5rem;
+          }
         }
       }
     }
   }
   @media only screen and (min-width: 375px) {
     section {
-      width: 90%;
+      width: 100%;
       .header__inner {
-        h1 {
-          font-size: 2.7rem;
-          width: 120%;
-        }
-        p {
-          font-size: 1.1rem;
-          width: 110%;
-        }
-        button {
+        width: 100%;
+        &__content {
+          h1 {
+            font-size: 2.7rem;
+          }
+          p {
+            font-size: 1.1rem;
+          }
+          button {
+          }
         }
       }
     }
@@ -75,22 +78,24 @@ const WaveHeaderStyles = styled.div`
   @media only screen and (min-width: 414px) {
     section {
       .header__inner {
-        h1 {
-          font-size: 3rem;
-        }
-        p {
-          font-size: 1.2rem;
+        &__content {
+          h1 {
+            font-size: 2.9rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
         }
       }
     }
   }
   @media only screen and (min-width: 768px) {
-    height: 86vh;
+    height: 50rem;
     section {
       .header__inner {
-        padding-top: 8rem;
+        padding-top: 4rem;
         h1 {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
 
         p {
@@ -102,10 +107,33 @@ const WaveHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1024px) {
-    height: 70vh;
+    height: 55rem;
     section {
       .header__inner {
-        padding-top: 12.5rem;
+        width: 80%;
+        margin: 0 auto;
+
+        padding-top: 6.5rem;
+        &__content {
+          width: 80%;
+          margin: 0 auto 0 0;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    height: 100vh;
+    width: 100%;
+    section {
+      width: 80%;
+      margin: 0 auto;
+      .header__inner {
+        width: 80%;
+        &__content {
+          margin: 0 auto 0 0;
+          padding-top: 4rem;
+          width: 70%;
+        }
       }
     }
   }
@@ -116,16 +144,18 @@ const WaveHeader = () => {
     <WaveHeaderStyles>
       <section>
         <div className="header__inner">
-          <h1>Award Winning Digital Agency Based in London &amp; Surrey</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsum
-            nulla unde.
-          </p>
-          {/* <h6>Want to get in touch?</h6>
+          <div className="header__inner__content">
+            <h1>Award Winning Digital Agency Based in London &amp; Surrey</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              ipsum nulla unde.
+            </p>
+            {/* <h6>Want to get in touch?</h6>
           <span className="bold">Let's talk</span> */}
-          <button type="button">
-            <span>Find out more</span>
-          </button>
+            <button type="button">
+              <span>Find out more</span>
+            </button>
+          </div>
         </div>
       </section>
       <AnimateHeaderBackground />

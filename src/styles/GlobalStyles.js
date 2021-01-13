@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     :root {
         --mainColour: #57CAC5;
+        --blackswansarered: #CD292C;
         --mainColourLighter: #7ad3ce;
         --background: #0B0C10;
         --altColour: #1F2833;
