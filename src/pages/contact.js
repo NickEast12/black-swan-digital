@@ -11,7 +11,7 @@ const ContactStyles = styled.div`
     .contact__wrapper {
       .contact__header {
         position: relative;
-        height: 90vh;
+        height: 32rem;
         &__content {
           position: absolute;
           top: 0;
@@ -44,7 +44,7 @@ const ContactStyles = styled.div`
           width: 90%;
           position: relative;
           z-index: 10;
-          margin: -17.5rem auto 0 auto;
+          margin: -14.5rem auto 0 auto;
           p {
             text-align: center;
             color: var(--white);
@@ -112,6 +112,9 @@ const ContactStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     .contact__wrapper {
+      .contact__header {
+        height: 38rem;
+      }
       .contact__body {
         &__form {
           margin-top: -22rem;
@@ -122,6 +125,9 @@ const ContactStyles = styled.div`
   }
   @media only screen and (min-width: 375px) and (min-height: 812px) {
     .contact__wrapper {
+      .contact__header {
+        height: 47rem;
+      }
       .contact__body {
         &__form {
           margin-top: -30rem;
@@ -133,6 +139,7 @@ const ContactStyles = styled.div`
   @media only screen and (min-width: 414px) {
     .contact__wrapper {
       .contact__header {
+        height: 40rem;
         &__content {
           span {
             font-size: 1.2rem;
@@ -145,7 +152,7 @@ const ContactStyles = styled.div`
       .contact__body {
         &__form {
           width: 90%;
-          margin-top: -26rem;
+          margin-top: -22rem;
           form {
           }
           p {
@@ -158,7 +165,7 @@ const ContactStyles = styled.div`
   @media only screen and (min-width: 768px) {
     .contact__wrapper {
       .contact__header {
-        height: 70vh;
+        height: 42.5rem;
         &__content {
           &__inner {
             width: 50%;

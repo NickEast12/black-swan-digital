@@ -4,10 +4,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
 import PageProjects from '../components/pageComponents/pageProjects';
-import AnimateHeaderBackground from '../components/functional/animatedHeader';
 import AltPageHeader from '../components/pageComponents/altPageHeader';
 //* Icons
-import HeaderIcon from '../svgs/services-icon.svg';
 import UXDesignIcon from '../svgs/web-design.svg';
 import WebDevelopmentIcon from '../svgs/web-development.svg';
 import ResponsiveDesignIcon from '../svgs/responsive-design.svg';
@@ -329,7 +327,7 @@ const ServicesBody = () => (
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
         <aside>
-          <h4>Branding &amp; Design</h4>
+          <h4>UI &amp; UX Design</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto sunt
             ducimus fugit assumenda labore cum!
@@ -343,24 +341,6 @@ const ServicesBody = () => (
         </aside>
       </div>
       <div className="services__body--left services__body__box">
-        <section>
-          <Image filename="about-us.jpg" alt="fill this in " />
-        </section>
-        <aside>
-          <h4>SEO</h4>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto sunt
-            ducimus fugit assumenda labore cum!
-          </p>
-          <h6>In-house capabilities</h6>
-          <ul>
-            <li>Web Design</li>
-            <li>Web Design</li>
-            <li>Web Design</li>
-          </ul>
-        </aside>
-      </div>
-      <div className="services__body--right services__body__box">
         <section>
           <Image filename="about-us.jpg" alt="fill this in " />
         </section>
