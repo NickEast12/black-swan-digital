@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimateHeaderBackground from '../functional/animatedHeader';
-import Image from '../functional/Image';
 
 const ProjectHeaderStyles = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   position: relative;
   .project__header {
     width: 100%;
@@ -30,15 +29,6 @@ const ProjectHeaderStyles = styled.div`
         font-weight: 300;
       }
     }
-    &__img {
-      width: 80%;
-      margin: 2rem auto;
-      .gatsby-image-wrapper {
-        width: 100%;
-        height: 100%;
-        border-radius: 4.5px;
-      }
-    }
   }
 `;
 const ProjectHeader = ({ title, titleDescription }) => (
@@ -48,9 +38,6 @@ const ProjectHeader = ({ title, titleDescription }) => (
       <div className="project__header__title">
         <h1>{title}</h1>
         <h2>{titleDescription}</h2>
-      </div>
-      <div className="project__header__img">
-        <Image filename="vs-cover.jpg" alt="Vine Street Solutions" />
       </div>
     </div>
   </ProjectHeaderStyles>

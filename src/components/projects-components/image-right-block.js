@@ -4,9 +4,9 @@ import Image from '../functional/Image';
 
 const ImageRightBlockStyles = styled.div`
   width: 100%;
-  padding: 2rem 0 2rem 0;
-  /* background: var(--background); */
-  background: rgb(245, 245, 245);
+  padding: 3rem 0;
+  background: #0b0d0f;
+  color: var(--white);
   .left {
     width: 80%;
     margin: 0 auto;

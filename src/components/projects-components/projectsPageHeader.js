@@ -8,7 +8,7 @@ const AltPageHeaderStyles = styled.div`
     width: 100%;
     background: var(--background);
     margin-top: -2rem;
-    height: 22rem;
+    height: 27rem;
     position: relative;
     section {
       width: 100%;
@@ -34,7 +34,7 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 375px) {
-    height: 25rem;
+    height: 33rem;
     section {
       padding-top: 3rem;
       .alt__header__inner {
@@ -48,7 +48,6 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 414px) {
-    height: 27rem;
     section {
       padding-top: 3.5rem;
       .alt__header__inner {
@@ -83,8 +82,7 @@ const AltPageHeaderStyles = styled.div`
     }
   }
 `;
-
-const SmallerHeader = ({ title, description, pageContext }) => {
+const ProjectsPageHeader = ({ title, description, pageContext }) => {
   const i = 'stay';
   return (
     <AltPageHeaderStyles>
@@ -100,4 +98,4 @@ const SmallerHeader = ({ title, description, pageContext }) => {
   );
 };
 
-export default SmallerHeader;
+export default ProjectsPageHeader;

@@ -5,7 +5,6 @@ import Image from '../functional/Image';
 const ImageLeftBlockStyles = styled.div`
   width: 100%;
   padding: 2rem 0 0 0;
-
   .left {
     width: 80%;
     margin: 0 auto;

@@ -10,13 +10,12 @@ const ProjectSorterStyles = styled.div`
     text-align: center;
     list-style: none;
     display: flex;
-    /* justify-content: space-around; */
     flex-wrap: wrap;
     @supports (gap: 10px) {
       gap: 10px;
     }
 
-    & > * + * {
+    & > * {
       margin-left: 4.5px;
     }
 
@@ -24,7 +23,7 @@ const ProjectSorterStyles = styled.div`
       flex-grow: 2;
       background: var(--mainColour);
       border-radius: 4.5px;
-      padding: 0.5rem 0;
+      padding: 0.5rem;
       color: var(--white);
       a {
         color: inherit;
