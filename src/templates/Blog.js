@@ -8,6 +8,7 @@ import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
 import SignUp from '../components/pageComponents/signUp';
 import Bread from '../components/functional/Breadcrums';
+import RelatedBlogs from '../components/pageComponents/relatedBlogs';
 
 const urlFor = (source) =>
   urlBuilder({
@@ -23,7 +24,7 @@ const BlogStyles = styled.div`
       width: 100%;
       padding: 5.5rem 0 2rem 0;
       position: relative;
-      height: 22.5rem;
+      height: 29rem;
       &::after {
         width: 100%;
         height: 100%;
@@ -117,13 +118,13 @@ const BlogStyles = styled.div`
   @media only screen and (min-width: 375px) {
     .blog__header {
       padding: 6rem 0 0 0;
-      height: 20rem;
+      height: 27rem;
     }
   }
   @media only screen and (min-width: 414px) {
     .blog__header {
       padding: 7.5rem 0 0 0;
-      height: 22rem;
+      height: 29rem;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -142,6 +143,7 @@ const BlogStyles = styled.div`
 `;
 const Blog = ({ data, pageContext }) => {
   const content = data.blog;
+  const categoryData = data.Category;
   const serializers = {
     types: {
       image: (props) => (
@@ -182,6 +184,7 @@ const Blog = ({ data, pageContext }) => {
         </div>
       </BlogStyles>
       <SignUp alt />
+      <RelatedBlogs blogData={categoryData} />
       <WaveCTA />
     </Layout>
   );
@@ -190,12 +193,15 @@ const Blog = ({ data, pageContext }) => {
 export default Blog;
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $category: String!) {
     blog: sanityPost(slug: { current: { eq: $slug } }) {
       title
       subtitle
       slug {
         current
+      }
+      categories {
+        title
       }
       publishedAt(formatString: "MMMM DD YYYY")
       author {
@@ -214,6 +220,43 @@ export const query = graphql`
         asset {
           fluid(maxWidth: 800) {
             ...GatsbySanityImageFluid
+          }
+        }
+      }
+    }
+
+    Category: allSanityPost(
+      filter: {
+        categories: { elemMatch: { title: { eq: $category } } }
+        slug: { current: { ne: $slug } }
+      }
+    ) {
+      nodes {
+        title
+        excerpt
+        _createdAt(formatString: "MMMM DD YYYY")
+        slug {
+          current
+        }
+        categories {
+          title
+          _id
+        }
+        author {
+          name
+          image {
+            asset {
+              fluid(maxWidth: 410) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+        }
+        mainImage {
+          asset {
+            fluid(maxWidth: 410) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
       }

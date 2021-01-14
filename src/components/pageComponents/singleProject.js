@@ -4,40 +4,51 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 const SingleProjectStyles = styled.div`
-  width: 100%;
-  position: relative;
-  margin: 2.5rem 0 2rem 0;
-  border-radius: 4.5px;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .single__background {
+  @media only screen and (min-width: 0px) {
     width: 100%;
-    height: 12.5rem;
-    .gatsby-image-wrapper {
+    position: relative;
+    margin: 2.5rem 0 2rem 0;
+    border-radius: 4.5px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .single__background {
       width: 100%;
-      height: 100%;
-      border-radius: 4.5px;
+      height: 12.5rem;
+      .gatsby-image-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 4.5px;
+      }
+    }
+    .single__content {
+      color: var(--black);
+      span {
+        color: var(--mainColour);
+        font-family: PoppinsLight;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: -0.1px;
+        text-transform: uppercase;
+        margin: 1rem 0 0.5rem 0;
+        display: block;
+      }
+      h5 {
+        font-size: 1.3rem;
+        margin: 0;
+        font-weight: 500;
+      }
     }
   }
-  .single__content {
-    color: var(--black);
-    span {
-      color: var(--mainColour);
-      font-family: PoppinsLight;
-      font-weight: 500;
-      font-size: 1rem;
-      letter-spacing: -0.1px;
-      text-transform: uppercase;
-      margin: 1rem 0 0.5rem 0;
-      display: block;
+  @media only screen and (min-width: 1280px) {
+    .single__background {
+      height: 17.5rem;
     }
-    h5 {
-      font-size: 1.3rem;
-      margin: 0;
-      font-weight: 500;
+    .single__content {
+      h5 {
+        font-size: 22.5px;
+      }
     }
   }
 `;

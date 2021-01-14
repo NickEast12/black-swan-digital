@@ -51,16 +51,15 @@ const IndexAboutUsStyles = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 2.5rem;
+
       .about__img {
-        width: 700px;
-        height: 300px;
         .gatsby-image-wrapper {
           width: 100%;
           height: 100%;
         }
       }
       .about__content {
+        margin-left: 2.5rem;
         h3 {
           font-size: 1.75rem;
         }
@@ -72,7 +71,7 @@ const IndexAboutUsStyles = styled.div`
     section {
       .about__img {
         width: 900px;
-        height: 320px;
+        height: 340px;
         .gatsby-image-wrapper {
           width: 100%;
           height: 100%;
@@ -80,6 +79,22 @@ const IndexAboutUsStyles = styled.div`
       }
       .about__content {
         margin-top: 0;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    section {
+      width: 75%;
+      padding: 2rem 0;
+      .about__img {
+      }
+      .about__content {
+        h3 {
+          font-size: 34px;
+        }
+        p {
+          width: 75%;
+        }
       }
     }
   }

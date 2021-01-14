@@ -67,6 +67,9 @@ export async function turnBlogsIntoPages({ graphql, actions }) {
     query {
       blogs: allSanityPost {
         nodes {
+          categories {
+            title
+          }
           slug {
             current
           }
@@ -85,6 +88,7 @@ export async function turnBlogsIntoPages({ graphql, actions }) {
       context: {
         title: blog.title,
         slug: blog.slug.current,
+        category: blog.categories[0].title,
       },
     });
   });

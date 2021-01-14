@@ -41,6 +41,19 @@ const IndexPorjectsStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    section {
+      margin: 0 auto;
+      padding: 1rem 0;
+      width: 75%;
+      h4 {
+        font-size: 34px;
+      }
+      .single__project__wrapper {
+        width: 100%;
+      }
+    }
+  }
 `;
 const IndexProjects = ({ indexProject }) => {
   console.log(indexProject);

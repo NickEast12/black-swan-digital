@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import BlogSorter from '../components/functional/blogSorter';
 import Layout from '../components/Layout';
-import AltPageHeader from '../components/pageComponents/altPageHeader';
 import BlogList from '../components/pageComponents/blogList';
 import SmallerHeader from '../components/pageComponents/smallerHeader';
 import WaveCTA from '../components/pageComponents/wave-cta';

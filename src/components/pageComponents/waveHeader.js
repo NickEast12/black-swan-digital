@@ -132,7 +132,7 @@ const WaveHeaderStyles = styled.div`
         &__content {
           margin: 0 auto 0 0;
           padding-top: 4rem;
-          width: 70%;
+          width: 80%;
         }
       }
     }

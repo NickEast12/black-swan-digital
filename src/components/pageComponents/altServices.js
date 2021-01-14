@@ -94,6 +94,34 @@ const AltServicesStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     padding: 3rem 0 4rem 0;
   }
+  @media only screen and (min-width: 1280px) {
+    .offerings__wrapper {
+      width: 70%;
+      padding: 2rem 0;
+      &__content {
+        text-align: center;
+        h2 {
+          font-size: 34px;
+          margin: 1rem 0 1.5rem 0;
+        }
+        p {
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
+      &__boxes {
+        section {
+          padding: 3rem 2rem;
+        }
+      }
+      &__btn {
+        margin: 2 auto;
+        text-align: center;
+        button {
+        }
+      }
+    }
+  }
 `;
 const AltServices = () => (
   <AltServicesStyles>
