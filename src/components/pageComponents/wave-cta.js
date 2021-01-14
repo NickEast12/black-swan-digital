@@ -30,7 +30,7 @@ const WaveCTAStyles = styled.section`
       right: 0;
       width: 101%;
 
-      height: 10vw;
+      height: 13vw;
       background-image: url(${WaveSVG});
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -69,13 +69,34 @@ const WaveCTAStyles = styled.section`
   }
   @media only screen and (min-width: 768px) {
     .wave__content {
-      padding: 5rem 0 4rem 0;
+      padding: 6rem 0 4rem 0;
       width: 70%;
       margin: 0 auto;
       &__inner {
         h4 {
           font-size: 2rem;
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .wave__content {
+      padding: 8rem 0 4rem 0;
+      width: 70%;
+      margin: 0 auto;
+      &__inner {
+        h4 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .wave__content {
+      padding: 9rem 0 5rem 0;
+      width: 50%;
+      h4 {
+        font-size: 34px;
       }
     }
   }
