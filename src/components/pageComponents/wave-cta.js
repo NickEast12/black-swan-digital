@@ -95,6 +95,7 @@ const WaveCTAStyles = styled.section`
     .wave__content {
       padding: 9rem 0 5rem 0;
       width: 50%;
+      max-width: var(--maxBreakpoint);
       h4 {
         font-size: 34px;
       }

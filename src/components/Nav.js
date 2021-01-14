@@ -380,6 +380,7 @@ const DesktopNavStyles = styled.div`
   }
   @media only screen and (min-width: 1024px) {
     .desktop__nav__wrapper {
+      max-width: var(--maxBreakpoint);
       width: 80%;
     }
   }

@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
         --titleFont: AcuminTitle;
         --testing: red dotted 1px;
         --trial: #EBEBEB;
+        --maxBreakpoint: 1400px;
         --servicesBackground: rgb(248, 248, 248);
         --boxShadow: 0 10px 50px rgba(0,0,0,0.08),0 13px 45px rgba(0,0,0,0.08);
     }

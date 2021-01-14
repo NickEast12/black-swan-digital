@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const SignUpStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
+    background: var(--background);
     .signup__wrapper {
-      background: var(--background);
     }
     .altSignup {
       background: var(--white);
@@ -105,6 +105,11 @@ const SignUpStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     .signup {
       padding: 6rem 0;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .signup {
+      max-width: var(--maxBreakpoint);
     }
   }
 `;

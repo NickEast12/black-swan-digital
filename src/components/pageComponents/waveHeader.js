@@ -125,9 +125,10 @@ const WaveHeaderStyles = styled.div`
     height: 100vh;
     width: 100%;
     section {
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
       .header__inner {
+        max-width: var(--maxBreakpoint);
         width: 80%;
         &__content {
           margin: 0 auto 0 0;

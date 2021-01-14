@@ -98,6 +98,7 @@ const AltServicesStyles = styled.div`
     .offerings__wrapper {
       width: 70%;
       padding: 2rem 0;
+      max-width: var(--maxBreakpoint);
       &__content {
         text-align: center;
         h2 {

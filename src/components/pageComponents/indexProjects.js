@@ -46,6 +46,7 @@ const IndexPorjectsStyles = styled.div`
       margin: 0 auto;
       padding: 1rem 0;
       width: 75%;
+      max-width: var(--maxBreakpoint);
       h4 {
         font-size: 34px;
       }

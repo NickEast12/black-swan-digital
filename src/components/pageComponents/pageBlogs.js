@@ -68,6 +68,7 @@ const PageBlogsStyles = styled.div`
   @media only screen and (min-width: 1280px) {
     .page__blogs {
       width: 75%;
+      max-width: var(--maxBreakpoint);
       h4 {
         font-size: 34px;
       }

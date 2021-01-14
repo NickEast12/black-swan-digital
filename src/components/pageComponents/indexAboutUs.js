@@ -69,6 +69,7 @@ const IndexAboutUsStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     padding: 4rem 0;
     section {
+      max-width: var(--maxBreakpoint);
       .about__img {
         width: 900px;
         height: 340px;

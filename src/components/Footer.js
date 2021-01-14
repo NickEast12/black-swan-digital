@@ -102,6 +102,16 @@ const FooterStyles = styled.footer`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .footer {
+      max-width: var(--maxBreakpoint);
+    }
+    section {
+      div {
+        max-width: var(--maxBreakpoint);
+      }
+    }
+  }
 `;
 
 const Footer = () => {

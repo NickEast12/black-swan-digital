@@ -158,6 +158,18 @@ const ServicesIntroStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .intro {
+      &__box {
+        svg {
+          width: 4.5rem;
+        }
+        h4 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
 `;
 const ServicesIntro = () => (
   <ServicesIntroStyles>

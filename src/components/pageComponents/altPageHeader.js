@@ -71,12 +71,17 @@ const AltPageHeaderStyles = styled.div`
       padding-top: 6rem;
       .alt__header__inner {
         .title--style {
-          font-size: 1.85rem;
+          font-size: 1.5rem;
         }
         h1 {
           font-size: 3rem;
         }
       }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    section {
+      padding-top: 3rem;
     }
   }
 `;
