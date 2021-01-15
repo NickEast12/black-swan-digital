@@ -109,7 +109,7 @@ const SignUpStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .signup {
-      max-width: var(--maxBreakpoint);
+      max-width: 700px;
     }
   }
 `;

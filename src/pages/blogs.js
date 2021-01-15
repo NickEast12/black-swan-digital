@@ -13,9 +13,6 @@ const BlogStyles = styled.div`
     .blogs {
       width: 80%;
       margin: 0 auto;
-      &__wrapper {
-        text-align: center;
-      }
     }
   }
   @media only screen and (min-width: 414px) {
@@ -38,6 +35,12 @@ const BlogStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     .blogs {
       width: 75%;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .blogs {
+      width: 75%;
+      max-width: var(--maxBreakpoint);
     }
   }
 `;

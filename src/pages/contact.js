@@ -201,7 +201,7 @@ const ContactStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     .contact__wrapper {
       .contact__header {
-        height: 55vh;
+        height: 44rem;
         &__content {
           padding-top: 2rem;
           h1 {
@@ -212,6 +212,21 @@ const ContactStyles = styled.div`
       .contact__body {
         &__form {
           width: 65%;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .contact__wrapper {
+      .contact__body {
+        &__form {
+          max-width: 700px;
+          width: 45%;
+          form {
+            textarea {
+              height: 10rem;
+            }
+          }
         }
       }
     }
@@ -239,17 +254,27 @@ const contact = () => (
               <div>
                 <section>
                   <label htmlFor="name">Name</label>
-                  <input type="text" name="name" placeholder="Joe Blogs" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Joe Blogs"
+                    required
+                  />
                 </section>
                 <section>
                   <label htmlFor="email">Email</label>
-                  <input type="email" name="email" placeholder="testing" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="testing"
+                    required
+                  />
                 </section>
               </div>
               <label htmlFor="company">Company</label>
               <input type="text" name="company" />
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" />
+              <textarea name="message" id="message" required />
               <div className="btn">
                 <button type="submit">
                   <span>Submit</span>
