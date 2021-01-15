@@ -34,6 +34,11 @@ const ClientStyles = styled.div`
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .client__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 `;
 const Clients = ({ data, pageContext }) => {
   const clients = data.clients.nodes;
@@ -61,15 +66,22 @@ const Clients = ({ data, pageContext }) => {
 export default Clients;
 
 const SingleClientStyles = styled.div`
-  width: 100%;
-  background: #f1f1f1;
-  margin: 1rem 0;
-  padding: 0;
-  border-radius: 4.5px;
-  .gatsby-image-wrapper {
+  @media only screen and (min-width: 0px) {
     width: 100%;
-    height: 10rem;
-    object-fit: cover;
+    background: #f1f1f1;
+    margin: 1rem 0;
+    padding: 0;
+    border-radius: 4.5px;
+    .gatsby-image-wrapper {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+    }
+    @media only screen and (min-width: 1280px) {
+      .gatsby-image-wrapper {
+        height: 9rem;
+      }
+    }
   }
 `;
 const SingleClient = ({ client }) => (

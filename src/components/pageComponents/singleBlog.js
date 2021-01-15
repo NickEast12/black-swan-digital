@@ -74,6 +74,11 @@ const SingleBlogStyles = styled.div`
           height: 15rem;
         }
       }
+      aside {
+        h5 {
+          font-size: 25px;
+        }
+      }
     }
   }
 `;

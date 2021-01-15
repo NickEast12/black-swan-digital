@@ -149,10 +149,10 @@ const ServicesIntroStyles = styled.div`
       width: 75%;
       &__box {
         svg {
-          width: 5rem;
+          width: 4rem;
         }
         h4 {
-          font-size: 1.75rem;
+          font-size: 1.35rem;
           margin-top: 1rem;
         }
       }
@@ -160,6 +160,7 @@ const ServicesIntroStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .intro {
+      max-width: var(--maxBreakpoint);
       &__box {
         svg {
           width: 4.5rem;
@@ -295,17 +296,38 @@ const ServicesBodyStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     .services__body {
       width: 75%;
+      max-width: var(--maxBreakpoint);
       &__box {
         width: 100%;
         gap: 2.5rem;
+        section {
+          .gatsby-image-wrapper {
+            height: 350px;
+          }
+        }
         aside {
-          padding-top: 1rem;
+          padding-top: 1.5rem;
           h4 {
             font-size: 2.5rem;
           }
           p {
             font-size: 1.1rem;
           }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .services__body {
+      &__box {
+        grid-gap: 5rem;
+        section {
+          .gatsby-image-wrapper {
+            height: 400px;
+          }
+        }
+        aside {
+          padding-top: 5rem;
         }
       }
     }

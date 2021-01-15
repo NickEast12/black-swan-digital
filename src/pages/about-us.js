@@ -104,6 +104,37 @@ const AboutUsStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .about {
+      &__intro {
+        max-width: var(--maxBreakpoint);
+        margin: 0 auto;
+        grid-gap: 7rem;
+        &__content {
+          padding-top: 5rem;
+          h2 {
+            font-size: 38px;
+          }
+        }
+        &__img {
+          .gatsby-image-wrapper {
+            height: 400px;
+            width: 100%;
+          }
+        }
+      }
+      &__ethos {
+        max-width: var(--maxBreakpoint);
+        margin: 0 auto;
+        padding: 5rem 0;
+        &__inner {
+          h3 {
+            font-size: 34px;
+          }
+        }
+      }
+    }
+  }
 `;
 const TeamStyles = styled.div`
   @media only screen and (min-width: 0px) {
@@ -206,6 +237,27 @@ const TeamStyles = styled.div`
           &__box {
             height: 20rem;
             .gatsby-image-wrapper {
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .team {
+      max-width: var(--maxBreakpoint);
+      &__inner {
+        h3 {
+          font-size: 34px;
+        }
+        p {
+          width: 50%;
+        }
+        &__grid {
+          &__box {
+            height: 400px;
+            .gatsby-image-wrapper {
+              height: 100%;
             }
           }
         }

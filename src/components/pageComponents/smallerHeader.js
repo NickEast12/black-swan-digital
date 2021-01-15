@@ -82,6 +82,16 @@ const AltPageHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    section {
+      .alt__header__inner {
+        max-width: var(--maxBreakpoint);
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 `;
 
 const SmallerHeader = ({ title, description, pageContext }) => {

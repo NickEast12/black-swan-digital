@@ -32,6 +32,11 @@ const PageProjectsStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .services__projects {
+      max-width: var(--maxBreakpoint);
+    }
+  }
 `;
 
 const PageProjects = ({ projects, title, description }) => (

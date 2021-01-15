@@ -43,11 +43,11 @@ const SingleProjectStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .single__background {
-      height: 17.5rem;
+      height: 15.5rem;
     }
     .single__content {
       h5 {
-        font-size: 22.5px;
+        font-size: 25px;
       }
     }
   }

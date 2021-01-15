@@ -80,8 +80,14 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1280px) {
+    width: 100%;
     section {
+      width: 100%;
+
       padding-top: 3rem;
+      .alt__header__inner {
+        max-width: var(--maxBreakpoint);
+      }
     }
   }
 `;

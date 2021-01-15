@@ -24,12 +24,18 @@ const ProjectSorterStyles = styled.div`
       background: var(--mainColour);
       border-radius: 4.5px;
       padding: 0.5rem;
-      color: var(--white);
-      a {
-        color: inherit;
-        font-weight: 400;
-        text-decoration: none;
+      button {
+        width: 100%;
+        margin: 0;
+        padding: 0;
         cursor: pointer;
+        a {
+          color: var(--white);
+          width: 100%;
+          font-weight: 400;
+          text-decoration: none;
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -51,11 +57,16 @@ const ProjectSorter = () => {
     <ProjectSorterStyles>
       <ul>
         <li>
-          <Link to="/work">All</Link>
+          <button type="button">
+            <Link to="/work">All</Link>
+          </button>
         </li>
+
         {category.map((cat) => (
           <li key={cat.title}>
-            <Link to={`/work/${cat.title}`}>{cat.title}</Link>
+            <button type="button">
+              <Link to={`/work/${cat.title}`}>{cat.title}</Link>
+            </button>
           </li>
         ))}
       </ul>

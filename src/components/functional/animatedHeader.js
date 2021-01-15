@@ -31,7 +31,7 @@ class AnimateHeaderBackground extends React.Component {
       waveHeight: 35.0,
       waveSpeed: 0.5,
       shininess: 35.0,
-      zoom: 0.65,
+      zoom: 0.85,
       minHeight: 200.0,
       minWidth: 200.0,
       mouseControls: true,

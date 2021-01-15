@@ -42,6 +42,12 @@ const WorkStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .work__wrapper {
+      max-width: var(--maxBreakpoint);
+      width: 75%;
+    }
+  }
 `;
 const Work = ({ data, pageContext }) => {
   const projects = data.projects.nodes;
