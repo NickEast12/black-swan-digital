@@ -161,7 +161,7 @@ const TeamStyles = styled.div`
         }
         &__grid {
           width: 80%;
-          margin: 0 auto;
+          margin: 0 auto 0 0;
           &__box {
             &:hover section {
               opacity: 1;
@@ -208,6 +208,17 @@ const TeamStyles = styled.div`
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 414px) {
+    .team {
+      &__inner {
+        &__grid {
+          &__box {
+            height: 23rem;
           }
         }
       }

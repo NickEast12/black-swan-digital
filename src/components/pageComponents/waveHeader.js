@@ -1,8 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimateHeaderBackground from '../functional/animatedHeader';
+import ScrollIcon from '../../svgs/scroll.svg';
 
 const WaveHeaderStyles = styled.div`
+  @keyframes scrollAnimationSmall {
+    0% {
+      transform: translateY(-15px);
+    }
+    25% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    75% {
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scrollAnimationBig {
+    0% {
+      transform: translateY(-25px);
+    }
+    75% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+    }
+  }
   @media only screen and (min-width: 0px) {
     width: 100%;
     height: 100vh;
@@ -54,6 +84,27 @@ const WaveHeaderStyles = styled.div`
             margin-top: 1.5rem;
           }
         }
+        .scroll {
+          text-align: center;
+          margin-top: 5rem;
+          svg {
+            fill: var(--white);
+            width: 25px;
+            path {
+              animation-duration: 1.25s;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease-in-out;
+              opacity: 0;
+              &:first-child {
+                animation-name: scrollAnimationBig;
+              }
+
+              &:last-child {
+                animation-name: scrollAnimationSmall;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -72,6 +123,9 @@ const WaveHeaderStyles = styled.div`
           button {
           }
         }
+        .scroll {
+          margin-top: 2.5rem;
+        }
       }
     }
   }
@@ -85,6 +139,9 @@ const WaveHeaderStyles = styled.div`
           p {
             font-size: 1.2rem;
           }
+        }
+        .scroll {
+          margin-top: 5rem;
         }
       }
     }
@@ -103,6 +160,9 @@ const WaveHeaderStyles = styled.div`
           margin-top: 1.5rem;
           font-size: 1.1rem;
         }
+        .scroll {
+          margin-top: 7rem;
+        }
       }
     }
   }
@@ -117,6 +177,9 @@ const WaveHeaderStyles = styled.div`
         &__content {
           width: 80%;
           margin: 0 auto 0 0;
+        }
+        .scroll {
+          margin-top: 10rem;
         }
       }
     }
@@ -134,6 +197,15 @@ const WaveHeaderStyles = styled.div`
           margin: 0 auto 0 0;
           padding-top: 4rem;
           width: 80%;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    section {
+      .header__inner {
+        .scroll {
+          margin-top: 15rem;
         }
       }
     }
@@ -156,6 +228,9 @@ const WaveHeader = () => {
             <button type="button">
               <span>Find out more</span>
             </button>
+          </div>
+          <div className="scroll">
+            <ScrollIcon />
           </div>
         </div>
       </section>
