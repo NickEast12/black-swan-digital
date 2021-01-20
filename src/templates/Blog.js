@@ -22,9 +22,9 @@ const BlogStyles = styled.div`
 
     .blog__header {
       width: 100%;
-      padding: 5.5rem 0 2rem 0;
+      padding: 6.5rem 0 2rem 0;
       position: relative;
-      height: 29rem;
+      height: 25rem;
       &::after {
         width: 100%;
         height: 100%;
@@ -94,22 +94,33 @@ const BlogStyles = styled.div`
         h4,
         h5,
         h6 {
-          margin: 0.5rem 0;
+          margin: 1rem 0;
         }
         p {
+          line-height: 1.45;
+          font-size: 1.1rem;
+          margin: 1.2rem 0;
+        }
+        ul {
+          list-style: inside;
+        }
+        li {
           margin: 0.5rem 0;
+          line-height: 1.45;
+          font-size: 1.1rem;
         }
         a {
           color: var(--mainColour);
           font-weight: 800;
         }
         .image {
-          width: 65%;
-          margin: 1rem auto;
+          width: 100%;
+          text-align: center;
+          margin: 2rem auto;
           img {
-            width: 100%;
-            height: 10rem;
-            border-radius: 4.5px;
+            height: auto;
+            max-width: 100%;
+            margin: 0 auto;
           }
         }
       }
@@ -117,13 +128,13 @@ const BlogStyles = styled.div`
   }
   @media only screen and (min-width: 375px) {
     .blog__header {
-      padding: 6rem 0 0 0;
+      padding: 8rem 0 0 0;
       height: 27rem;
     }
   }
   @media only screen and (min-width: 414px) {
     .blog__header {
-      padding: 7.5rem 0 0 0;
+      padding: 8.85rem 0 0 0;
       height: 29rem;
     }
   }
@@ -137,6 +148,32 @@ const BlogStyles = styled.div`
     .blog__body {
       &__inner {
         width: 70%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .blog__header {
+      &__inner {
+        > h1 {
+          font-size: 2.85rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .blog__header {
+      height: 35rem;
+      &__inner {
+        max-width: var(--maxBreakpoint);
+        padding-top: 4rem;
+        > h1 {
+          width: 80%;
+        }
+      }
+    }
+    .blog__body {
+      &__inner {
+        max-width: var(--maxBreakpoint);
       }
     }
   }

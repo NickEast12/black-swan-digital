@@ -6,6 +6,9 @@ import SingleBlog from './singleBlog';
 const RelatedBlogsStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
+    .empty {
+      display: none;
+    }
     .related {
       width: 80%;
       margin: 2rem auto;
@@ -22,6 +25,7 @@ const RelatedBlogsStyles = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .related {
+      max-width: 1000px;
       &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -32,10 +36,9 @@ const RelatedBlogsStyles = styled.div`
 `;
 const RelatedBlogs = ({ blogData }) => {
   const blogs = blogData.nodes;
-  console.log(blogs);
   return (
     <RelatedBlogsStyles>
-      <div className="related">
+      <div className={`related ${blogs.length === 0 ? 'empty' : ''}`}>
         <h3>Fancy reading some more?</h3>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.

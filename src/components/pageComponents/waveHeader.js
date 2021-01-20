@@ -185,7 +185,7 @@ const WaveHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1280px) {
-    height: 100vh;
+    height: 50rem;
     width: 100%;
     section {
       width: 100%;
@@ -202,6 +202,7 @@ const WaveHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1440px) {
+    height: 52rem;
     section {
       .header__inner {
         .scroll {
