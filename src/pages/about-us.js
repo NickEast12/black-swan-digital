@@ -160,8 +160,13 @@ const TeamStyles = styled.div`
           margin-top: 0.5rem;
         }
         &__grid {
-          width: 80%;
-          margin: 0 auto 0 0;
+          width: 90%;
+          margin: 0 auto;
+          padding: 2rem 0;
+          display: grid;
+          grid-template-columns: 1fr;
+          position: relative;
+          grid-gap: 2rem;
           &__box {
             &:hover section {
               opacity: 1;
@@ -173,15 +178,18 @@ const TeamStyles = styled.div`
                 animation: enter 1s 0.6s forwards;
               }
             }
-            margin: 2rem 0;
+            margin: 0 auto;
+            width: 100%;
+            height: 225px;
             position: relative;
-            height: 20rem;
             .gatsby-image-wrapper {
               filter: blur(3px);
               filter: grayscale(1);
-              height: 100%;
+              position: relative;
               border-radius: 4.5px;
+              max-width: 100%;
               width: 100%;
+              height: 100%;
             }
             section {
               transition: all 0.3s ease;
@@ -213,12 +221,23 @@ const TeamStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 375px) {
+    .team {
+      &__inner {
+        &__grid {
+          &__box {
+            height: 275px;
+          }
+        }
+      }
+    }
+  }
   @media only screen and (min-width: 414px) {
     .team {
       &__inner {
         &__grid {
           &__box {
-            height: 23rem;
+            height: 300px;
           }
         }
       }

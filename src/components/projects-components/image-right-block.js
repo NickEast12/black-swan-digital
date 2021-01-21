@@ -5,19 +5,29 @@ import Image from '../functional/Image';
 const ImageRightBlockStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 5rem 0;
-    background: #0b0d0f;
-    color: var(--white);
+    padding: 2rem 0;
+    color: var(--black);
+
     .left {
       width: 80%;
       margin: 0 auto;
-      &__img {
+      .largeImage {
+        width: 100%;
+        padding-top: 2.5rem;
         .gatsby-image-wrapper {
-          border-radius: 4.5px;
+          width: 100%;
+        }
+      }
+      &__img {
+        width: 50%;
+        margin: 0 auto;
+        .gatsby-image-wrapper {
+          height: auto;
+          max-width: 100%;
         }
       }
       &__content {
-        padding: 1rem 0;
+        padding: 3rem 0;
         h3 {
           font-size: 1.5rem;
           margin-bottom: 1rem;
@@ -36,7 +46,7 @@ const ImageRightBlockStyles = styled.div`
     .left {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 5rem;
       &__content {
         padding-top: 0;
       }
@@ -44,11 +54,11 @@ const ImageRightBlockStyles = styled.div`
   }
 `;
 
-const ImageRightBlock = ({ title, subtitle, description }) => (
+const ImageRightBlock = ({ title, subtitle, description, img, largeImage }) => (
   <ImageRightBlockStyles>
     <div className="left">
-      <div className="left__img">
-        <Image filename="vs-cover.jpg" />
+      <div className={`left__img ${largeImage ? 'largeImage' : ''}`}>
+        <Image filename={img} />
       </div>
       <div className="left__content">
         <h3>{title}</h3>

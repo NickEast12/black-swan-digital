@@ -18,18 +18,26 @@ const VineStreet = ({ pageContext }) => {
       />
       <div>
         <ProjectOverview
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eaque molestiae dolor dignissimos est fugit veniam temporibus, dolore sequi quisquam?"
           techArray={techArray}
           service="Website Development"
-          details="Details about the client and what they do."
         />
         <ImageRightBlock
           title="The Challenge"
           subtitle="Create a modern and clean UI that is responsive on all  screen sizes."
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
+          img="vs-mobile-mockup.png"
         />
         <ImageLeftBlock
           title="The Solution"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
+          img="vs-ipad-mockup.png"
+        />
+        <ImageRightBlock
+          title="The Result"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
+          img="vs-desktop-mockup.png"
+          largeImage
         />
         <WaveCTA />
       </div>
