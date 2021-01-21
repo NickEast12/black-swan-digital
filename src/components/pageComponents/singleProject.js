@@ -56,7 +56,7 @@ const SingleProject = ({ project }) => {
   const cat = project.categories;
   return (
     <SingleProjectStyles>
-      <Link to={`/work/${project.slug.current}`}>
+      <Link to={`/case-studies/${project.slug.current}`}>
         <div className="single__background">
           <Img fluid={project.projectImage.asset.fluid} alt={project.title} />
         </div>
