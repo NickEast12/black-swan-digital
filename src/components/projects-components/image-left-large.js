@@ -5,21 +5,15 @@ import Image from '../functional/Image';
 const ImageRightBlockStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 2rem 0;
+    padding: 4rem 0 0 0;
     color: var(--black);
-    .largeImage {
-      width: 100%;
-      padding-top: 2.5rem;
-      .gatsby-image-wrapper {
-        width: 100%;
-      }
-    }
-    .left {
+
+    .result {
       width: 80%;
       margin: 0 auto;
 
       &__img {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         .gatsby-image-wrapper {
           height: auto;
@@ -43,30 +37,25 @@ const ImageRightBlockStyles = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
-    .left {
-      padding: 2rem 0;
+    .result {
+      padding: 2rem 0 4rem 0;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 5rem;
+      grid-template-columns: 56% 1fr;
+      grid-gap: 3rem;
+
       &__content {
-        padding-top: 2rem;
+        padding-top: 0;
       }
     }
   }
   @media only screen and (min-width: 1024px) {
-    .left {
+    .result {
+      width: 80%;
       max-width: var(--maxBreakpoint);
-      grid-gap: 2rem;
-      padding-bottom: 4rem;
       &__img {
-        .gatsby-image-wrapper {
-          height: auto;
-
-          width: 90%;
-        }
       }
       &__content {
-        padding-top: 4rem;
+        padding-top: 2.5rem;
         h3 {
           font-size: 2rem;
         }
@@ -74,27 +63,28 @@ const ImageRightBlockStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1280px) {
-    .left {
+    .result {
+      width: 80%;
+      max-width: var(--maxBreakpoint);
       &__img {
-        .gatsby-image-wrapper {
-          width: 250px;
-        }
+        width: 550px;
       }
       &__content {
-        width: 80%;
-        padding-top: 8rem;
+        padding-top: 2.5rem;
+        h3 {
+          font-size: 2rem;
+        }
       }
     }
   }
 `;
-
-const ImageRightBlock = ({ title, subtitle, description, img }) => (
+const ImageLeftLarge = ({ img, title, subtitle, description }) => (
   <ImageRightBlockStyles>
-    <div className="left">
-      <div className="left__img">
+    <div className="result">
+      <div className="result__img">
         <Image filename={img} />
       </div>
-      <div className="left__content">
+      <div className="result__content">
         <h3>{title}</h3>
         <h4>{subtitle}</h4>
         <p>{description}</p>
@@ -103,4 +93,4 @@ const ImageRightBlock = ({ title, subtitle, description, img }) => (
   </ImageRightBlockStyles>
 );
 
-export default ImageRightBlock;
+export default ImageLeftLarge;

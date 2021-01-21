@@ -55,8 +55,8 @@ const Work = ({ data, pageContext }) => {
   return (
     <Layout>
       <SmallerHeader
-        title="Work"
-        description="A selection of our most recent work"
+        title="Case Studies"
+        description="A selection of our most recent case studies."
         pageContext={pageContext}
       />
       <WorkStyles>

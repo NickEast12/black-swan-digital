@@ -69,6 +69,22 @@ const ProjectOverviewStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .wrapper {
+      max-width: var(--maxBreakpoint);
+      h3 {
+        font-size: 38px;
+      }
+      &__details {
+        margin-right: 3rem;
+      }
+      &__grid {
+        grid-gap: 0.15rem;
+
+        grid-template-columns: 40% 60%;
+      }
+    }
+  }
 `;
 const ProjectOverview = ({ techArray, service, details }) => (
   <ProjectOverviewStyles>

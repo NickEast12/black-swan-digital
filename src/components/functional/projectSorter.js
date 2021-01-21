@@ -58,14 +58,14 @@ const ProjectSorter = () => {
       <ul>
         <li>
           <button type="button">
-            <Link to="/work">All</Link>
+            <Link to="/case-studies">All</Link>
           </button>
         </li>
 
         {category.map((cat) => (
           <li key={cat.title}>
             <button type="button">
-              <Link to={`/work/${cat.title}`}>{cat.title}</Link>
+              <Link to={`/case-studies/${cat.title}`}>{cat.title}</Link>
             </button>
           </li>
         ))}

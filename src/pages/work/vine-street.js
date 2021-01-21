@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import WaveCTA from '../../components/pageComponents/wave-cta';
 import ImageLeftBlock from '../../components/projects-components/image-left-block';
+import ImageLeftLarge from '../../components/projects-components/image-left-large';
 import ImageRightBlock from '../../components/projects-components/image-right-block';
 import ProjectOverview from '../../components/projects-components/project-overview';
 import ProjectPageHeader from '../../components/projects-components/projectsPageHeader.js';
@@ -33,10 +34,10 @@ const VineStreet = ({ pageContext }) => {
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
           img="vs-ipad-mockup.png"
         />
-        <ImageRightBlock
+        <ImageLeftLarge
           title="The Result"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
-          img="vs-desktop-mockup.png"
+          img="vs-result.png"
           largeImage
         />
         <WaveCTA />

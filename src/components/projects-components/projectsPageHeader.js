@@ -70,14 +70,17 @@ const AltPageHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1024px) {
-    height: 27rem;
-    .alt__header__inner {
-      padding-top: 6rem;
-      .title--style {
-        font-size: 1.85rem;
-      }
-      h1 {
-        font-size: 3rem;
+    height: 35rem;
+    section {
+      .alt__header__inner {
+        max-width: var(--maxBreakpoint);
+        padding-top: 9rem;
+        .title--style {
+          font-size: 1.85rem;
+        }
+        h1 {
+          font-size: 3rem;
+        }
       }
     }
   }

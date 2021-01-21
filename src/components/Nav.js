@@ -293,8 +293,8 @@ const MobileNav = () => {
             <Link to="/about-us">
               <li>About us</li>
             </Link>
-            <Link to="/work">
-              <li>Work</li>
+            <Link to="/case-studies">
+              <li>Case Stuides</li>
             </Link>
             <Link to="/clients">
               <li>Clients</li>
@@ -403,7 +403,7 @@ const DesktopNav = () => (
               <Link to="/about-us">About us</Link>
             </li>
             <li>
-              <Link to="/work">Work</Link>
+              <Link to="/case-studies">Case Studies</Link>
             </li>
             <li>
               <Link to="/clients">Clients</Link>

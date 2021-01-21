@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../functional/Image';
-//* background
-import Background from '../../assets/images/bs-background.png';
 
 const ImageLeftBlockStyles = styled.div`
   @media only screen and (min-width: 0px) {
     width: 100%;
-    padding: 5rem 0;
-    background-image: url(${Background});
-    background-position: center;
-    background-size: cover;
+    padding: 5rem 0 3rem 0;
+
+    background-color: black;
     color: var(--white);
     .left {
       width: 80%;
@@ -43,17 +40,51 @@ const ImageLeftBlockStyles = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
+    padding: 3rem 0;
     .left {
+      padding: 2rem 0 2rem 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 'Content Img';
       grid-gap: 5rem;
       &__content {
-        padding-top: 0;
+        padding-top: 3rem;
         grid-area: Content;
+        margin-left: 2rem;
       }
       &__img {
         grid-area: Img;
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .left {
+      max-width: var(--maxBreakpoint);
+      &__img {
+        .gatsby-image-wrapper {
+          width: 90%;
+        }
+      }
+      &__content {
+        padding-top: 5.5rem;
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .left {
+      &__img {
+        .gatsby-image-wrapper {
+          width: 400px;
+        }
+      }
+      &__content {
+        width: 80%;
+        padding-top: 8rem;
+        margin-left: 4rem;
       }
     }
   }

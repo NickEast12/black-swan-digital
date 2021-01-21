@@ -32,7 +32,7 @@ export async function turnBlogCateogriesIntoPages({ graphql, actions }) {
 }
 
 export async function turnProjectsCategoriesIntoPages({ graphql, actions }) {
-  const template = path.resolve('./src/pages/work.js');
+  const template = path.resolve('./src/pages/case-studies.js');
   const { data } = await graphql(
     `
       query {
@@ -49,7 +49,7 @@ export async function turnProjectsCategoriesIntoPages({ graphql, actions }) {
   projectCategory.forEach((project) => {
     console.log(`creating page for ${project.title}`);
     actions.createPage({
-      path: `/work/${project.title}`,
+      path: `/case-studies/${project.title}`,
       component: template,
       context: {
         title: project.title,
