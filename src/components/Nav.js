@@ -294,7 +294,7 @@ const MobileNav = () => {
               <li>About us</li>
             </Link>
             <Link to="/case-studies">
-              <li>Case Stuides</li>
+              <li>Case Studies</li>
             </Link>
             <Link to="/clients">
               <li>Clients</li>

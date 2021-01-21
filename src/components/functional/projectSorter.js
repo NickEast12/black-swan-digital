@@ -11,12 +11,13 @@ const ProjectSorterStyles = styled.div`
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    @supports (gap: 10px) {
+    /* @supports (gap: 10px) {
       gap: 10px;
-    }
+    } */
 
     & > * {
-      margin-left: 4.5px;
+      margin-left: 12px;
+      margin-bottom: 10px;
     }
 
     li {
