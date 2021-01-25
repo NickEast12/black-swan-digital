@@ -1,21 +1,26 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 import Layout from '../components/Layout';
 import WaveCTA from '../components/pageComponents/wave-cta';
 import PageBlogs from '../components/pageComponents/pageBlogs';
 import SignUp from '../components/pageComponents/signUp';
 import IndexAboutUs from '../components/pageComponents/indexAboutUs';
-import IndexServices from '../components/pageComponents/indexServices';
 import IndexProjects from '../components/pageComponents/indexProjects';
 import WaveHeader from '../components/pageComponents/waveHeader';
 import AltServices from '../components/pageComponents/altServices';
+import SEO from '../components/functional/SEO';
+import BSDIcon from '../assets/images/icon.png';
 
 const index = ({ data }) => {
   const indexBlogs = data.indexBlogs.nodes;
   const indexProject = data.projects.nodes;
   return (
     <Layout>
+      <SEO
+        title="Digital Marketing agency based in London, UK | Black Swan Digital"
+        description="This is a short description to be used as a placeholder untill i come up with the real description"
+        img={BSDIcon}
+      />
       <div>
         <WaveHeader />
         <AltServices />

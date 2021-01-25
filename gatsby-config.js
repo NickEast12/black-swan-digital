@@ -25,15 +25,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nick East `,
-        short_name: `Nick East`,
+        name: `Black Swan Digital`,
+        short_name: `Black Swan Digital`,
         description: `I'm a front-end web developer based in London, UK. With a love for designing and writing code.`,
         start_url: `/`,
         lang: `en`,
-        background_color: `#162129`,
-        theme_color: `#1bbc9b`,
+        background_color: `#0B0C10`,
+        theme_color: `#57CAC5`,
         display: `minimal-ui`,
-        icon: `./src/static/favicon.png`,
+        icon: `./src/static/favicon.ico`,
       },
     },
     {

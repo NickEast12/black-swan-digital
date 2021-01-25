@@ -3,44 +3,47 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BlogSorterStyles = styled.ul`
-  list-style: none;
-  display: flex;
-  padding-bottom: 1rem;
-  flex-wrap: wrap;
-  padding: 2rem 0 0 0;
-  @supports (gap: 10px) {
-    gap: 10px;
-  }
+  @media only screen and (min-width: 0px) {
+    list-style: none;
+    display: flex;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0 0 0;
 
-  & > * {
-    margin: 4.5px;
-  }
+    & > * {
+      margin: 4.5px;
+    }
 
-  /* @supports (gap: 10px) {
-    gap: 10px;
-  }
-  grid-gap: 10px; */
-  li {
-    background: var(--mainColour);
-    border-radius: 4.5px;
-    flex-grow: 2;
-    padding: 0.5rem;
-    .blog__button {
-      margin: 0;
-      padding: 0;
-      background: none;
-      width: 100%;
-      color: var(--white);
-      span {
-        background: var(--white);
-        color: var(--background);
-        border-radius: 4.5px;
-        padding: 0.1rem 0.45rem;
-        margin-left: 5px;
-      }
-      a {
+    li {
+      background: var(--mainColour);
+      border-radius: 4.5px;
+      flex-grow: 2;
+      padding: 0.5rem;
+      .blog__button {
+        margin: 0;
+        padding: 0;
+        background: none;
+        width: 100%;
         color: var(--white);
-        text-decoration: none;
+        span {
+          background: var(--white);
+          color: var(--background);
+          border-radius: 4.5px;
+          padding: 0.1rem 0.45rem;
+          margin-left: 5px;
+        }
+        a {
+          color: var(--white);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    @supports (gap: 10px) {
+      gap: 10px;
+      & > * {
+        margin: 0px;
       }
     }
   }
