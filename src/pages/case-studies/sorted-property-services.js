@@ -27,17 +27,17 @@ const SortedPropertyServices = ({ pageContext }) => {
           title="The Challenge"
           subtitle="Create a modern and clean UI that is responsive on all  screen sizes."
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
-          img="vs-mobile-mockup.png"
+          img="sorted-mob-mockup.png"
         />
         <ImageLeftBlock
           title="The Solution"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
-          img="vs-ipad-mockup.png"
+          img="sorted-tablet-mockup.png"
         />
         <ImageLeftLarge
           title="The Result"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquid iste quo rem, corrupti voluptatibus molestias, eligendi ex iure at, tempore commodi? Ipsam, aliquam dolor!"
-          img="vs-result.png"
+          img="sorted-mockup.png"
           largeImage
         />
         <WaveCTA />
